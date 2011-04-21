@@ -3,3 +3,8 @@ C:\Users\baskint\Documents\Visual Studio 2010\Projects\BoardSports\BoardSports\b
 C:\Users\baskint\Documents\Visual Studio 2010\Projects\BoardSports\BoardSports\obj\Debug\ResolveAssemblyReference.cache
 C:\Users\baskint\Documents\Visual Studio 2010\Projects\BoardSports\BoardSports\obj\Debug\BoardSports.dll
 C:\Users\baskint\Documents\Visual Studio 2010\Projects\BoardSports\BoardSports\obj\Debug\BoardSports.pdb
+C:\src\dotNet\BoardSportsASPMVC\BoardSports\bin\BoardSports.dll
+C:\src\dotNet\BoardSportsASPMVC\BoardSports\bin\BoardSports.pdb
+C:\src\dotNet\BoardSportsASPMVC\BoardSports\obj\Debug\ResolveAssemblyReference.cache
+C:\src\dotNet\BoardSportsASPMVC\BoardSports\obj\Debug\BoardSports.dll
+C:\src\dotNet\BoardSportsASPMVC\BoardSports\obj\Debug\BoardSports.pdb

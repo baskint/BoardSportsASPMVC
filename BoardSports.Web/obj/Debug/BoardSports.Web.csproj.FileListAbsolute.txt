@@ -5,3 +5,10 @@ C:\Users\baskint\Documents\Visual Studio 2010\Projects\BoardSports\BoardSports.W
 C:\Users\baskint\Documents\Visual Studio 2010\Projects\BoardSports\BoardSports.Web\obj\Debug\BoardSports.Web.pdb
 C:\Users\baskint\Documents\Visual Studio 2010\Projects\BoardSports\BoardSports.Web\bin\EntityFramework.dll
 C:\Users\baskint\Documents\Visual Studio 2010\Projects\BoardSports\BoardSports.Web\bin\EntityFramework.xml
+C:\src\dotNet\BoardSportsASPMVC\BoardSports.Web\bin\BoardSports.Web.dll
+C:\src\dotNet\BoardSportsASPMVC\BoardSports.Web\bin\BoardSports.Web.pdb
+C:\src\dotNet\BoardSportsASPMVC\BoardSports.Web\bin\EntityFramework.dll
+C:\src\dotNet\BoardSportsASPMVC\BoardSports.Web\bin\EntityFramework.xml
+C:\src\dotNet\BoardSportsASPMVC\BoardSports.Web\obj\Debug\ResolveAssemblyReference.cache
+C:\src\dotNet\BoardSportsASPMVC\BoardSports.Web\obj\Debug\BoardSports.Web.dll
+C:\src\dotNet\BoardSportsASPMVC\BoardSports.Web\obj\Debug\BoardSports.Web.pdb

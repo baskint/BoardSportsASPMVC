@@ -8,3 +8,13 @@ C:\Users\baskint\Documents\Visual Studio 2010\Projects\BoardSports\BoardSports.T
 C:\Users\baskint\Documents\Visual Studio 2010\Projects\BoardSports\BoardSports.Tests\obj\Debug\ResolveAssemblyReference.cache
 C:\Users\baskint\Documents\Visual Studio 2010\Projects\BoardSports\BoardSports.Tests\obj\Debug\BoardSports.Tests.dll
 C:\Users\baskint\Documents\Visual Studio 2010\Projects\BoardSports\BoardSports.Tests\obj\Debug\BoardSports.Tests.pdb
+C:\src\dotNet\BoardSportsASPMVC\BoardSports.Tests\bin\Debug\BoardSports.Tests.dll.config
+C:\src\dotNet\BoardSportsASPMVC\BoardSports.Tests\bin\Debug\BoardSports.Tests.dll
+C:\src\dotNet\BoardSportsASPMVC\BoardSports.Tests\bin\Debug\BoardSports.Tests.pdb
+C:\src\dotNet\BoardSportsASPMVC\BoardSports.Tests\bin\Debug\BoardSports.DAL.dll
+C:\src\dotNet\BoardSportsASPMVC\BoardSports.Tests\bin\Debug\BoardSports.dll
+C:\src\dotNet\BoardSportsASPMVC\BoardSports.Tests\bin\Debug\BoardSports.DAL.pdb
+C:\src\dotNet\BoardSportsASPMVC\BoardSports.Tests\bin\Debug\BoardSports.pdb
+C:\src\dotNet\BoardSportsASPMVC\BoardSports.Tests\obj\Debug\ResolveAssemblyReference.cache
+C:\src\dotNet\BoardSportsASPMVC\BoardSports.Tests\obj\Debug\BoardSports.Tests.dll
+C:\src\dotNet\BoardSportsASPMVC\BoardSports.Tests\obj\Debug\BoardSports.Tests.pdb

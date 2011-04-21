@@ -4,3 +4,9 @@ C:\Users\baskint\Documents\Visual Studio 2010\Projects\BoardSports\BoardSports.S
 C:\Users\baskint\Documents\Visual Studio 2010\Projects\BoardSports\BoardSports.Services\obj\x86\Debug\ResolveAssemblyReference.cache
 C:\Users\baskint\Documents\Visual Studio 2010\Projects\BoardSports\BoardSports.Services\obj\x86\Debug\BoardSports.Services.exe
 C:\Users\baskint\Documents\Visual Studio 2010\Projects\BoardSports\BoardSports.Services\obj\x86\Debug\BoardSports.Services.pdb
+C:\src\dotNet\BoardSportsASPMVC\BoardSports.Services\bin\Debug\BoardSports.Services.exe.config
+C:\src\dotNet\BoardSportsASPMVC\BoardSports.Services\bin\Debug\BoardSports.Services.exe
+C:\src\dotNet\BoardSportsASPMVC\BoardSports.Services\bin\Debug\BoardSports.Services.pdb
+C:\src\dotNet\BoardSportsASPMVC\BoardSports.Services\obj\x86\Debug\ResolveAssemblyReference.cache
+C:\src\dotNet\BoardSportsASPMVC\BoardSports.Services\obj\x86\Debug\BoardSports.Services.exe
+C:\src\dotNet\BoardSportsASPMVC\BoardSports.Services\obj\x86\Debug\BoardSports.Services.pdb

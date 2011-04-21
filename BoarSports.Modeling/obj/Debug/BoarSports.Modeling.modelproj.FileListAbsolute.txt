@@ -3,3 +3,8 @@ C:\Users\baskint\Documents\Visual Studio 2010\Projects\BoardSports\BoarSports.Mo
 C:\Users\baskint\Documents\Visual Studio 2010\Projects\BoardSports\BoarSports.Modeling\bin\Debug\BoardSports.DAL.pdb
 C:\Users\baskint\Documents\Visual Studio 2010\Projects\BoardSports\BoarSports.Modeling\bin\Debug\BoardSports.Services.pdb
 C:\Users\baskint\Documents\Visual Studio 2010\Projects\BoardSports\BoarSports.Modeling\obj\Debug\ResolveAssemblyReference.cache
+C:\src\dotNet\BoardSportsASPMVC\BoarSports.Modeling\bin\Debug\BoardSports.DAL.dll
+C:\src\dotNet\BoardSportsASPMVC\BoarSports.Modeling\bin\Debug\BoardSports.Services.exe
+C:\src\dotNet\BoardSportsASPMVC\BoarSports.Modeling\bin\Debug\BoardSports.DAL.pdb
+C:\src\dotNet\BoardSportsASPMVC\BoarSports.Modeling\bin\Debug\BoardSports.Services.pdb
+C:\src\dotNet\BoardSportsASPMVC\BoarSports.Modeling\obj\Debug\ResolveAssemblyReference.cache
