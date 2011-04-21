@@ -1,0 +1,140 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2008/09/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="BoardSportsDevModelStoreContainer" CdmEntityContainer="BoardSportsDevEntities">
+    <EntitySetMapping Name="Boards">
+      <EntityTypeMapping TypeName="BoardSportsDevModel.Board">
+        <MappingFragment StoreEntitySet="Boards">
+          <ScalarProperty Name="BoardId" ColumnName="BoardId" />
+          <ScalarProperty Name="BoardName" ColumnName="BoardName" />
+          <ScalarProperty Name="Manufacturer" ColumnName="Manufacturer" />
+          <ScalarProperty Name="Length" ColumnName="Length" />
+          <ScalarProperty Name="Width" ColumnName="Width" />
+          <ScalarProperty Name="Volume" ColumnName="Volume" />
+          <ScalarProperty Name="BoardType" ColumnName="BoardType" />
+          <ScalarProperty Name="PurchaseDate" ColumnName="PurchaseDate" />
+          <ScalarProperty Name="PurchasePrice" ColumnName="PurchasePrice" />
+          <ScalarProperty Name="EstimatedValue" ColumnName="EstimatedValue" />
+          <ScalarProperty Name="PurchaseLocation" ColumnName="PurchaseLocation" />
+          <ScalarProperty Name="YearManufactured" ColumnName="YearManufactured" />
+          <ScalarProperty Name="PictureLocation" ColumnName="PictureLocation" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Booms">
+      <EntityTypeMapping TypeName="BoardSportsDevModel.Boom">
+        <MappingFragment StoreEntitySet="Booms">
+          <ScalarProperty Name="BoomId" ColumnName="BoomId" />
+          <ScalarProperty Name="BoomName" ColumnName="BoomName" />
+          <ScalarProperty Name="Manufacturer" ColumnName="Manufacturer" />
+          <ScalarProperty Name="MinLength" ColumnName="MinLength" />
+          <ScalarProperty Name="MaxLength" ColumnName="MaxLength" />
+          <ScalarProperty Name="PurchaseDate" ColumnName="PurchaseDate" />
+          <ScalarProperty Name="PurchasePrice" ColumnName="PurchasePrice" />
+          <ScalarProperty Name="EstimatedValue" ColumnName="EstimatedValue" />
+          <ScalarProperty Name="PictureLocation" ColumnName="PictureLocation" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Fins">
+      <EntityTypeMapping TypeName="BoardSportsDevModel.Fin">
+        <MappingFragment StoreEntitySet="Fins">
+          <ScalarProperty Name="FinId" ColumnName="FinId" />
+          <ScalarProperty Name="FinStyle" ColumnName="FinStyle" />
+          <ScalarProperty Name="FinType" ColumnName="FinType" />
+          <ScalarProperty Name="Length" ColumnName="Length" />
+          <ScalarProperty Name="Manufacturer" ColumnName="Manufacturer" />
+          <ScalarProperty Name="PurchasePrice" ColumnName="PurchasePrice" />
+          <ScalarProperty Name="PictureLocation" ColumnName="PictureLocation" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Kites">
+      <EntityTypeMapping TypeName="BoardSportsDevModel.Kite">
+        <MappingFragment StoreEntitySet="Kites">
+          <ScalarProperty Name="KiteId" ColumnName="KiteId" />
+          <ScalarProperty Name="KiteName" ColumnName="KiteName" />
+          <ScalarProperty Name="KiteBrand" ColumnName="KiteBrand" />
+          <ScalarProperty Name="Manufacturer" ColumnName="Manufacturer" />
+          <ScalarProperty Name="Size" ColumnName="Size" />
+          <ScalarProperty Name="NumberLines" ColumnName="NumberLines" />
+          <ScalarProperty Name="YearManufactured" ColumnName="YearManufactured" />
+          <ScalarProperty Name="BarBrand" ColumnName="BarBrand" />
+          <ScalarProperty Name="PictureLocation" ColumnName="PictureLocation" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Masts">
+      <EntityTypeMapping TypeName="BoardSportsDevModel.Mast">
+        <MappingFragment StoreEntitySet="Masts">
+          <ScalarProperty Name="MastId" ColumnName="MastId" />
+          <ScalarProperty Name="MastName" ColumnName="MastName" />
+          <ScalarProperty Name="Manufacturer" ColumnName="Manufacturer" />
+          <ScalarProperty Name="CarbonContent" ColumnName="CarbonContent" />
+          <ScalarProperty Name="PurchaseDate" ColumnName="PurchaseDate" />
+          <ScalarProperty Name="PurchasePrice" ColumnName="PurchasePrice" />
+          <ScalarProperty Name="PurchaseLocation" ColumnName="PurchaseLocation" />
+          <ScalarProperty Name="PictureLocation" ColumnName="PictureLocation" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Rigs">
+      <EntityTypeMapping TypeName="BoardSportsDevModel.Rig">
+        <MappingFragment StoreEntitySet="Rigs">
+          <ScalarProperty Name="RigId" ColumnName="RigId" />
+          <ScalarProperty Name="RigDate" ColumnName="RigDate" />
+          <ScalarProperty Name="RigType" ColumnName="RigType" />
+          <ScalarProperty Name="VenueId" ColumnName="VenueId" />
+          <ScalarProperty Name="BoardId" ColumnName="BoardId" />
+          <ScalarProperty Name="BoomId" ColumnName="BoomId" />
+          <ScalarProperty Name="MastId" ColumnName="MastId" />
+          <ScalarProperty Name="SailId" ColumnName="SailId" />
+          <ScalarProperty Name="KiteId" ColumnName="KiteId" />
+          <ScalarProperty Name="FinId" ColumnName="FinId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Sails">
+      <EntityTypeMapping TypeName="BoardSportsDevModel.Sail">
+        <MappingFragment StoreEntitySet="Sails">
+          <ScalarProperty Name="SailId" ColumnName="SailId" />
+          <ScalarProperty Name="SailName" ColumnName="SailName" />
+          <ScalarProperty Name="Manufacturer" ColumnName="Manufacturer" />
+          <ScalarProperty Name="PurchaseDate" ColumnName="PurchaseDate" />
+          <ScalarProperty Name="PurchasePrice" ColumnName="PurchasePrice" />
+          <ScalarProperty Name="Condition" ColumnName="Condition" />
+          <ScalarProperty Name="Size" ColumnName="Size" />
+          <ScalarProperty Name="BoomLength" ColumnName="BoomLength" />
+          <ScalarProperty Name="BaseLength" ColumnName="BaseLength" />
+          <ScalarProperty Name="YearManufactured" ColumnName="YearManufactured" />
+          <ScalarProperty Name="PictureLocation" ColumnName="PictureLocation" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Sessions">
+      <EntityTypeMapping TypeName="BoardSportsDevModel.Session">
+        <MappingFragment StoreEntitySet="Sessions">
+          <ScalarProperty Name="SessionId" ColumnName="SessionId" />
+          <ScalarProperty Name="SessionType" ColumnName="SessionType" />
+          <ScalarProperty Name="SessionDate" ColumnName="SessionDate" />
+          <ScalarProperty Name="SessionDescription" ColumnName="SessionDescription" />
+          <ScalarProperty Name="Duration" ColumnName="Duration" />
+          <ScalarProperty Name="Funfactor" ColumnName="Funfactor" />
+          <ScalarProperty Name="RigId" ColumnName="RigId" />
+          <ScalarProperty Name="VenueId" ColumnName="VenueId" />
+          <ScalarProperty Name="BeersConsumed" ColumnName="BeersConsumed" />
+          <ScalarProperty Name="PeopleInCompany" ColumnName="PeopleInCompany" />
+          <ScalarProperty Name="Notes" ColumnName="Notes" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Venues">
+      <EntityTypeMapping TypeName="BoardSportsDevModel.Venue">
+        <MappingFragment StoreEntitySet="Venues">
+          <ScalarProperty Name="VenueId" ColumnName="VenueId" />
+          <ScalarProperty Name="VenueName" ColumnName="VenueName" />
+          <ScalarProperty Name="PictureLocation" ColumnName="PictureLocation" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

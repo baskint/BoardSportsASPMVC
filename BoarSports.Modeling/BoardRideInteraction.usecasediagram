@@ -1,0 +1,105 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<useCaseModelRoot xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm4="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm5="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/ModelStore" xmlns:dm9="http://schemas.microsoft.com/dsltools/SimpleShapesModel" xmlns:dm10="http://schemas.microsoft.com/VisualStudio/TeamArchitect/SequenceDesigner" dslVersion="1.0.0.0" Id="80131e28-9f5c-4cf2-a40a-cbf2055b37e8" name="BoardRideInteraction" linkedPackageId="3d1d95f3-65f8-4a9f-b64d-99a981af039d" xmlns="http://schemas.microsoft.com/dsltools/UseCaseModel">
+  <profileInstances>
+    <packageHasProfileInstances Id="4d665e45-c44b-4110-98de-c84f1235e938">
+      <profileInstance Id="21f52fc9-ab3b-4220-bcea-f3d9eb525125" name="StandardProfileL2">
+        <elementDefinition Id="e34d544e-0fea-4ed6-ac5e-1b74119ac791" />
+      </profileInstance>
+      <elementDefinition Id="0caec977-1f8c-4ba3-a7db-8cc9ad9cc73b" />
+    </packageHasProfileInstances>
+    <packageHasProfileInstances Id="d6708f82-40bb-435b-9ad8-9e29eeec165d">
+      <profileInstance Id="83d80689-06a0-4412-a253-ba4e38ae0d3b" name="StandardProfileL3">
+        <elementDefinition Id="532ea607-fb19-44b8-8502-3351b05452be" />
+      </profileInstance>
+      <elementDefinition Id="29349502-908c-4fda-9054-c48619c59ed0" />
+    </packageHasProfileInstances>
+  </profileInstances>
+  <packagedElements>
+    <useCaseModelRootHasTypes>
+      <subsystem Id="65acd98e-5045-4a17-907d-f59417ab59b0" name="BoardSports" isAbstract="false" isLeaf="false" isActiveClass="false">
+        <elementDefinition Id="587d8c9e-de00-4922-b9e3-b897d2e1e87c" />
+      </subsystem>
+    </useCaseModelRootHasTypes>
+    <useCaseModelRootHasTypes>
+      <actor Id="124c4e78-27ac-442f-86cb-564c0e177962" name="Rider" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="2454c31d-4217-433b-9570-77993f1f8f14" />
+        <targetEnds>
+          <association Id="79269039-e474-4c89-af88-667dbabc80ff" isDerived="false" sourceEndRoleName="Rider" targetEndRoleName="EnterRideInfo" isLeaf="false" isAbstract="false">
+            <useCaseMoniker Id="dde777fb-6a5a-49c8-93c1-2a176933ee67" LastKnownName="EnterRideInfo" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="1f425914-79b7-400d-b9f6-1f76f362259b" name="Rider" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="65bd4b37-1ccb-42b9-9006-475c4aaeb140" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="390d4a06-66d7-43c2-a84e-d630e865a439" name="EnterRideInfo" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="84f1236b-60ef-459b-92a7-0df6134419ec" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="7b054563-3ddc-4590-b115-b4561576b308" />
+          </association>
+          <association Id="59408349-73aa-409a-9d14-affe80444081" isDerived="false" sourceEndRoleName="Rider" targetEndRoleName="InventoryMagement" isLeaf="false" isAbstract="false">
+            <useCaseMoniker Id="18fc11cc-78d1-4f93-90d9-a2edc061b9cc" LastKnownName="InventoryManagement" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="9d635385-f3bb-44ad-baa6-05ddc0f20f85" name="Rider" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="8c7ba432-ad35-4426-b0aa-3a95c39cf40e" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="5477612e-2a3a-4f4a-aea8-1dc6386bdd17" name="InventoryMagement" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="491d6f99-52f6-4e87-b11b-d9acbb158a99" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="836f414c-8a3e-42dd-a7a8-0782ae3bcfc4" />
+          </association>
+        </targetEnds>
+      </actor>
+    </useCaseModelRootHasTypes>
+    <useCaseModelRootHasTypes>
+      <actor Id="a1747d4c-871c-4fbe-a25e-fe691f30afc3" name="BoardStore" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="47ed2ba0-3375-427e-85cf-9a3b55dd4799" />
+        <targetEnds>
+          <association Id="d870ba3a-4fbe-474d-a0c2-15aa7b42e1a1" isDerived="false" sourceEndRoleName="BoardStore" targetEndRoleName="InventoryMagement" isLeaf="false" isAbstract="false">
+            <useCaseMoniker Id="18fc11cc-78d1-4f93-90d9-a2edc061b9cc" LastKnownName="InventoryManagement" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="10e4c207-3d89-442a-9928-c5ac385f2351" name="BoardStore" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="f4598c49-a40a-4282-913e-cd96d6e8eaed" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="43265c05-25a1-4baa-8f20-645babdc8569" name="InventoryMagement" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="fa9b07b8-6023-4c6f-b1fc-c380f5d72bec" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="898ae498-fedc-418e-80bc-85f4ee4827b1" />
+          </association>
+        </targetEnds>
+      </actor>
+    </useCaseModelRootHasTypes>
+    <packageHasNamedElement>
+      <useCase Id="dde777fb-6a5a-49c8-93c1-2a176933ee67" name="EnterRideInfo" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="c6c04721-b1e2-469e-aa18-5db4cbd254ab" />
+        <subjects>
+          <subsystemMoniker Id="65acd98e-5045-4a17-907d-f59417ab59b0" LastKnownName="BoardSports" />
+        </subjects>
+      </useCase>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase Id="18fc11cc-78d1-4f93-90d9-a2edc061b9cc" name="InventoryManagement" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="d790596a-f8fe-4aef-b901-6904a8586f5d" />
+        <subjects>
+          <subsystemMoniker Id="65acd98e-5045-4a17-907d-f59417ab59b0" LastKnownName="BoardSports" />
+        </subjects>
+      </useCase>
+    </packageHasNamedElement>
+  </packagedElements>
+  <package Id="3d1d95f3-65f8-4a9f-b64d-99a981af039d" name="BoarSports.Modeling">
+    <elementDefinition Id="7c9828bf-2e6f-416b-851d-d2c8e5cbdc9a" />
+  </package>
+</useCaseModelRoot>

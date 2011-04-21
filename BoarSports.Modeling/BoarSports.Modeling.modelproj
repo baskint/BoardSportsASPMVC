@@ -1,0 +1,73 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{ead61db6-1e71-4971-82e1-332abb666d13}</ProjectGuid>
+    <ArchitectureToolsVersion>1.0.0.0</ArchitectureToolsVersion>
+    <Name>BoarSports.Modeling</Name>
+    <RootNamespace>BoarSports.Modeling</RootNamespace>
+    <SccProjectName>SAK</SccProjectName>
+    <SccProvider>SAK</SccProvider>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccLocalPath>SAK</SccLocalPath>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <OutputPath>bin\Debug\</OutputPath>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <OutputPath>bin\Release\</OutputPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildExtensionsPath)\Microsoft\VisualStudio\v10.0\ArchitectureTools\Microsoft.VisualStudio.TeamArchitect.ModelingProject.targets" />
+  <ItemGroup>
+    <Content Include="BoardRideInteraction.usecasediagram">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="BoardRideInteraction.usecasediagram.layout">
+      <SubType>Content</SubType>
+      <DependentUpon>BoardRideInteraction.usecasediagram</DependentUpon>
+    </Content>
+    <Folder Include="ModelDefinition\" />
+    <Content Include="BoardSports.componentdiagram">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="BoardSports.componentdiagram.layout">
+      <SubType>Content</SubType>
+      <DependentUpon>BoardSports.componentdiagram</DependentUpon>
+    </Content>
+    <Content Include="EquipmentInventory.sequencediagram">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="EquipmentInventory.sequencediagram.layout">
+      <SubType>Content</SubType>
+      <DependentUpon>EquipmentInventory.sequencediagram</DependentUpon>
+    </Content>
+    <Content Include="ModelDefinition\BoarSports.Modeling.uml">
+      <SubType>Content</SubType>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Validate Include="BoardSportsLayers.layerdiagram">
+      <SubType>Content</SubType>
+    </Validate>
+    <Validate Include="BoardSportsLayers.layerdiagram.layout">
+      <SubType>Content</SubType>
+      <DependentUpon>BoardSportsLayers.layerdiagram</DependentUpon>
+    </Validate>
+    <Validate Include="BoardSportsLayers.layerdiagram.suppressions">
+      <SubType>Content</SubType>
+      <DependentUpon>BoardSportsLayers.layerdiagram</DependentUpon>
+    </Validate>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\BoardSports.DAL\BoardSports.DAL.csproj">
+      <Name>BoardSports.DAL</Name>
+      <Project>{ea936470-b201-4ea1-a93f-008ff0bb8f7f}</Project>
+    </ProjectReference>
+    <ProjectReference Include="..\BoardSports.Services\BoardSports.Services.csproj">
+      <Name>BoardSports.Services</Name>
+      <Project>{3b04dc45-b70c-4ba9-9127-3c5bf42e3b69}</Project>
+    </ProjectReference>
+  </ItemGroup>
+</Project>

@@ -1,0 +1,7 @@
+C:\Users\baskint\Documents\Visual Studio 2010\Projects\BoardSports\BoardSports.Web\bin\BoardSports.Web.dll
+C:\Users\baskint\Documents\Visual Studio 2010\Projects\BoardSports\BoardSports.Web\bin\BoardSports.Web.pdb
+C:\Users\baskint\Documents\Visual Studio 2010\Projects\BoardSports\BoardSports.Web\obj\Debug\ResolveAssemblyReference.cache
+C:\Users\baskint\Documents\Visual Studio 2010\Projects\BoardSports\BoardSports.Web\obj\Debug\BoardSports.Web.dll
+C:\Users\baskint\Documents\Visual Studio 2010\Projects\BoardSports\BoardSports.Web\obj\Debug\BoardSports.Web.pdb
+C:\Users\baskint\Documents\Visual Studio 2010\Projects\BoardSports\BoardSports.Web\bin\EntityFramework.dll
+C:\Users\baskint\Documents\Visual Studio 2010\Projects\BoardSports\BoardSports.Web\bin\EntityFramework.xml

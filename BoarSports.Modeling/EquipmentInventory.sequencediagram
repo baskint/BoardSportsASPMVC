@@ -1,0 +1,158 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<SequenceDesignerModel xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm4="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm5="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/ModelStore" xmlns:dm9="http://schemas.microsoft.com/dsltools/SimpleShapesModel" xmlns:dm10="http://schemas.microsoft.com/dsltools/UseCaseModel" dslVersion="1.0.0.0" Id="dcc807f2-55ce-4868-b4d3-d46d62a54cc4" name="EquipmentInventory" linkedPackageId="8a16e5c6-acf6-48dd-a2d3-4270bdd38c7c" xmlns="http://schemas.microsoft.com/VisualStudio/TeamArchitect/SequenceDesigner">
+  <profileInstances>
+    <packageHasProfileInstances Id="b69b7a67-74c7-474f-bd83-d637e7f7addc">
+      <profileInstance Id="d156741c-d20e-461a-b027-d60b1874ac88" name="StandardProfileL2">
+        <elementDefinition Id="e34d544e-0fea-4ed6-ac5e-1b74119ac791" />
+      </profileInstance>
+      <elementDefinition Id="0caec977-1f8c-4ba3-a7db-8cc9ad9cc73b" />
+    </packageHasProfileInstances>
+    <packageHasProfileInstances Id="9f287bf9-5dec-42b4-8fc9-b68a2b3623f7">
+      <profileInstance Id="b3f5f721-1456-40a6-a399-3515fd5d760e" name="StandardProfileL3">
+        <elementDefinition Id="532ea607-fb19-44b8-8502-3351b05452be" />
+      </profileInstance>
+      <elementDefinition Id="29349502-908c-4fda-9054-c48619c59ed0" />
+    </packageHasProfileInstances>
+  </profileInstances>
+  <packagedElements>
+    <packageHasNamedElement>
+      <interaction Id="11d935e8-778e-45ef-9c0b-43b5f54628e6" name="EquipmentInventory" collapseFragmentsFlag="false" isActiveClass="false" isAbstract="false" isLeaf="false" isReentrant="false">
+        <elementDefinition Id="fa2d2fdd-7868-4bde-9c19-603a548cfeaf" />
+        <fragments>
+          <behaviorExecutionSpecification Id="3726db97-510d-4c0e-97b9-0bc99cc64cf8" name="BehaviorExecutionSpecification1">
+            <elementDefinition Id="7274f1fa-bcda-4b33-8971-b7dd1eefa218" />
+            <coveredLifelines>
+              <lifelineMoniker Id="07092d5c-7fb2-4ef6-9295-6754884b5dfd" LastKnownName="Inventory" />
+            </coveredLifelines>
+            <finish>
+              <executionOccurrenceSpecificationMoniker Id="d81e0d83-363e-4525-9ed0-fe830eb27705" LastKnownName="ExecutionOccurrenceSpecification2" />
+            </finish>
+            <start>
+              <executionOccurrenceSpecificationMoniker Id="0fc479e1-70c9-48dd-8b6c-3e8782c25335" LastKnownName="ExecutionOccurrenceSpecification1" />
+            </start>
+            <nestedOccurrences>
+              <messageOccurrenceSpecificationMoniker Id="b8db9035-533f-414b-ab7e-7fe51609965f" LastKnownName="MessageOccurrenceSpecification2" />
+              <messageOccurrenceSpecificationMoniker Id="bd9f2551-b97f-40e5-9452-a9389d0f5dce" LastKnownName="MessageOccurrenceSpecification3" />
+            </nestedOccurrences>
+          </behaviorExecutionSpecification>
+          <executionOccurrenceSpecification Id="0fc479e1-70c9-48dd-8b6c-3e8782c25335" name="ExecutionOccurrenceSpecification1">
+            <elementDefinition Id="73217bb6-ae69-47e2-9275-632323a6840a" />
+            <event>
+              <executionOccurrenceSpecificationReferencesEvent>
+                <executionEventMoniker Id="214504cd-1c7f-4c23-a961-7fe2c4278b7c" LastKnownName="ExecutionEvent" />
+              </executionOccurrenceSpecificationReferencesEvent>
+            </event>
+            <covered>
+              <lifelineMoniker Id="07092d5c-7fb2-4ef6-9295-6754884b5dfd" LastKnownName="Inventory" />
+            </covered>
+          </executionOccurrenceSpecification>
+          <messageOccurrenceSpecification Id="1c0c557a-f410-4b59-b9c7-de199260e471" name="MessageOccurrenceSpecification1">
+            <elementDefinition Id="2e1215bb-3bb9-4ef0-a52b-a509b77787ee" />
+            <covered>
+              <lifelineMoniker Id="1ca3da86-7693-4655-a2bc-b9f9d5d24f5b" LastKnownName="Rider" />
+            </covered>
+          </messageOccurrenceSpecification>
+          <messageOccurrenceSpecification Id="b8db9035-533f-414b-ab7e-7fe51609965f" name="MessageOccurrenceSpecification2">
+            <elementDefinition Id="aaabf844-74d2-4ab6-bf36-069045eed0e3" />
+            <covered>
+              <lifelineMoniker Id="07092d5c-7fb2-4ef6-9295-6754884b5dfd" LastKnownName="Inventory" />
+            </covered>
+          </messageOccurrenceSpecification>
+          <messageOccurrenceSpecification Id="bd9f2551-b97f-40e5-9452-a9389d0f5dce" name="MessageOccurrenceSpecification3">
+            <elementDefinition Id="ab866f78-d219-450e-a9d8-d65cadb20646" />
+            <covered>
+              <lifelineMoniker Id="07092d5c-7fb2-4ef6-9295-6754884b5dfd" LastKnownName="Inventory" />
+            </covered>
+          </messageOccurrenceSpecification>
+          <messageOccurrenceSpecification Id="944c0b59-0dff-4b36-a654-8e1bd8d7b210" name="MessageOccurrenceSpecification4">
+            <elementDefinition Id="52c009de-1198-41ab-9f29-49a1c4a516e3" />
+            <covered>
+              <lifelineMoniker Id="1ca3da86-7693-4655-a2bc-b9f9d5d24f5b" LastKnownName="Rider" />
+            </covered>
+          </messageOccurrenceSpecification>
+          <executionOccurrenceSpecification Id="d81e0d83-363e-4525-9ed0-fe830eb27705" name="ExecutionOccurrenceSpecification2">
+            <elementDefinition Id="485360b4-6bad-48f1-89b7-310a8fdc6dc2" />
+            <event>
+              <executionOccurrenceSpecificationReferencesEvent>
+                <executionEventMoniker Id="b820c89b-a3c0-4923-b53c-081cc8bb15bb" LastKnownName="ExecutionEvent" />
+              </executionOccurrenceSpecificationReferencesEvent>
+            </event>
+            <covered>
+              <lifelineMoniker Id="07092d5c-7fb2-4ef6-9295-6754884b5dfd" LastKnownName="Inventory" />
+            </covered>
+          </executionOccurrenceSpecification>
+        </fragments>
+        <lifelines>
+          <lifeline Id="1ca3da86-7693-4655-a2bc-b9f9d5d24f5b" name="Rider" isActor="true" lifelineDisplayName="Rider">
+            <elementDefinition Id="696eb3c6-e561-4c1a-b1fc-27529cd44e63" />
+            <represents>
+              <propertyMoniker Id="c54b94be-b484-4a70-885f-311fbe3f9abc" />
+            </represents>
+            <topLevelOccurrences>
+              <messageOccurrenceSpecificationMoniker Id="1c0c557a-f410-4b59-b9c7-de199260e471" LastKnownName="MessageOccurrenceSpecification1" />
+              <messageOccurrenceSpecificationMoniker Id="944c0b59-0dff-4b36-a654-8e1bd8d7b210" LastKnownName="MessageOccurrenceSpecification4" />
+            </topLevelOccurrences>
+          </lifeline>
+          <lifeline Id="07092d5c-7fb2-4ef6-9295-6754884b5dfd" name="Inventory" isActor="false" lifelineDisplayName="Inventory">
+            <elementDefinition Id="3bcf4634-747f-4538-86eb-cb30ad1872f6" />
+            <topLevelOccurrences>
+              <executionOccurrenceSpecificationMoniker Id="0fc479e1-70c9-48dd-8b6c-3e8782c25335" LastKnownName="ExecutionOccurrenceSpecification1" />
+              <executionOccurrenceSpecificationMoniker Id="d81e0d83-363e-4525-9ed0-fe830eb27705" LastKnownName="ExecutionOccurrenceSpecification2" />
+            </topLevelOccurrences>
+          </lifeline>
+        </lifelines>
+        <messages>
+          <message Id="1489a754-9756-4871-a6bf-7da53ca845b0" name="EnterBoardInfo" messageKind="Complete" messageSort="SynchCall" createSelfMessage="false">
+            <elementDefinition Id="607333fd-be99-4d97-b3a5-bfa3226df6de" />
+            <sendEvent>
+              <messageOccurrenceSpecificationMoniker Id="1c0c557a-f410-4b59-b9c7-de199260e471" LastKnownName="MessageOccurrenceSpecification1" />
+            </sendEvent>
+            <receiveEvent>
+              <messageOccurrenceSpecificationMoniker Id="b8db9035-533f-414b-ab7e-7fe51609965f" LastKnownName="MessageOccurrenceSpecification2" />
+            </receiveEvent>
+          </message>
+          <message Id="378aa790-b5af-41a8-9762-d5561b33c4ea" name="&lt;&lt;return&gt;&gt;" messageKind="Complete" messageSort="Reply" createSelfMessage="false">
+            <elementDefinition Id="d763509b-e1bd-4541-9014-0aeef80233d0" />
+            <sendEvent>
+              <messageOccurrenceSpecificationMoniker Id="bd9f2551-b97f-40e5-9452-a9389d0f5dce" LastKnownName="MessageOccurrenceSpecification3" />
+            </sendEvent>
+            <receiveEvent>
+              <messageOccurrenceSpecificationMoniker Id="944c0b59-0dff-4b36-a654-8e1bd8d7b210" LastKnownName="MessageOccurrenceSpecification4" />
+            </receiveEvent>
+          </message>
+        </messages>
+        <ownedAttributesInternal>
+          <property Id="c54b94be-b484-4a70-885f-311fbe3f9abc" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <elementDefinition Id="a0dabf45-6506-4a98-8349-9a88f2d5035f" />
+            <type_NamedElement>
+              <referencedTypeMoniker Id="8e8fb2b4-0514-43d0-8968-38d1547d2169" LastKnownName="Rider" />
+            </type_NamedElement>
+          </property>
+        </ownedAttributesInternal>
+      </interaction>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <referencedType Id="5dd14fa0-e1d8-4eca-be77-8e3ae32cb704" name="BoardStore" isAbstract="false" isLeaf="false" cachedFullName="BoarSports.Modeling::BoardStore">
+        <elementDefinition Id="47ed2ba0-3375-427e-85cf-9a3b55dd4799" />
+      </referencedType>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <referencedType Id="8e8fb2b4-0514-43d0-8968-38d1547d2169" name="Rider" isAbstract="false" isLeaf="false" cachedFullName="BoarSports.Modeling::Rider">
+        <elementDefinition Id="2454c31d-4217-433b-9570-77993f1f8f14" />
+      </referencedType>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <executionEvent Id="214504cd-1c7f-4c23-a961-7fe2c4278b7c" name="ExecutionEvent">
+        <elementDefinition Id="8aa89586-4a2e-4620-8ca6-35f4a8706069" />
+      </executionEvent>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <executionEvent Id="b820c89b-a3c0-4923-b53c-081cc8bb15bb" name="ExecutionEvent">
+        <elementDefinition Id="ad2edfcd-c818-47ff-ae04-1a22fa5eb842" />
+      </executionEvent>
+    </packageHasNamedElement>
+  </packagedElements>
+  <package Id="8a16e5c6-acf6-48dd-a2d3-4270bdd38c7c" name="BoarSports.Modeling">
+    <elementDefinition Id="7c9828bf-2e6f-416b-851d-d2c8e5cbdc9a" />
+  </package>
+</SequenceDesignerModel>

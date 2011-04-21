@@ -1,0 +1,5 @@
+C:\Users\baskint\Documents\Visual Studio 2010\Projects\BoardSports\BoardSports\bin\BoardSports.dll
+C:\Users\baskint\Documents\Visual Studio 2010\Projects\BoardSports\BoardSports\bin\BoardSports.pdb
+C:\Users\baskint\Documents\Visual Studio 2010\Projects\BoardSports\BoardSports\obj\Debug\ResolveAssemblyReference.cache
+C:\Users\baskint\Documents\Visual Studio 2010\Projects\BoardSports\BoardSports\obj\Debug\BoardSports.dll
+C:\Users\baskint\Documents\Visual Studio 2010\Projects\BoardSports\BoardSports\obj\Debug\BoardSports.pdb

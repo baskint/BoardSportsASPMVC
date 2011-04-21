@@ -1,0 +1,44 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<layerModel xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/SimpleShapesModel" dslVersion="1.0.0.0" Id="55d73282-daae-4afd-a7b0-d4752299b06e" xmlns="http://schemas.microsoft.com/VisualStudio/TeamArchitect/LayerDesigner">
+  <layers>
+    <layer Id="a3817f6d-a893-4e54-bee3-8f78472d51ee" name="UI">
+      <references>
+        <reference Id="9b3947d9-9ea3-4ff4-98ff-daab07bd59a1" name="BoardSports.Web">
+          <ArtifactNode Label="BoardSports.Web" Category="CodeSchema_Project" Id="(Assembly=&quot;$(PersonalUri)/Visual Studio 2010/Projects/BoardSports/BoardSports.Web/BoardSports.Web.csproj&quot;)">
+            <Category Ref="CodeSchema_SourceFile" />
+          </ArtifactNode>
+          <ExpandedNode Id="(Assembly=BoardSports.Web)" Label="BoardSports.Web.dll" Category="FileSystem.Category.FileOfType.dll">
+            <LinkCategory Ref="Produces" />
+            <LinkCategory Ref="Represents" />
+          </ExpandedNode>
+        </reference>
+      </references>
+    </layer>
+    <layer Id="c60af4f1-581f-435e-88d1-3fc380f644c3" name="Services">
+      <references>
+        <reference Id="fe14da4d-1a54-4754-a70c-0e0ca175282a" name="BoardSports.Services">
+          <ArtifactNode Label="BoardSports.Services" Category="CodeSchema_Project" Id="(Assembly=&quot;$(PersonalUri)/Visual Studio 2010/Projects/BoardSports/BoardSports.Services/BoardSports.Services.csproj&quot;)">
+            <Category Ref="CodeSchema_SourceFile" />
+          </ArtifactNode>
+          <ExpandedNode Id="(Assembly=BoardSports.Services)" Label="BoardSports.Services.exe" Category="FileSystem.Category.FileOfType.exe">
+            <LinkCategory Ref="Produces" />
+            <LinkCategory Ref="Represents" />
+          </ExpandedNode>
+        </reference>
+      </references>
+    </layer>
+    <layer Id="2f46950a-6195-436e-89a0-b21f684740a5" name="DataAccess">
+      <references>
+        <reference Id="56414707-33db-4377-a31d-833ebec7dcbd" name="BoardSports.DAL">
+          <ArtifactNode Label="BoardSports.DAL" Category="CodeSchema_Project" Id="(Assembly=&quot;$(PersonalUri)/Visual Studio 2010/Projects/BoardSports/BoardSports.DAL/BoardSports.DAL.csproj&quot;)">
+            <Category Ref="CodeSchema_SourceFile" />
+          </ArtifactNode>
+          <ExpandedNode Id="(Assembly=BoardSports.DAL)" Label="BoardSports.DAL.dll" Category="FileSystem.Category.FileOfType.dll">
+            <LinkCategory Ref="Produces" />
+            <LinkCategory Ref="Represents" />
+          </ExpandedNode>
+        </reference>
+      </references>
+    </layer>
+  </layers>
+</layerModel>

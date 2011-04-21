@@ -1,0 +1,5 @@
+C:\Users\baskint\Documents\Visual Studio 2010\Projects\BoardSports\BoarSports.Modeling\bin\Debug\BoardSports.DAL.dll
+C:\Users\baskint\Documents\Visual Studio 2010\Projects\BoardSports\BoarSports.Modeling\bin\Debug\BoardSports.Services.exe
+C:\Users\baskint\Documents\Visual Studio 2010\Projects\BoardSports\BoarSports.Modeling\bin\Debug\BoardSports.DAL.pdb
+C:\Users\baskint\Documents\Visual Studio 2010\Projects\BoardSports\BoarSports.Modeling\bin\Debug\BoardSports.Services.pdb
+C:\Users\baskint\Documents\Visual Studio 2010\Projects\BoardSports\BoarSports.Modeling\obj\Debug\ResolveAssemblyReference.cache

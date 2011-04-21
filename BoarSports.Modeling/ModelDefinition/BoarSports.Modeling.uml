@@ -1,0 +1,550 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<modelStoreModel xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm4="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm5="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/SimpleShapesModel" xmlns:dm9="http://schemas.microsoft.com/dsltools/UseCaseModel" xmlns:dm10="http://schemas.microsoft.com/VisualStudio/TeamArchitect/SequenceDesigner" xmlns:dm11="http://schemas.microsoft.com/VisualStudio/TeamArchitect/ComponentDesigner"
+  dslVersion="1.0.0.0"
+  Id="7c9828bf-2e6f-416b-851d-d2c8e5cbdc9a"
+  name="BoarSports.Modeling" xmlns="http://schemas.microsoft.com/dsltools/ModelStore">
+  <profileInstances>
+    <packageHasProfileInstances
+      Id="0caec977-1f8c-4ba3-a7db-8cc9ad9cc73b">
+      <profileInstance
+        Id="e34d544e-0fea-4ed6-ac5e-1b74119ac791"
+        name="StandardProfileL2" />
+    </packageHasProfileInstances>
+    <packageHasProfileInstances
+      Id="29349502-908c-4fda-9054-c48619c59ed0">
+      <profileInstance
+        Id="532ea607-fb19-44b8-8502-3351b05452be"
+        name="StandardProfileL3" />
+    </packageHasProfileInstances>
+  </profileInstances>
+  <packagedElements>
+    <packageHasNamedElement>
+      <subsystem
+        Id="587d8c9e-de00-4922-b9e3-b897d2e1e87c"
+        name="BoardSports"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <actor
+        Id="2454c31d-4217-433b-9570-77993f1f8f14"
+        name="Rider"
+        isAbstract="false"
+        isLeaf="false">
+        <targetEnds>
+          <association
+            Id="7b054563-3ddc-4590-b115-b4561576b308"
+            isDerived="false"
+            sourceEndRoleName="Rider"
+            targetEndRoleName="EnterRideInfo"
+            isLeaf="false"
+            isAbstract="false">
+            <useCaseMoniker
+              Id="c6c04721-b1e2-469e-aa18-5db4cbd254ab"
+              LastKnownName="EnterRideInfo"
+              LastKnownLocation="BoarSports.Modeling.uml" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="65bd4b37-1ccb-42b9-9006-475c4aaeb140"
+                  name="Rider"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false"
+                  isNavigableOwned="false" />
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="84f1236b-60ef-459b-92a7-0df6134419ec"
+                  name="EnterRideInfo"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false" />
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+          <association
+            Id="836f414c-8a3e-42dd-a7a8-0782ae3bcfc4"
+            isDerived="false"
+            sourceEndRoleName="Rider"
+            targetEndRoleName="InventoryMagement"
+            isLeaf="false"
+            isAbstract="false">
+            <useCaseMoniker
+              Id="d790596a-f8fe-4aef-b901-6904a8586f5d"
+              LastKnownName="InventoryManagement"
+              LastKnownLocation="BoarSports.Modeling.uml" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="8c7ba432-ad35-4426-b0aa-3a95c39cf40e"
+                  name="Rider"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false"
+                  isNavigableOwned="false" />
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="491d6f99-52f6-4e87-b11b-d9acbb158a99"
+                  name="InventoryMagement"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false" />
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+        </targetEnds>
+      </actor>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <actor
+        Id="47ed2ba0-3375-427e-85cf-9a3b55dd4799"
+        name="BoardStore"
+        isAbstract="false"
+        isLeaf="false">
+        <targetEnds>
+          <association
+            Id="898ae498-fedc-418e-80bc-85f4ee4827b1"
+            isDerived="false"
+            sourceEndRoleName="BoardStore"
+            targetEndRoleName="InventoryMagement"
+            isLeaf="false"
+            isAbstract="false">
+            <useCaseMoniker
+              Id="d790596a-f8fe-4aef-b901-6904a8586f5d"
+              LastKnownName="InventoryManagement"
+              LastKnownLocation="BoarSports.Modeling.uml" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="f4598c49-a40a-4282-913e-cd96d6e8eaed"
+                  name="BoardStore"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false"
+                  isNavigableOwned="false" />
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="fa9b07b8-6023-4c6f-b1fc-c380f5d72bec"
+                  name="InventoryMagement"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false" />
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+        </targetEnds>
+      </actor>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase
+        Id="c6c04721-b1e2-469e-aa18-5db4cbd254ab"
+        name="EnterRideInfo"
+        isAbstract="false"
+        isLeaf="false">
+        <subjects>
+          <subsystemMoniker
+            Id="587d8c9e-de00-4922-b9e3-b897d2e1e87c"
+            LastKnownName="BoardSports"
+            LastKnownLocation="BoarSports.Modeling.uml" />
+        </subjects>
+      </useCase>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase
+        Id="d790596a-f8fe-4aef-b901-6904a8586f5d"
+        name="InventoryManagement"
+        isAbstract="false"
+        isLeaf="false">
+        <subjects>
+          <subsystemMoniker
+            Id="587d8c9e-de00-4922-b9e3-b897d2e1e87c"
+            LastKnownName="BoardSports"
+            LastKnownLocation="BoarSports.Modeling.uml" />
+        </subjects>
+      </useCase>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <interaction
+        Id="fa2d2fdd-7868-4bde-9c19-603a548cfeaf"
+        name="EquipmentInventory"
+        collapseFragmentsFlag="false"
+        isActiveClass="false"
+        isAbstract="false"
+        isLeaf="false"
+        isReentrant="false">
+        <fragments>
+          <behaviorExecutionSpecification
+            Id="7274f1fa-bcda-4b33-8971-b7dd1eefa218"
+            name="BehaviorExecutionSpecification1">
+            <coveredLifelines>
+              <lifelineMoniker
+                Id="3bcf4634-747f-4538-86eb-cb30ad1872f6"
+                LastKnownName="Inventory"
+                LastKnownLocation="BoarSports.Modeling.uml" />
+            </coveredLifelines>
+            <finish>
+              <executionOccurrenceSpecificationMoniker
+                Id="485360b4-6bad-48f1-89b7-310a8fdc6dc2"
+                LastKnownName="ExecutionOccurrenceSpecification2"
+                LastKnownLocation="BoarSports.Modeling.uml" />
+            </finish>
+            <start>
+              <executionOccurrenceSpecificationMoniker
+                Id="73217bb6-ae69-47e2-9275-632323a6840a"
+                LastKnownName="ExecutionOccurrenceSpecification1"
+                LastKnownLocation="BoarSports.Modeling.uml" />
+            </start>
+            <nestedOccurrences>
+              <messageOccurrenceSpecificationMoniker
+                Id="aaabf844-74d2-4ab6-bf36-069045eed0e3"
+                LastKnownName="MessageOccurrenceSpecification2"
+                LastKnownLocation="BoarSports.Modeling.uml" />
+              <messageOccurrenceSpecificationMoniker
+                Id="ab866f78-d219-450e-a9d8-d65cadb20646"
+                LastKnownName="MessageOccurrenceSpecification3"
+                LastKnownLocation="BoarSports.Modeling.uml" />
+            </nestedOccurrences>
+          </behaviorExecutionSpecification>
+          <executionOccurrenceSpecification
+            Id="73217bb6-ae69-47e2-9275-632323a6840a"
+            name="ExecutionOccurrenceSpecification1">
+            <event>
+              <executionOccurrenceSpecificationReferencesEvent>
+                <executionEventMoniker
+                  Id="8aa89586-4a2e-4620-8ca6-35f4a8706069"
+                  LastKnownName="ExecutionEvent"
+                  LastKnownLocation="BoarSports.Modeling.uml" />
+              </executionOccurrenceSpecificationReferencesEvent>
+            </event>
+            <covered>
+              <lifelineMoniker
+                Id="3bcf4634-747f-4538-86eb-cb30ad1872f6"
+                LastKnownName="Inventory"
+                LastKnownLocation="BoarSports.Modeling.uml" />
+            </covered>
+          </executionOccurrenceSpecification>
+          <messageOccurrenceSpecification
+            Id="2e1215bb-3bb9-4ef0-a52b-a509b77787ee"
+            name="MessageOccurrenceSpecification1">
+            <covered>
+              <lifelineMoniker
+                Id="696eb3c6-e561-4c1a-b1fc-27529cd44e63"
+                LastKnownName="Rider"
+                LastKnownLocation="BoarSports.Modeling.uml" />
+            </covered>
+          </messageOccurrenceSpecification>
+          <messageOccurrenceSpecification
+            Id="aaabf844-74d2-4ab6-bf36-069045eed0e3"
+            name="MessageOccurrenceSpecification2">
+            <covered>
+              <lifelineMoniker
+                Id="3bcf4634-747f-4538-86eb-cb30ad1872f6"
+                LastKnownName="Inventory"
+                LastKnownLocation="BoarSports.Modeling.uml" />
+            </covered>
+          </messageOccurrenceSpecification>
+          <messageOccurrenceSpecification
+            Id="ab866f78-d219-450e-a9d8-d65cadb20646"
+            name="MessageOccurrenceSpecification3">
+            <covered>
+              <lifelineMoniker
+                Id="3bcf4634-747f-4538-86eb-cb30ad1872f6"
+                LastKnownName="Inventory"
+                LastKnownLocation="BoarSports.Modeling.uml" />
+            </covered>
+          </messageOccurrenceSpecification>
+          <messageOccurrenceSpecification
+            Id="52c009de-1198-41ab-9f29-49a1c4a516e3"
+            name="MessageOccurrenceSpecification4">
+            <covered>
+              <lifelineMoniker
+                Id="696eb3c6-e561-4c1a-b1fc-27529cd44e63"
+                LastKnownName="Rider"
+                LastKnownLocation="BoarSports.Modeling.uml" />
+            </covered>
+          </messageOccurrenceSpecification>
+          <executionOccurrenceSpecification
+            Id="485360b4-6bad-48f1-89b7-310a8fdc6dc2"
+            name="ExecutionOccurrenceSpecification2">
+            <event>
+              <executionOccurrenceSpecificationReferencesEvent>
+                <executionEventMoniker
+                  Id="ad2edfcd-c818-47ff-ae04-1a22fa5eb842"
+                  LastKnownName="ExecutionEvent"
+                  LastKnownLocation="BoarSports.Modeling.uml" />
+              </executionOccurrenceSpecificationReferencesEvent>
+            </event>
+            <covered>
+              <lifelineMoniker
+                Id="3bcf4634-747f-4538-86eb-cb30ad1872f6"
+                LastKnownName="Inventory"
+                LastKnownLocation="BoarSports.Modeling.uml" />
+            </covered>
+          </executionOccurrenceSpecification>
+        </fragments>
+        <lifelines>
+          <lifeline
+            Id="696eb3c6-e561-4c1a-b1fc-27529cd44e63"
+            name="Rider"
+            isActor="true"
+            lifelineDisplayName="Rider">
+            <represents>
+              <propertyMoniker
+                Id="a0dabf45-6506-4a98-8349-9a88f2d5035f"
+                LastKnownLocation="BoarSports.Modeling.uml" />
+            </represents>
+            <topLevelOccurrences>
+              <messageOccurrenceSpecificationMoniker
+                Id="2e1215bb-3bb9-4ef0-a52b-a509b77787ee"
+                LastKnownName="MessageOccurrenceSpecification1"
+                LastKnownLocation="BoarSports.Modeling.uml" />
+              <messageOccurrenceSpecificationMoniker
+                Id="52c009de-1198-41ab-9f29-49a1c4a516e3"
+                LastKnownName="MessageOccurrenceSpecification4"
+                LastKnownLocation="BoarSports.Modeling.uml" />
+            </topLevelOccurrences>
+          </lifeline>
+          <lifeline
+            Id="3bcf4634-747f-4538-86eb-cb30ad1872f6"
+            name="Inventory"
+            isActor="false"
+            lifelineDisplayName="Inventory">
+            <topLevelOccurrences>
+              <executionOccurrenceSpecificationMoniker
+                Id="73217bb6-ae69-47e2-9275-632323a6840a"
+                LastKnownName="ExecutionOccurrenceSpecification1"
+                LastKnownLocation="BoarSports.Modeling.uml" />
+              <executionOccurrenceSpecificationMoniker
+                Id="485360b4-6bad-48f1-89b7-310a8fdc6dc2"
+                LastKnownName="ExecutionOccurrenceSpecification2"
+                LastKnownLocation="BoarSports.Modeling.uml" />
+            </topLevelOccurrences>
+          </lifeline>
+        </lifelines>
+        <messages>
+          <message
+            Id="607333fd-be99-4d97-b3a5-bfa3226df6de"
+            name="EnterBoardInfo"
+            messageKind="Complete"
+            messageSort="SynchCall"
+            createSelfMessage="false">
+            <sendEvent>
+              <messageOccurrenceSpecificationMoniker
+                Id="2e1215bb-3bb9-4ef0-a52b-a509b77787ee"
+                LastKnownName="MessageOccurrenceSpecification1"
+                LastKnownLocation="BoarSports.Modeling.uml" />
+            </sendEvent>
+            <receiveEvent>
+              <messageOccurrenceSpecificationMoniker
+                Id="aaabf844-74d2-4ab6-bf36-069045eed0e3"
+                LastKnownName="MessageOccurrenceSpecification2"
+                LastKnownLocation="BoarSports.Modeling.uml" />
+            </receiveEvent>
+          </message>
+          <message
+            Id="d763509b-e1bd-4541-9014-0aeef80233d0"
+            name="&lt;&lt;return&gt;&gt;"
+            messageKind="Complete"
+            messageSort="Reply"
+            createSelfMessage="false">
+            <sendEvent>
+              <messageOccurrenceSpecificationMoniker
+                Id="ab866f78-d219-450e-a9d8-d65cadb20646"
+                LastKnownName="MessageOccurrenceSpecification3"
+                LastKnownLocation="BoarSports.Modeling.uml" />
+            </sendEvent>
+            <receiveEvent>
+              <messageOccurrenceSpecificationMoniker
+                Id="52c009de-1198-41ab-9f29-49a1c4a516e3"
+                LastKnownName="MessageOccurrenceSpecification4"
+                LastKnownLocation="BoarSports.Modeling.uml" />
+            </receiveEvent>
+          </message>
+        </messages>
+        <ownedAttributesInternal>
+          <property
+            Id="a0dabf45-6506-4a98-8349-9a88f2d5035f"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false">
+            <type_NamedElement>
+              <actorMoniker
+                Id="2454c31d-4217-433b-9570-77993f1f8f14"
+                LastKnownName="Rider"
+                LastKnownLocation="BoarSports.Modeling.uml" />
+            </type_NamedElement>
+          </property>
+        </ownedAttributesInternal>
+      </interaction>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <executionEvent
+        Id="8aa89586-4a2e-4620-8ca6-35f4a8706069"
+        name="ExecutionEvent" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <executionEvent
+        Id="ad2edfcd-c818-47ff-ae04-1a22fa5eb842"
+        name="ExecutionEvent" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <component
+        Id="61eeb79e-d20b-4cf8-a38c-b6f72f64ce02"
+        name="WebBrowser"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false">
+        <ownedAttributesInternal>
+          <requiredInterface
+            Id="9afeee8c-4388-4618-9b8f-189a6eb3f5ff"
+            name="Port1"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false"
+            isService="false"
+            isBehavior="false">
+            <suppliersInternal>
+              <dependency
+                Id="dabaa13c-19d0-42ad-8ee8-60043a4daad5">
+                <providedInterfaceMoniker
+                  Id="c5a19a3c-1b56-410a-8d8d-5438628d8b62"
+                  LastKnownName="Port1"
+                  LastKnownLocation="BoarSports.Modeling.uml" />
+              </dependency>
+            </suppliersInternal>
+            <type_NamedElement>
+              <interfaceMoniker
+                Id="3c4631da-2d6f-4cdf-ad0f-2678c959442c"
+                LastKnownName="Http Request"
+                LastKnownLocation="BoarSports.Modeling.uml" />
+            </type_NamedElement>
+          </requiredInterface>
+        </ownedAttributesInternal>
+      </component>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <component
+        Id="dd4f420d-64ac-4657-9c85-36b79831a91c"
+        name="BoardSports Web Application"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false">
+        <suppliersInternal>
+          <dependency
+            Id="d1875afb-1751-4d80-b4e3-3377e1743941">
+            <componentMoniker
+              Id="4b8a336d-8392-4cdf-ac76-5e849cda12f1"
+              LastKnownName="BoardSports Database"
+              LastKnownLocation="BoarSports.Modeling.uml" />
+          </dependency>
+        </suppliersInternal>
+        <ownedAttributesInternal>
+          <providedInterface
+            Id="c5a19a3c-1b56-410a-8d8d-5438628d8b62"
+            name="Port1"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false"
+            isService="false"
+            isBehavior="false">
+            <type_NamedElement>
+              <interfaceMoniker
+                Id="c6ed201a-e56e-425b-8802-8f7b081c8474"
+                LastKnownName="BoardSports Web Site"
+                LastKnownLocation="BoarSports.Modeling.uml" />
+            </type_NamedElement>
+          </providedInterface>
+        </ownedAttributesInternal>
+      </component>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <component
+        Id="4b8a336d-8392-4cdf-ac76-5e849cda12f1"
+        name="BoardSports Database"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <Interface
+        Id="83d537ae-2f9f-4662-87e4-520a639028ab"
+        name="Interface1"
+        isAbstract="false"
+        isLeaf="false" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <Interface
+        Id="3c4631da-2d6f-4cdf-ad0f-2678c959442c"
+        name="Http Request"
+        isAbstract="false"
+        isLeaf="false" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <Interface
+        Id="c6ed201a-e56e-425b-8802-8f7b081c8474"
+        name="BoardSports Web Site"
+        isAbstract="false"
+        isLeaf="false" />
+    </packageHasNamedElement>
+  </packagedElements>
+  <primitiveType
+    Id="220a3521-e091-4221-bae9-3ef9018e845c"
+    name="Integer"
+    isAbstract="false"
+    isLeaf="false" />
+  <primitiveType
+    Id="8943dc84-709e-4f62-b15a-a3273aa6f165"
+    name="Boolean"
+    isAbstract="false"
+    isLeaf="false" />
+  <primitiveType
+    Id="59259974-6d55-42c6-b7bd-763d77ac8ef9"
+    name="String"
+    isAbstract="false"
+    isLeaf="false" />
+  <primitiveType
+    Id="3ab42e7d-4969-445a-b209-471f5cb8209c"
+    name="UnlimitedNatural"
+    isAbstract="false"
+    isLeaf="false" />
+</modelStoreModel>

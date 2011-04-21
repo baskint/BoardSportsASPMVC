@@ -1,0 +1,15 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<layerDiagram dslVersion="1.0.0.0" Id="0e253f33-061b-4990-bf74-ed33fdcd256b" absoluteBounds="0, 0, 11, 8.5" name="BoardSportsLayers">
+  <layerModelMoniker Id="55d73282-daae-4afd-a7b0-d4752299b06e" />
+  <nestedChildShapes>
+    <layerShape Id="12c7a73d-5181-4847-8774-5b4df4cace14" absoluteBounds="2.5, 0.875, 2, 0.75" customColor="161, 199, 231">
+      <layerMoniker Id="a3817f6d-a893-4e54-bee3-8f78472d51ee" />
+    </layerShape>
+    <layerShape Id="ccd25054-f6e7-48fd-82ea-4c431a356edb" absoluteBounds="5.125, 0.875, 2, 0.75" customColor="161, 199, 231">
+      <layerMoniker Id="c60af4f1-581f-435e-88d1-3fc380f644c3" />
+    </layerShape>
+    <layerShape Id="4c08603b-dbdf-450e-9698-78b4d99741ce" absoluteBounds="3.875, 2.625, 2, 0.75" customColor="161, 199, 231">
+      <layerMoniker Id="2f46950a-6195-436e-89a0-b21f684740a5" />
+    </layerShape>
+  </nestedChildShapes>
+</layerDiagram>

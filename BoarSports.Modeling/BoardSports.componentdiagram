@@ -1,0 +1,75 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<componentModel xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm4="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm5="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/ModelStore" xmlns:dm9="http://schemas.microsoft.com/dsltools/SimpleShapesModel" xmlns:dm10="http://schemas.microsoft.com/dsltools/UseCaseModel" xmlns:dm11="http://schemas.microsoft.com/VisualStudio/TeamArchitect/SequenceDesigner" dslVersion="1.0.0.0" Id="191cce12-42a9-489f-8cf5-fc1e52f64f80" name="BoardSports" linkedPackageId="404790e0-ec99-4eff-8a21-822c84e23863" xmlns="http://schemas.microsoft.com/VisualStudio/TeamArchitect/ComponentDesigner">
+  <profileInstances>
+    <packageHasProfileInstances Id="b8610af2-751f-46a0-8e16-2e9191b02054">
+      <profileInstance Id="791f5c49-1f31-4944-8fae-6ed5c0cf5eab" name="StandardProfileL2">
+        <elementDefinition Id="e34d544e-0fea-4ed6-ac5e-1b74119ac791" />
+      </profileInstance>
+      <elementDefinition Id="0caec977-1f8c-4ba3-a7db-8cc9ad9cc73b" />
+    </packageHasProfileInstances>
+    <packageHasProfileInstances Id="195a1945-8c15-4200-8710-ec93014f4945">
+      <profileInstance Id="45aecb48-1fb8-4674-922c-91bf7209fe40" name="StandardProfileL3">
+        <elementDefinition Id="532ea607-fb19-44b8-8502-3351b05452be" />
+      </profileInstance>
+      <elementDefinition Id="29349502-908c-4fda-9054-c48619c59ed0" />
+    </packageHasProfileInstances>
+  </profileInstances>
+  <packagedElements>
+    <componentModelHasComponents>
+      <component Id="0ca977f1-0ed3-403e-ba3e-80247e57f57f" name="WebBrowser" isAbstract="false" isLeaf="false" isActiveClass="false">
+        <elementDefinition Id="61eeb79e-d20b-4cf8-a38c-b6f72f64ce02" />
+        <ownedAttributesInternal>
+          <requiredInterface Id="4bd65014-b582-4570-a496-562f18abbab7" name="Port1" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isService="false" isBehavior="false">
+            <elementDefinition Id="9afeee8c-4388-4618-9b8f-189a6eb3f5ff" />
+            <suppliersInternal>
+              <dependency Id="6c1265e9-2417-4a48-950a-aa44d41c7658">
+                <providedInterfaceMoniker Id="a3100bcd-d26a-44f3-aa31-4291ff1171e2" LastKnownName="Port1" />
+                <elementDefinition Id="dabaa13c-19d0-42ad-8ee8-60043a4daad5" />
+              </dependency>
+            </suppliersInternal>
+            <type_NamedElement>
+              <interfaceMoniker Id="b46270af-803e-4090-9e69-e8853b9d4ad8" LastKnownName="Http Request" />
+            </type_NamedElement>
+          </requiredInterface>
+        </ownedAttributesInternal>
+      </component>
+    </componentModelHasComponents>
+    <componentModelHasComponents>
+      <component Id="b6d2d18e-c395-4dc6-b278-569b04818fe2" name="BoardSports Web Application" isAbstract="false" isLeaf="false" isActiveClass="false">
+        <elementDefinition Id="dd4f420d-64ac-4657-9c85-36b79831a91c" />
+        <suppliersInternal>
+          <dependency Id="c654881d-304b-4aa5-aca1-10b396718fad">
+            <componentMoniker Id="bdaf0006-0a37-47e1-af85-b1f1d598663d" LastKnownName="BoardSports Database" />
+            <elementDefinition Id="d1875afb-1751-4d80-b4e3-3377e1743941" />
+          </dependency>
+        </suppliersInternal>
+        <ownedAttributesInternal>
+          <providedInterface Id="a3100bcd-d26a-44f3-aa31-4291ff1171e2" name="Port1" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isService="false" isBehavior="false">
+            <elementDefinition Id="c5a19a3c-1b56-410a-8d8d-5438628d8b62" />
+            <type_NamedElement>
+              <interfaceMoniker Id="27c32bfb-ee22-4c97-981c-d120794e42d1" LastKnownName="BoardSports Web Site" />
+            </type_NamedElement>
+          </providedInterface>
+        </ownedAttributesInternal>
+      </component>
+    </componentModelHasComponents>
+    <componentModelHasComponents>
+      <component Id="bdaf0006-0a37-47e1-af85-b1f1d598663d" name="BoardSports Database" isAbstract="false" isLeaf="false" isActiveClass="false">
+        <elementDefinition Id="4b8a336d-8392-4cdf-ac76-5e849cda12f1" />
+      </component>
+    </componentModelHasComponents>
+    <modelContainsNamedElements>
+      <Interface Id="b46270af-803e-4090-9e69-e8853b9d4ad8" name="Http Request" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="3c4631da-2d6f-4cdf-ad0f-2678c959442c" />
+      </Interface>
+    </modelContainsNamedElements>
+    <modelContainsNamedElements>
+      <Interface Id="27c32bfb-ee22-4c97-981c-d120794e42d1" name="BoardSports Web Site" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="c6ed201a-e56e-425b-8802-8f7b081c8474" />
+      </Interface>
+    </modelContainsNamedElements>
+  </packagedElements>
+  <package Id="404790e0-ec99-4eff-8a21-822c84e23863" name="BoarSports.Modeling">
+    <elementDefinition Id="7c9828bf-2e6f-416b-851d-d2c8e5cbdc9a" />
+  </package>
+</componentModel>

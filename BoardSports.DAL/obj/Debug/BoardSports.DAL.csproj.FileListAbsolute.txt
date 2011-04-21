@@ -1,0 +1,8 @@
+C:\Users\baskint\Documents\Visual Studio 2010\Projects\BoardSports\BoardSports.DAL\bin\Debug\BoardSports.DAL.dll
+C:\Users\baskint\Documents\Visual Studio 2010\Projects\BoardSports\BoardSports.DAL\bin\Debug\BoardSports.DAL.pdb
+C:\Users\baskint\Documents\Visual Studio 2010\Projects\BoardSports\BoardSports.DAL\obj\Debug\ResolveAssemblyReference.cache
+C:\Users\baskint\Documents\Visual Studio 2010\Projects\BoardSports\BoardSports.DAL\obj\Debug\BoardSports.DAL.dll
+C:\Users\baskint\Documents\Visual Studio 2010\Projects\BoardSports\BoardSports.DAL\obj\Debug\BoardSports.DAL.pdb
+C:\Users\baskint\Documents\Visual Studio 2010\Projects\BoardSports\BoardSports.DAL\bin\Debug\BoardSports.DAL.dll.config
+C:\Users\baskint\Documents\Visual Studio 2010\Projects\BoardSports\BoardSports.DAL\bin\Debug\EntityFramework.dll
+C:\Users\baskint\Documents\Visual Studio 2010\Projects\BoardSports\BoardSports.DAL\bin\Debug\EntityFramework.xml

@@ -1,0 +1,26 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<siteMap xmlns="http://schemas.microsoft.com/AspNet/SiteMap-File-1.0" >
+	<siteMapNode
+	   url="~/"
+	   title="Board Sports"
+	   description="The Board Sports Page">
+		<siteMapNode
+            url="~/Windsurfing/Index"
+            title="./Content/images/windsurfing_logo.jpg"
+            description="Windsurfing" />
+		<siteMapNode
+            url="~/Kiteboarding/Index"
+            description="Kiteboarding"
+            title="../Content/images/kiteboarding_logo.jpg" />
+		<siteMapNode
+		url="~/Snowboarding/Index"
+		title="Snowboarding"
+		description="Snowboarding" />
+		<siteMapNode
+            url="~/Home/About"
+            title="About"
+            description="About Us" />
+
+	</siteMapNode>
+
+</siteMap>
