@@ -10,6 +10,9 @@ body {
     margin: 0;
     padding: 0;
     color: #696969;
+    /* gradient background */
+    background-image: url(../../Content/images/BoardSports_gradient.png); 
+    background-repeat: repeat-x; 
 }
 
 a:link {

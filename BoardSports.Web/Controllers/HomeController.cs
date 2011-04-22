@@ -10,7 +10,7 @@ namespace BoardSports.Web.Controllers
     {
         public ActionResult Index()
         {
-            ViewBag.Message = "Welcome to ASP.NET MVC!";
+            ViewBag.Message = "Ride On!";
 
             return View();
         }
