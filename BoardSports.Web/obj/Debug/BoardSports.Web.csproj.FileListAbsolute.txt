@@ -12,3 +12,4 @@ C:\src\dotNet\BoardSportsASPMVC\BoardSports.Web\bin\EntityFramework.xml
 C:\src\dotNet\BoardSportsASPMVC\BoardSports.Web\obj\Debug\ResolveAssemblyReference.cache
 C:\src\dotNet\BoardSportsASPMVC\BoardSports.Web\obj\Debug\BoardSports.Web.dll
 C:\src\dotNet\BoardSportsASPMVC\BoardSports.Web\obj\Debug\BoardSports.Web.pdb
+C:\src\dotNet\BoardSportsASPMVC\BoardSports.Web\bin\Glimpse.Net.dll

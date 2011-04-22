@@ -1,9 +1,0 @@
-<Modules>
-  <Module PersistentId="8C7DF6AC-DFF8-45DC-963C-6D57520CFDB1" ModuleId="BoardSports" />
-  <Module PersistentId="CCA4FA4D-ABF0-4B67-A541-90C0B8893DC7" ModuleId="BoardSports.Tests" />
-  <Module PersistentId="EA936470-B201-4EA1-A93F-008FF0BB8F7F" ModuleId="BoardSports.DAL" />
-  <Module PersistentId="3B04DC45-B70C-4BA9-9127-3C5BF42E3B69" ModuleId="BoardSports.Services" />
-  <Module PersistentId="B83AD555-4D64-46C8-9975-9FEBD628578E" ModuleId="BoardSports.Web" />
-  <Module PersistentId="931F9DAA-B661-4AB8-8D0F-8320DE8AC129" ModuleId="BoardSports.Web_1" />
-  <Module PersistentId="211F5080-91FC-4E0E-8B1A-D5197E655733" ModuleId="BoardSports.Web_2" />
-</Modules>

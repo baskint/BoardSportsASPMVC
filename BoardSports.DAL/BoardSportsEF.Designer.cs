@@ -18,14 +18,13 @@ using System.Runtime.Serialization;
 [assembly: EdmSchemaAttribute()]
 #region EDM Relationship Metadata
 
-[assembly: EdmRelationshipAttribute("BoardSportsDevModel", "FK_Rigs_Boards", "Boards", System.Data.Metadata.Edm.RelationshipMultiplicity.One, typeof(BoardSports.DAL.Board), "Rigs", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(BoardSports.DAL.Rig), true)]
-[assembly: EdmRelationshipAttribute("BoardSportsDevModel", "FK_Rigs_Booms", "Booms", System.Data.Metadata.Edm.RelationshipMultiplicity.ZeroOrOne, typeof(BoardSports.DAL.Boom), "Rigs", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(BoardSports.DAL.Rig), true)]
-[assembly: EdmRelationshipAttribute("BoardSportsDevModel", "FK_Rigs_Fins", "Fins", System.Data.Metadata.Edm.RelationshipMultiplicity.ZeroOrOne, typeof(BoardSports.DAL.Fin), "Rigs", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(BoardSports.DAL.Rig), true)]
-[assembly: EdmRelationshipAttribute("BoardSportsDevModel", "FK_Rigs_Kites", "Kites", System.Data.Metadata.Edm.RelationshipMultiplicity.ZeroOrOne, typeof(BoardSports.DAL.Kite), "Rigs", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(BoardSports.DAL.Rig), true)]
-[assembly: EdmRelationshipAttribute("BoardSportsDevModel", "FK_Rigs_Masts", "Masts", System.Data.Metadata.Edm.RelationshipMultiplicity.ZeroOrOne, typeof(BoardSports.DAL.Mast), "Rigs", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(BoardSports.DAL.Rig), true)]
-[assembly: EdmRelationshipAttribute("BoardSportsDevModel", "FK_Rigs_Sails", "Sails", System.Data.Metadata.Edm.RelationshipMultiplicity.ZeroOrOne, typeof(BoardSports.DAL.Sail), "Rigs", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(BoardSports.DAL.Rig), true)]
-[assembly: EdmRelationshipAttribute("BoardSportsDevModel", "FK_Rigs_Venues", "Venues", System.Data.Metadata.Edm.RelationshipMultiplicity.One, typeof(BoardSports.DAL.Venue), "Rigs", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(BoardSports.DAL.Rig), true)]
-[assembly: EdmRelationshipAttribute("BoardSportsDevModel", "FK_Sessions_Venues", "Venues", System.Data.Metadata.Edm.RelationshipMultiplicity.One, typeof(BoardSports.DAL.Venue), "Sessions", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(BoardSports.DAL.Session), true)]
+[assembly: EdmRelationshipAttribute("BoardSportsModel", "FK_Rigs_Boards", "Boards", System.Data.Metadata.Edm.RelationshipMultiplicity.One, typeof(BoardSports.DAL.Board), "Rigs", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(BoardSports.DAL.Rig), true)]
+[assembly: EdmRelationshipAttribute("BoardSportsModel", "FK_Rigs_Booms", "Booms", System.Data.Metadata.Edm.RelationshipMultiplicity.One, typeof(BoardSports.DAL.Boom), "Rigs", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(BoardSports.DAL.Rig), true)]
+[assembly: EdmRelationshipAttribute("BoardSportsModel", "FK_Rigs_Fins", "Fins", System.Data.Metadata.Edm.RelationshipMultiplicity.One, typeof(BoardSports.DAL.Fin), "Rigs", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(BoardSports.DAL.Rig), true)]
+[assembly: EdmRelationshipAttribute("BoardSportsModel", "FK_Rigs_Masts", "Masts", System.Data.Metadata.Edm.RelationshipMultiplicity.ZeroOrOne, typeof(BoardSports.DAL.Mast), "Rigs", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(BoardSports.DAL.Rig), true)]
+[assembly: EdmRelationshipAttribute("BoardSportsModel", "FK_Rigs_Sails", "Sails", System.Data.Metadata.Edm.RelationshipMultiplicity.One, typeof(BoardSports.DAL.Sail), "Rigs", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(BoardSports.DAL.Rig), true)]
+[assembly: EdmRelationshipAttribute("BoardSportsModel", "FK_Rigs_Venues", "Venues", System.Data.Metadata.Edm.RelationshipMultiplicity.One, typeof(BoardSports.DAL.Venue), "Rigs", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(BoardSports.DAL.Rig), true)]
+[assembly: EdmRelationshipAttribute("BoardSportsModel", "FK_Sessions_Rigs", "Rigs", System.Data.Metadata.Edm.RelationshipMultiplicity.One, typeof(BoardSports.DAL.Rig), "Sessions", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(BoardSports.DAL.Session), true)]
 
 #endregion
 
@@ -36,32 +35,32 @@ namespace BoardSports.DAL
     /// <summary>
     /// No Metadata Documentation available.
     /// </summary>
-    public partial class BoardSportsDevEntities : ObjectContext
+    public partial class BoardSportsDevEntity : ObjectContext
     {
         #region Constructors
     
         /// <summary>
-        /// Initializes a new BoardSportsDevEntities object using the connection string found in the 'BoardSportsDevEntities' section of the application configuration file.
+        /// Initializes a new BoardSportsDevEntity object using the connection string found in the 'BoardSportsDevEntity' section of the application configuration file.
         /// </summary>
-        public BoardSportsDevEntities() : base("name=BoardSportsDevEntities", "BoardSportsDevEntities")
+        public BoardSportsDevEntity() : base("name=BoardSportsDevEntity", "BoardSportsDevEntity")
         {
             this.ContextOptions.LazyLoadingEnabled = true;
             OnContextCreated();
         }
     
         /// <summary>
-        /// Initialize a new BoardSportsDevEntities object.
+        /// Initialize a new BoardSportsDevEntity object.
         /// </summary>
-        public BoardSportsDevEntities(string connectionString) : base(connectionString, "BoardSportsDevEntities")
+        public BoardSportsDevEntity(string connectionString) : base(connectionString, "BoardSportsDevEntity")
         {
             this.ContextOptions.LazyLoadingEnabled = true;
             OnContextCreated();
         }
     
         /// <summary>
-        /// Initialize a new BoardSportsDevEntities object.
+        /// Initialize a new BoardSportsDevEntity object.
         /// </summary>
-        public BoardSportsDevEntities(EntityConnection connection) : base(connection, "BoardSportsDevEntities")
+        public BoardSportsDevEntity(EntityConnection connection) : base(connection, "BoardSportsDevEntity")
         {
             this.ContextOptions.LazyLoadingEnabled = true;
             OnContextCreated();
@@ -124,6 +123,22 @@ namespace BoardSports.DAL
             }
         }
         private ObjectSet<Fin> _Fins;
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        public ObjectSet<KiteBoard> KiteBoards
+        {
+            get
+            {
+                if ((_KiteBoards == null))
+                {
+                    _KiteBoards = base.CreateObjectSet<KiteBoard>("KiteBoards");
+                }
+                return _KiteBoards;
+            }
+        }
+        private ObjectSet<KiteBoard> _KiteBoards;
     
         /// <summary>
         /// No Metadata Documentation available.
@@ -208,6 +223,22 @@ namespace BoardSports.DAL
         /// <summary>
         /// No Metadata Documentation available.
         /// </summary>
+        public ObjectSet<Snowboard> Snowboards
+        {
+            get
+            {
+                if ((_Snowboards == null))
+                {
+                    _Snowboards = base.CreateObjectSet<Snowboard>("Snowboards");
+                }
+                return _Snowboards;
+            }
+        }
+        private ObjectSet<Snowboard> _Snowboards;
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
         public ObjectSet<Venue> Venues
         {
             get
@@ -246,6 +277,14 @@ namespace BoardSports.DAL
         public void AddToFins(Fin fin)
         {
             base.AddObject("Fins", fin);
+        }
+    
+        /// <summary>
+        /// Deprecated Method for adding a new object to the KiteBoards EntitySet. Consider using the .Add method of the associated ObjectSet&lt;T&gt; property instead.
+        /// </summary>
+        public void AddToKiteBoards(KiteBoard kiteBoard)
+        {
+            base.AddObject("KiteBoards", kiteBoard);
         }
     
         /// <summary>
@@ -289,6 +328,14 @@ namespace BoardSports.DAL
         }
     
         /// <summary>
+        /// Deprecated Method for adding a new object to the Snowboards EntitySet. Consider using the .Add method of the associated ObjectSet&lt;T&gt; property instead.
+        /// </summary>
+        public void AddToSnowboards(Snowboard snowboard)
+        {
+            base.AddObject("Snowboards", snowboard);
+        }
+    
+        /// <summary>
         /// Deprecated Method for adding a new object to the Venues EntitySet. Consider using the .Add method of the associated ObjectSet&lt;T&gt; property instead.
         /// </summary>
         public void AddToVenues(Venue venue)
@@ -307,7 +354,7 @@ namespace BoardSports.DAL
     /// <summary>
     /// No Metadata Documentation available.
     /// </summary>
-    [EdmEntityTypeAttribute(NamespaceName="BoardSportsDevModel", Name="Board")]
+    [EdmEntityTypeAttribute(NamespaceName="BoardSportsModel", Name="Board")]
     [Serializable()]
     [DataContractAttribute(IsReference=true)]
     public partial class Board : EntityObject
@@ -580,24 +627,24 @@ namespace BoardSports.DAL
         /// </summary>
         [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=true)]
         [DataMemberAttribute()]
-        public global::System.String PurchaseLocation
+        public global::System.String PictureLocation
         {
             get
             {
-                return _PurchaseLocation;
+                return _PictureLocation;
             }
             set
             {
-                OnPurchaseLocationChanging(value);
-                ReportPropertyChanging("PurchaseLocation");
-                _PurchaseLocation = StructuralObject.SetValidValue(value, true);
-                ReportPropertyChanged("PurchaseLocation");
-                OnPurchaseLocationChanged();
+                OnPictureLocationChanging(value);
+                ReportPropertyChanging("PictureLocation");
+                _PictureLocation = StructuralObject.SetValidValue(value, true);
+                ReportPropertyChanged("PictureLocation");
+                OnPictureLocationChanged();
             }
         }
-        private global::System.String _PurchaseLocation;
-        partial void OnPurchaseLocationChanging(global::System.String value);
-        partial void OnPurchaseLocationChanged();
+        private global::System.String _PictureLocation;
+        partial void OnPictureLocationChanging(global::System.String value);
+        partial void OnPictureLocationChanged();
     
         /// <summary>
         /// No Metadata Documentation available.
@@ -622,30 +669,6 @@ namespace BoardSports.DAL
         private Nullable<global::System.Int32> _YearManufactured;
         partial void OnYearManufacturedChanging(Nullable<global::System.Int32> value);
         partial void OnYearManufacturedChanged();
-    
-        /// <summary>
-        /// No Metadata Documentation available.
-        /// </summary>
-        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=true)]
-        [DataMemberAttribute()]
-        public global::System.String PictureLocation
-        {
-            get
-            {
-                return _PictureLocation;
-            }
-            set
-            {
-                OnPictureLocationChanging(value);
-                ReportPropertyChanging("PictureLocation");
-                _PictureLocation = StructuralObject.SetValidValue(value, true);
-                ReportPropertyChanged("PictureLocation");
-                OnPictureLocationChanged();
-            }
-        }
-        private global::System.String _PictureLocation;
-        partial void OnPictureLocationChanging(global::System.String value);
-        partial void OnPictureLocationChanged();
 
         #endregion
     
@@ -657,18 +680,18 @@ namespace BoardSports.DAL
         [XmlIgnoreAttribute()]
         [SoapIgnoreAttribute()]
         [DataMemberAttribute()]
-        [EdmRelationshipNavigationPropertyAttribute("BoardSportsDevModel", "FK_Rigs_Boards", "Rigs")]
+        [EdmRelationshipNavigationPropertyAttribute("BoardSportsModel", "FK_Rigs_Boards", "Rigs")]
         public EntityCollection<Rig> Rigs
         {
             get
             {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedCollection<Rig>("BoardSportsDevModel.FK_Rigs_Boards", "Rigs");
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedCollection<Rig>("BoardSportsModel.FK_Rigs_Boards", "Rigs");
             }
             set
             {
                 if ((value != null))
                 {
-                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedCollection<Rig>("BoardSportsDevModel.FK_Rigs_Boards", "Rigs", value);
+                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedCollection<Rig>("BoardSportsModel.FK_Rigs_Boards", "Rigs", value);
                 }
             }
         }
@@ -679,7 +702,7 @@ namespace BoardSports.DAL
     /// <summary>
     /// No Metadata Documentation available.
     /// </summary>
-    [EdmEntityTypeAttribute(NamespaceName="BoardSportsDevModel", Name="Boom")]
+    [EdmEntityTypeAttribute(NamespaceName="BoardSportsModel", Name="Boom")]
     [Serializable()]
     [DataContractAttribute(IsReference=true)]
     public partial class Boom : EntityObject
@@ -690,10 +713,12 @@ namespace BoardSports.DAL
         /// Create a new Boom object.
         /// </summary>
         /// <param name="boomId">Initial value of the BoomId property.</param>
-        public static Boom CreateBoom(global::System.Int32 boomId)
+        /// <param name="boomName">Initial value of the BoomName property.</param>
+        public static Boom CreateBoom(global::System.Int32 boomId, global::System.String boomName)
         {
             Boom boom = new Boom();
             boom.BoomId = boomId;
+            boom.BoomName = boomName;
             return boom;
         }
 
@@ -730,7 +755,7 @@ namespace BoardSports.DAL
         /// <summary>
         /// No Metadata Documentation available.
         /// </summary>
-        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=true)]
+        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=false)]
         [DataMemberAttribute()]
         public global::System.String BoomName
         {
@@ -742,7 +767,7 @@ namespace BoardSports.DAL
             {
                 OnBoomNameChanging(value);
                 ReportPropertyChanging("BoomName");
-                _BoomName = StructuralObject.SetValidValue(value, true);
+                _BoomName = StructuralObject.SetValidValue(value, false);
                 ReportPropertyChanged("BoomName");
                 OnBoomNameChanged();
             }
@@ -929,18 +954,18 @@ namespace BoardSports.DAL
         [XmlIgnoreAttribute()]
         [SoapIgnoreAttribute()]
         [DataMemberAttribute()]
-        [EdmRelationshipNavigationPropertyAttribute("BoardSportsDevModel", "FK_Rigs_Booms", "Rigs")]
+        [EdmRelationshipNavigationPropertyAttribute("BoardSportsModel", "FK_Rigs_Booms", "Rigs")]
         public EntityCollection<Rig> Rigs
         {
             get
             {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedCollection<Rig>("BoardSportsDevModel.FK_Rigs_Booms", "Rigs");
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedCollection<Rig>("BoardSportsModel.FK_Rigs_Booms", "Rigs");
             }
             set
             {
                 if ((value != null))
                 {
-                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedCollection<Rig>("BoardSportsDevModel.FK_Rigs_Booms", "Rigs", value);
+                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedCollection<Rig>("BoardSportsModel.FK_Rigs_Booms", "Rigs", value);
                 }
             }
         }
@@ -951,7 +976,7 @@ namespace BoardSports.DAL
     /// <summary>
     /// No Metadata Documentation available.
     /// </summary>
-    [EdmEntityTypeAttribute(NamespaceName="BoardSportsDevModel", Name="Fin")]
+    [EdmEntityTypeAttribute(NamespaceName="BoardSportsModel", Name="Fin")]
     [Serializable()]
     [DataContractAttribute(IsReference=true)]
     public partial class Fin : EntityObject
@@ -962,12 +987,12 @@ namespace BoardSports.DAL
         /// Create a new Fin object.
         /// </summary>
         /// <param name="finId">Initial value of the FinId property.</param>
-        /// <param name="length">Initial value of the Length property.</param>
-        public static Fin CreateFin(global::System.Int32 finId, global::System.Int32 length)
+        /// <param name="finType">Initial value of the FinType property.</param>
+        public static Fin CreateFin(global::System.Int32 finId, global::System.String finType)
         {
             Fin fin = new Fin();
             fin.FinId = finId;
-            fin.Length = length;
+            fin.FinType = finType;
             return fin;
         }
 
@@ -1028,7 +1053,7 @@ namespace BoardSports.DAL
         /// <summary>
         /// No Metadata Documentation available.
         /// </summary>
-        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=true)]
+        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=false)]
         [DataMemberAttribute()]
         public global::System.String FinType
         {
@@ -1040,7 +1065,7 @@ namespace BoardSports.DAL
             {
                 OnFinTypeChanging(value);
                 ReportPropertyChanging("FinType");
-                _FinType = StructuralObject.SetValidValue(value, true);
+                _FinType = StructuralObject.SetValidValue(value, false);
                 ReportPropertyChanged("FinType");
                 OnFinTypeChanged();
             }
@@ -1052,9 +1077,9 @@ namespace BoardSports.DAL
         /// <summary>
         /// No Metadata Documentation available.
         /// </summary>
-        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=false)]
+        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=true)]
         [DataMemberAttribute()]
-        public global::System.Int32 Length
+        public Nullable<global::System.Int32> Length
         {
             get
             {
@@ -1069,81 +1094,9 @@ namespace BoardSports.DAL
                 OnLengthChanged();
             }
         }
-        private global::System.Int32 _Length;
-        partial void OnLengthChanging(global::System.Int32 value);
+        private Nullable<global::System.Int32> _Length;
+        partial void OnLengthChanging(Nullable<global::System.Int32> value);
         partial void OnLengthChanged();
-    
-        /// <summary>
-        /// No Metadata Documentation available.
-        /// </summary>
-        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=true)]
-        [DataMemberAttribute()]
-        public global::System.String Manufacturer
-        {
-            get
-            {
-                return _Manufacturer;
-            }
-            set
-            {
-                OnManufacturerChanging(value);
-                ReportPropertyChanging("Manufacturer");
-                _Manufacturer = StructuralObject.SetValidValue(value, true);
-                ReportPropertyChanged("Manufacturer");
-                OnManufacturerChanged();
-            }
-        }
-        private global::System.String _Manufacturer;
-        partial void OnManufacturerChanging(global::System.String value);
-        partial void OnManufacturerChanged();
-    
-        /// <summary>
-        /// No Metadata Documentation available.
-        /// </summary>
-        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=true)]
-        [DataMemberAttribute()]
-        public Nullable<global::System.Decimal> PurchasePrice
-        {
-            get
-            {
-                return _PurchasePrice;
-            }
-            set
-            {
-                OnPurchasePriceChanging(value);
-                ReportPropertyChanging("PurchasePrice");
-                _PurchasePrice = StructuralObject.SetValidValue(value);
-                ReportPropertyChanged("PurchasePrice");
-                OnPurchasePriceChanged();
-            }
-        }
-        private Nullable<global::System.Decimal> _PurchasePrice;
-        partial void OnPurchasePriceChanging(Nullable<global::System.Decimal> value);
-        partial void OnPurchasePriceChanged();
-    
-        /// <summary>
-        /// No Metadata Documentation available.
-        /// </summary>
-        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=true)]
-        [DataMemberAttribute()]
-        public global::System.String PictureLocation
-        {
-            get
-            {
-                return _PictureLocation;
-            }
-            set
-            {
-                OnPictureLocationChanging(value);
-                ReportPropertyChanging("PictureLocation");
-                _PictureLocation = StructuralObject.SetValidValue(value, true);
-                ReportPropertyChanged("PictureLocation");
-                OnPictureLocationChanged();
-            }
-        }
-        private global::System.String _PictureLocation;
-        partial void OnPictureLocationChanging(global::System.String value);
-        partial void OnPictureLocationChanged();
 
         #endregion
     
@@ -1155,18 +1108,18 @@ namespace BoardSports.DAL
         [XmlIgnoreAttribute()]
         [SoapIgnoreAttribute()]
         [DataMemberAttribute()]
-        [EdmRelationshipNavigationPropertyAttribute("BoardSportsDevModel", "FK_Rigs_Fins", "Rigs")]
+        [EdmRelationshipNavigationPropertyAttribute("BoardSportsModel", "FK_Rigs_Fins", "Rigs")]
         public EntityCollection<Rig> Rigs
         {
             get
             {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedCollection<Rig>("BoardSportsDevModel.FK_Rigs_Fins", "Rigs");
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedCollection<Rig>("BoardSportsModel.FK_Rigs_Fins", "Rigs");
             }
             set
             {
                 if ((value != null))
                 {
-                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedCollection<Rig>("BoardSportsDevModel.FK_Rigs_Fins", "Rigs", value);
+                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedCollection<Rig>("BoardSportsModel.FK_Rigs_Fins", "Rigs", value);
                 }
             }
         }
@@ -1177,7 +1130,7 @@ namespace BoardSports.DAL
     /// <summary>
     /// No Metadata Documentation available.
     /// </summary>
-    [EdmEntityTypeAttribute(NamespaceName="BoardSportsDevModel", Name="Kite")]
+    [EdmEntityTypeAttribute(NamespaceName="BoardSportsModel", Name="Kite")]
     [Serializable()]
     [DataContractAttribute(IsReference=true)]
     public partial class Kite : EntityObject
@@ -1189,13 +1142,11 @@ namespace BoardSports.DAL
         /// </summary>
         /// <param name="kiteId">Initial value of the KiteId property.</param>
         /// <param name="kiteName">Initial value of the KiteName property.</param>
-        /// <param name="yearManufactured">Initial value of the YearManufactured property.</param>
-        public static Kite CreateKite(global::System.Int32 kiteId, global::System.String kiteName, global::System.Int32 yearManufactured)
+        public static Kite CreateKite(global::System.Int32 kiteId, global::System.String kiteName)
         {
             Kite kite = new Kite();
             kite.KiteId = kiteId;
             kite.KiteName = kiteName;
-            kite.YearManufactured = yearManufactured;
             return kite;
         }
 
@@ -1258,24 +1209,271 @@ namespace BoardSports.DAL
         /// </summary>
         [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=true)]
         [DataMemberAttribute()]
-        public global::System.String KiteBrand
+        public global::System.String Manufacturer
         {
             get
             {
-                return _KiteBrand;
+                return _Manufacturer;
             }
             set
             {
-                OnKiteBrandChanging(value);
-                ReportPropertyChanging("KiteBrand");
-                _KiteBrand = StructuralObject.SetValidValue(value, true);
-                ReportPropertyChanged("KiteBrand");
-                OnKiteBrandChanged();
+                OnManufacturerChanging(value);
+                ReportPropertyChanging("Manufacturer");
+                _Manufacturer = StructuralObject.SetValidValue(value, true);
+                ReportPropertyChanged("Manufacturer");
+                OnManufacturerChanged();
             }
         }
-        private global::System.String _KiteBrand;
-        partial void OnKiteBrandChanging(global::System.String value);
-        partial void OnKiteBrandChanged();
+        private global::System.String _Manufacturer;
+        partial void OnManufacturerChanging(global::System.String value);
+        partial void OnManufacturerChanged();
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=true)]
+        [DataMemberAttribute()]
+        public Nullable<global::System.Byte> Size
+        {
+            get
+            {
+                return _Size;
+            }
+            set
+            {
+                OnSizeChanging(value);
+                ReportPropertyChanging("Size");
+                _Size = StructuralObject.SetValidValue(value);
+                ReportPropertyChanged("Size");
+                OnSizeChanged();
+            }
+        }
+        private Nullable<global::System.Byte> _Size;
+        partial void OnSizeChanging(Nullable<global::System.Byte> value);
+        partial void OnSizeChanged();
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=true)]
+        [DataMemberAttribute()]
+        public Nullable<global::System.Byte> NumberOfLines
+        {
+            get
+            {
+                return _NumberOfLines;
+            }
+            set
+            {
+                OnNumberOfLinesChanging(value);
+                ReportPropertyChanging("NumberOfLines");
+                _NumberOfLines = StructuralObject.SetValidValue(value);
+                ReportPropertyChanged("NumberOfLines");
+                OnNumberOfLinesChanged();
+            }
+        }
+        private Nullable<global::System.Byte> _NumberOfLines;
+        partial void OnNumberOfLinesChanging(Nullable<global::System.Byte> value);
+        partial void OnNumberOfLinesChanged();
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=true)]
+        [DataMemberAttribute()]
+        public global::System.String PictureLocation
+        {
+            get
+            {
+                return _PictureLocation;
+            }
+            set
+            {
+                OnPictureLocationChanging(value);
+                ReportPropertyChanging("PictureLocation");
+                _PictureLocation = StructuralObject.SetValidValue(value, true);
+                ReportPropertyChanged("PictureLocation");
+                OnPictureLocationChanged();
+            }
+        }
+        private global::System.String _PictureLocation;
+        partial void OnPictureLocationChanging(global::System.String value);
+        partial void OnPictureLocationChanged();
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=true)]
+        [DataMemberAttribute()]
+        public Nullable<global::System.Decimal> EstimatedValue
+        {
+            get
+            {
+                return _EstimatedValue;
+            }
+            set
+            {
+                OnEstimatedValueChanging(value);
+                ReportPropertyChanging("EstimatedValue");
+                _EstimatedValue = StructuralObject.SetValidValue(value);
+                ReportPropertyChanged("EstimatedValue");
+                OnEstimatedValueChanged();
+            }
+        }
+        private Nullable<global::System.Decimal> _EstimatedValue;
+        partial void OnEstimatedValueChanging(Nullable<global::System.Decimal> value);
+        partial void OnEstimatedValueChanged();
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=true)]
+        [DataMemberAttribute()]
+        public Nullable<global::System.Decimal> PurchasePrice
+        {
+            get
+            {
+                return _PurchasePrice;
+            }
+            set
+            {
+                OnPurchasePriceChanging(value);
+                ReportPropertyChanging("PurchasePrice");
+                _PurchasePrice = StructuralObject.SetValidValue(value);
+                ReportPropertyChanged("PurchasePrice");
+                OnPurchasePriceChanged();
+            }
+        }
+        private Nullable<global::System.Decimal> _PurchasePrice;
+        partial void OnPurchasePriceChanging(Nullable<global::System.Decimal> value);
+        partial void OnPurchasePriceChanged();
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=true)]
+        [DataMemberAttribute()]
+        public Nullable<global::System.DateTime> PurchaseDate
+        {
+            get
+            {
+                return _PurchaseDate;
+            }
+            set
+            {
+                OnPurchaseDateChanging(value);
+                ReportPropertyChanging("PurchaseDate");
+                _PurchaseDate = StructuralObject.SetValidValue(value);
+                ReportPropertyChanged("PurchaseDate");
+                OnPurchaseDateChanged();
+            }
+        }
+        private Nullable<global::System.DateTime> _PurchaseDate;
+        partial void OnPurchaseDateChanging(Nullable<global::System.DateTime> value);
+        partial void OnPurchaseDateChanged();
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=true)]
+        [DataMemberAttribute()]
+        public Nullable<global::System.Int32> YearManufactured
+        {
+            get
+            {
+                return _YearManufactured;
+            }
+            set
+            {
+                OnYearManufacturedChanging(value);
+                ReportPropertyChanging("YearManufactured");
+                _YearManufactured = StructuralObject.SetValidValue(value);
+                ReportPropertyChanged("YearManufactured");
+                OnYearManufacturedChanged();
+            }
+        }
+        private Nullable<global::System.Int32> _YearManufactured;
+        partial void OnYearManufacturedChanging(Nullable<global::System.Int32> value);
+        partial void OnYearManufacturedChanged();
+
+        #endregion
+    
+    }
+    
+    /// <summary>
+    /// No Metadata Documentation available.
+    /// </summary>
+    [EdmEntityTypeAttribute(NamespaceName="BoardSportsModel", Name="KiteBoard")]
+    [Serializable()]
+    [DataContractAttribute(IsReference=true)]
+    public partial class KiteBoard : EntityObject
+    {
+        #region Factory Method
+    
+        /// <summary>
+        /// Create a new KiteBoard object.
+        /// </summary>
+        /// <param name="kiteboardId">Initial value of the KiteboardId property.</param>
+        public static KiteBoard CreateKiteBoard(global::System.Int32 kiteboardId)
+        {
+            KiteBoard kiteBoard = new KiteBoard();
+            kiteBoard.KiteboardId = kiteboardId;
+            return kiteBoard;
+        }
+
+        #endregion
+        #region Primitive Properties
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [EdmScalarPropertyAttribute(EntityKeyProperty=true, IsNullable=false)]
+        [DataMemberAttribute()]
+        public global::System.Int32 KiteboardId
+        {
+            get
+            {
+                return _KiteboardId;
+            }
+            set
+            {
+                if (_KiteboardId != value)
+                {
+                    OnKiteboardIdChanging(value);
+                    ReportPropertyChanging("KiteboardId");
+                    _KiteboardId = StructuralObject.SetValidValue(value);
+                    ReportPropertyChanged("KiteboardId");
+                    OnKiteboardIdChanged();
+                }
+            }
+        }
+        private global::System.Int32 _KiteboardId;
+        partial void OnKiteboardIdChanging(global::System.Int32 value);
+        partial void OnKiteboardIdChanged();
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=true)]
+        [DataMemberAttribute()]
+        public global::System.String KiteboardName
+        {
+            get
+            {
+                return _KiteboardName;
+            }
+            set
+            {
+                OnKiteboardNameChanging(value);
+                ReportPropertyChanging("KiteboardName");
+                _KiteboardName = StructuralObject.SetValidValue(value, true);
+                ReportPropertyChanged("KiteboardName");
+                OnKiteboardNameChanged();
+            }
+        }
+        private global::System.String _KiteboardName;
+        partial void OnKiteboardNameChanging(global::System.String value);
+        partial void OnKiteboardNameChanged();
     
         /// <summary>
         /// No Metadata Documentation available.
@@ -1306,55 +1504,55 @@ namespace BoardSports.DAL
         /// </summary>
         [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=true)]
         [DataMemberAttribute()]
-        public Nullable<global::System.Int32> Size
+        public Nullable<global::System.Decimal> PurchasePrice
         {
             get
             {
-                return _Size;
+                return _PurchasePrice;
             }
             set
             {
-                OnSizeChanging(value);
-                ReportPropertyChanging("Size");
-                _Size = StructuralObject.SetValidValue(value);
-                ReportPropertyChanged("Size");
-                OnSizeChanged();
+                OnPurchasePriceChanging(value);
+                ReportPropertyChanging("PurchasePrice");
+                _PurchasePrice = StructuralObject.SetValidValue(value);
+                ReportPropertyChanged("PurchasePrice");
+                OnPurchasePriceChanged();
             }
         }
-        private Nullable<global::System.Int32> _Size;
-        partial void OnSizeChanging(Nullable<global::System.Int32> value);
-        partial void OnSizeChanged();
+        private Nullable<global::System.Decimal> _PurchasePrice;
+        partial void OnPurchasePriceChanging(Nullable<global::System.Decimal> value);
+        partial void OnPurchasePriceChanged();
     
         /// <summary>
         /// No Metadata Documentation available.
         /// </summary>
         [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=true)]
         [DataMemberAttribute()]
-        public Nullable<global::System.Int32> NumberLines
+        public Nullable<global::System.DateTime> PurchaseDate
         {
             get
             {
-                return _NumberLines;
+                return _PurchaseDate;
             }
             set
             {
-                OnNumberLinesChanging(value);
-                ReportPropertyChanging("NumberLines");
-                _NumberLines = StructuralObject.SetValidValue(value);
-                ReportPropertyChanged("NumberLines");
-                OnNumberLinesChanged();
+                OnPurchaseDateChanging(value);
+                ReportPropertyChanging("PurchaseDate");
+                _PurchaseDate = StructuralObject.SetValidValue(value);
+                ReportPropertyChanged("PurchaseDate");
+                OnPurchaseDateChanged();
             }
         }
-        private Nullable<global::System.Int32> _NumberLines;
-        partial void OnNumberLinesChanging(Nullable<global::System.Int32> value);
-        partial void OnNumberLinesChanged();
+        private Nullable<global::System.DateTime> _PurchaseDate;
+        partial void OnPurchaseDateChanging(Nullable<global::System.DateTime> value);
+        partial void OnPurchaseDateChanged();
     
         /// <summary>
         /// No Metadata Documentation available.
         /// </summary>
-        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=false)]
+        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=true)]
         [DataMemberAttribute()]
-        public global::System.Int32 YearManufactured
+        public Nullable<global::System.Int32> YearManufactured
         {
             get
             {
@@ -1369,8 +1567,8 @@ namespace BoardSports.DAL
                 OnYearManufacturedChanged();
             }
         }
-        private global::System.Int32 _YearManufactured;
-        partial void OnYearManufacturedChanging(global::System.Int32 value);
+        private Nullable<global::System.Int32> _YearManufactured;
+        partial void OnYearManufacturedChanging(Nullable<global::System.Int32> value);
         partial void OnYearManufacturedChanged();
     
         /// <summary>
@@ -1378,24 +1576,48 @@ namespace BoardSports.DAL
         /// </summary>
         [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=true)]
         [DataMemberAttribute()]
-        public global::System.String BarBrand
+        public Nullable<global::System.Byte> Length
         {
             get
             {
-                return _BarBrand;
+                return _Length;
             }
             set
             {
-                OnBarBrandChanging(value);
-                ReportPropertyChanging("BarBrand");
-                _BarBrand = StructuralObject.SetValidValue(value, true);
-                ReportPropertyChanged("BarBrand");
-                OnBarBrandChanged();
+                OnLengthChanging(value);
+                ReportPropertyChanging("Length");
+                _Length = StructuralObject.SetValidValue(value);
+                ReportPropertyChanged("Length");
+                OnLengthChanged();
             }
         }
-        private global::System.String _BarBrand;
-        partial void OnBarBrandChanging(global::System.String value);
-        partial void OnBarBrandChanged();
+        private Nullable<global::System.Byte> _Length;
+        partial void OnLengthChanging(Nullable<global::System.Byte> value);
+        partial void OnLengthChanged();
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=true)]
+        [DataMemberAttribute()]
+        public Nullable<global::System.Byte> Width
+        {
+            get
+            {
+                return _Width;
+            }
+            set
+            {
+                OnWidthChanging(value);
+                ReportPropertyChanging("Width");
+                _Width = StructuralObject.SetValidValue(value);
+                ReportPropertyChanged("Width");
+                OnWidthChanged();
+            }
+        }
+        private Nullable<global::System.Byte> _Width;
+        partial void OnWidthChanging(Nullable<global::System.Byte> value);
+        partial void OnWidthChanged();
     
         /// <summary>
         /// No Metadata Documentation available.
@@ -1423,37 +1645,12 @@ namespace BoardSports.DAL
 
         #endregion
     
-        #region Navigation Properties
-    
-        /// <summary>
-        /// No Metadata Documentation available.
-        /// </summary>
-        [XmlIgnoreAttribute()]
-        [SoapIgnoreAttribute()]
-        [DataMemberAttribute()]
-        [EdmRelationshipNavigationPropertyAttribute("BoardSportsDevModel", "FK_Rigs_Kites", "Rigs")]
-        public EntityCollection<Rig> Rigs
-        {
-            get
-            {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedCollection<Rig>("BoardSportsDevModel.FK_Rigs_Kites", "Rigs");
-            }
-            set
-            {
-                if ((value != null))
-                {
-                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedCollection<Rig>("BoardSportsDevModel.FK_Rigs_Kites", "Rigs", value);
-                }
-            }
-        }
-
-        #endregion
     }
     
     /// <summary>
     /// No Metadata Documentation available.
     /// </summary>
-    [EdmEntityTypeAttribute(NamespaceName="BoardSportsDevModel", Name="Mast")]
+    [EdmEntityTypeAttribute(NamespaceName="BoardSportsModel", Name="Mast")]
     [Serializable()]
     [DataContractAttribute(IsReference=true)]
     public partial class Mast : EntityObject
@@ -1464,10 +1661,12 @@ namespace BoardSports.DAL
         /// Create a new Mast object.
         /// </summary>
         /// <param name="mastId">Initial value of the MastId property.</param>
-        public static Mast CreateMast(global::System.Int32 mastId)
+        /// <param name="mastName">Initial value of the MastName property.</param>
+        public static Mast CreateMast(global::System.Int32 mastId, global::System.String mastName)
         {
             Mast mast = new Mast();
             mast.MastId = mastId;
+            mast.MastName = mastName;
             return mast;
         }
 
@@ -1504,7 +1703,7 @@ namespace BoardSports.DAL
         /// <summary>
         /// No Metadata Documentation available.
         /// </summary>
-        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=true)]
+        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=false)]
         [DataMemberAttribute()]
         public global::System.String MastName
         {
@@ -1516,7 +1715,7 @@ namespace BoardSports.DAL
             {
                 OnMastNameChanging(value);
                 ReportPropertyChanging("MastName");
-                _MastName = StructuralObject.SetValidValue(value, true);
+                _MastName = StructuralObject.SetValidValue(value, false);
                 ReportPropertyChanged("MastName");
                 OnMastNameChanged();
             }
@@ -1626,48 +1825,48 @@ namespace BoardSports.DAL
         /// </summary>
         [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=true)]
         [DataMemberAttribute()]
-        public global::System.String PurchaseLocation
+        public global::System.String PurchaseStore
         {
             get
             {
-                return _PurchaseLocation;
+                return _PurchaseStore;
             }
             set
             {
-                OnPurchaseLocationChanging(value);
-                ReportPropertyChanging("PurchaseLocation");
-                _PurchaseLocation = StructuralObject.SetValidValue(value, true);
-                ReportPropertyChanged("PurchaseLocation");
-                OnPurchaseLocationChanged();
+                OnPurchaseStoreChanging(value);
+                ReportPropertyChanging("PurchaseStore");
+                _PurchaseStore = StructuralObject.SetValidValue(value, true);
+                ReportPropertyChanged("PurchaseStore");
+                OnPurchaseStoreChanged();
             }
         }
-        private global::System.String _PurchaseLocation;
-        partial void OnPurchaseLocationChanging(global::System.String value);
-        partial void OnPurchaseLocationChanged();
+        private global::System.String _PurchaseStore;
+        partial void OnPurchaseStoreChanging(global::System.String value);
+        partial void OnPurchaseStoreChanged();
     
         /// <summary>
         /// No Metadata Documentation available.
         /// </summary>
         [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=true)]
         [DataMemberAttribute()]
-        public global::System.String PictureLocation
+        public global::System.String YearManurfactured
         {
             get
             {
-                return _PictureLocation;
+                return _YearManurfactured;
             }
             set
             {
-                OnPictureLocationChanging(value);
-                ReportPropertyChanging("PictureLocation");
-                _PictureLocation = StructuralObject.SetValidValue(value, true);
-                ReportPropertyChanged("PictureLocation");
-                OnPictureLocationChanged();
+                OnYearManurfacturedChanging(value);
+                ReportPropertyChanging("YearManurfactured");
+                _YearManurfactured = StructuralObject.SetValidValue(value, true);
+                ReportPropertyChanged("YearManurfactured");
+                OnYearManurfacturedChanged();
             }
         }
-        private global::System.String _PictureLocation;
-        partial void OnPictureLocationChanging(global::System.String value);
-        partial void OnPictureLocationChanged();
+        private global::System.String _YearManurfactured;
+        partial void OnYearManurfacturedChanging(global::System.String value);
+        partial void OnYearManurfacturedChanged();
 
         #endregion
     
@@ -1679,18 +1878,18 @@ namespace BoardSports.DAL
         [XmlIgnoreAttribute()]
         [SoapIgnoreAttribute()]
         [DataMemberAttribute()]
-        [EdmRelationshipNavigationPropertyAttribute("BoardSportsDevModel", "FK_Rigs_Masts", "Rigs")]
+        [EdmRelationshipNavigationPropertyAttribute("BoardSportsModel", "FK_Rigs_Masts", "Rigs")]
         public EntityCollection<Rig> Rigs
         {
             get
             {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedCollection<Rig>("BoardSportsDevModel.FK_Rigs_Masts", "Rigs");
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedCollection<Rig>("BoardSportsModel.FK_Rigs_Masts", "Rigs");
             }
             set
             {
                 if ((value != null))
                 {
-                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedCollection<Rig>("BoardSportsDevModel.FK_Rigs_Masts", "Rigs", value);
+                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedCollection<Rig>("BoardSportsModel.FK_Rigs_Masts", "Rigs", value);
                 }
             }
         }
@@ -1701,7 +1900,7 @@ namespace BoardSports.DAL
     /// <summary>
     /// No Metadata Documentation available.
     /// </summary>
-    [EdmEntityTypeAttribute(NamespaceName="BoardSportsDevModel", Name="Rig")]
+    [EdmEntityTypeAttribute(NamespaceName="BoardSportsModel", Name="Rig")]
     [Serializable()]
     [DataContractAttribute(IsReference=true)]
     public partial class Rig : EntityObject
@@ -1712,16 +1911,20 @@ namespace BoardSports.DAL
         /// Create a new Rig object.
         /// </summary>
         /// <param name="rigId">Initial value of the RigId property.</param>
-        /// <param name="rigType">Initial value of the RigType property.</param>
         /// <param name="venueId">Initial value of the VenueId property.</param>
         /// <param name="boardId">Initial value of the BoardId property.</param>
-        public static Rig CreateRig(global::System.Int32 rigId, global::System.String rigType, global::System.Int32 venueId, global::System.Int32 boardId)
+        /// <param name="sailId">Initial value of the SailId property.</param>
+        /// <param name="boomId">Initial value of the BoomId property.</param>
+        /// <param name="finId">Initial value of the FinId property.</param>
+        public static Rig CreateRig(global::System.Int32 rigId, global::System.Int32 venueId, global::System.Int32 boardId, global::System.Int32 sailId, global::System.Int32 boomId, global::System.Int32 finId)
         {
             Rig rig = new Rig();
             rig.RigId = rigId;
-            rig.RigType = rigType;
             rig.VenueId = venueId;
             rig.BoardId = boardId;
+            rig.SailId = sailId;
+            rig.BoomId = boomId;
+            rig.FinId = finId;
             return rig;
         }
 
@@ -1760,7 +1963,7 @@ namespace BoardSports.DAL
         /// </summary>
         [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=true)]
         [DataMemberAttribute()]
-        public Nullable<global::System.DateTime> RigDate
+        public global::System.String RigDate
         {
             get
             {
@@ -1770,19 +1973,19 @@ namespace BoardSports.DAL
             {
                 OnRigDateChanging(value);
                 ReportPropertyChanging("RigDate");
-                _RigDate = StructuralObject.SetValidValue(value);
+                _RigDate = StructuralObject.SetValidValue(value, true);
                 ReportPropertyChanged("RigDate");
                 OnRigDateChanged();
             }
         }
-        private Nullable<global::System.DateTime> _RigDate;
-        partial void OnRigDateChanging(Nullable<global::System.DateTime> value);
+        private global::System.String _RigDate;
+        partial void OnRigDateChanging(global::System.String value);
         partial void OnRigDateChanged();
     
         /// <summary>
         /// No Metadata Documentation available.
         /// </summary>
-        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=false)]
+        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=true)]
         [DataMemberAttribute()]
         public global::System.String RigType
         {
@@ -1794,7 +1997,7 @@ namespace BoardSports.DAL
             {
                 OnRigTypeChanging(value);
                 ReportPropertyChanging("RigType");
-                _RigType = StructuralObject.SetValidValue(value, false);
+                _RigType = StructuralObject.SetValidValue(value, true);
                 ReportPropertyChanged("RigType");
                 OnRigTypeChanged();
             }
@@ -1854,9 +2057,33 @@ namespace BoardSports.DAL
         /// <summary>
         /// No Metadata Documentation available.
         /// </summary>
-        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=true)]
+        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=false)]
         [DataMemberAttribute()]
-        public Nullable<global::System.Int32> BoomId
+        public global::System.Int32 SailId
+        {
+            get
+            {
+                return _SailId;
+            }
+            set
+            {
+                OnSailIdChanging(value);
+                ReportPropertyChanging("SailId");
+                _SailId = StructuralObject.SetValidValue(value);
+                ReportPropertyChanged("SailId");
+                OnSailIdChanged();
+            }
+        }
+        private global::System.Int32 _SailId;
+        partial void OnSailIdChanging(global::System.Int32 value);
+        partial void OnSailIdChanged();
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=false)]
+        [DataMemberAttribute()]
+        public global::System.Int32 BoomId
         {
             get
             {
@@ -1871,9 +2098,33 @@ namespace BoardSports.DAL
                 OnBoomIdChanged();
             }
         }
-        private Nullable<global::System.Int32> _BoomId;
-        partial void OnBoomIdChanging(Nullable<global::System.Int32> value);
+        private global::System.Int32 _BoomId;
+        partial void OnBoomIdChanging(global::System.Int32 value);
         partial void OnBoomIdChanged();
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=false)]
+        [DataMemberAttribute()]
+        public global::System.Int32 FinId
+        {
+            get
+            {
+                return _FinId;
+            }
+            set
+            {
+                OnFinIdChanging(value);
+                ReportPropertyChanging("FinId");
+                _FinId = StructuralObject.SetValidValue(value);
+                ReportPropertyChanged("FinId");
+                OnFinIdChanged();
+            }
+        }
+        private global::System.Int32 _FinId;
+        partial void OnFinIdChanging(global::System.Int32 value);
+        partial void OnFinIdChanged();
     
         /// <summary>
         /// No Metadata Documentation available.
@@ -1904,30 +2155,6 @@ namespace BoardSports.DAL
         /// </summary>
         [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=true)]
         [DataMemberAttribute()]
-        public Nullable<global::System.Int32> SailId
-        {
-            get
-            {
-                return _SailId;
-            }
-            set
-            {
-                OnSailIdChanging(value);
-                ReportPropertyChanging("SailId");
-                _SailId = StructuralObject.SetValidValue(value);
-                ReportPropertyChanged("SailId");
-                OnSailIdChanged();
-            }
-        }
-        private Nullable<global::System.Int32> _SailId;
-        partial void OnSailIdChanging(Nullable<global::System.Int32> value);
-        partial void OnSailIdChanged();
-    
-        /// <summary>
-        /// No Metadata Documentation available.
-        /// </summary>
-        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=true)]
-        [DataMemberAttribute()]
         public Nullable<global::System.Int32> KiteId
         {
             get
@@ -1952,24 +2179,24 @@ namespace BoardSports.DAL
         /// </summary>
         [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=true)]
         [DataMemberAttribute()]
-        public Nullable<global::System.Int32> FinId
+        public Nullable<global::System.Int32> KiteBoardId
         {
             get
             {
-                return _FinId;
+                return _KiteBoardId;
             }
             set
             {
-                OnFinIdChanging(value);
-                ReportPropertyChanging("FinId");
-                _FinId = StructuralObject.SetValidValue(value);
-                ReportPropertyChanged("FinId");
-                OnFinIdChanged();
+                OnKiteBoardIdChanging(value);
+                ReportPropertyChanging("KiteBoardId");
+                _KiteBoardId = StructuralObject.SetValidValue(value);
+                ReportPropertyChanged("KiteBoardId");
+                OnKiteBoardIdChanged();
             }
         }
-        private Nullable<global::System.Int32> _FinId;
-        partial void OnFinIdChanging(Nullable<global::System.Int32> value);
-        partial void OnFinIdChanged();
+        private Nullable<global::System.Int32> _KiteBoardId;
+        partial void OnKiteBoardIdChanging(Nullable<global::System.Int32> value);
+        partial void OnKiteBoardIdChanged();
 
         #endregion
     
@@ -1981,16 +2208,16 @@ namespace BoardSports.DAL
         [XmlIgnoreAttribute()]
         [SoapIgnoreAttribute()]
         [DataMemberAttribute()]
-        [EdmRelationshipNavigationPropertyAttribute("BoardSportsDevModel", "FK_Rigs_Boards", "Boards")]
+        [EdmRelationshipNavigationPropertyAttribute("BoardSportsModel", "FK_Rigs_Boards", "Boards")]
         public Board Board
         {
             get
             {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Board>("BoardSportsDevModel.FK_Rigs_Boards", "Boards").Value;
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Board>("BoardSportsModel.FK_Rigs_Boards", "Boards").Value;
             }
             set
             {
-                ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Board>("BoardSportsDevModel.FK_Rigs_Boards", "Boards").Value = value;
+                ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Board>("BoardSportsModel.FK_Rigs_Boards", "Boards").Value = value;
             }
         }
         /// <summary>
@@ -2002,13 +2229,13 @@ namespace BoardSports.DAL
         {
             get
             {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Board>("BoardSportsDevModel.FK_Rigs_Boards", "Boards");
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Board>("BoardSportsModel.FK_Rigs_Boards", "Boards");
             }
             set
             {
                 if ((value != null))
                 {
-                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedReference<Board>("BoardSportsDevModel.FK_Rigs_Boards", "Boards", value);
+                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedReference<Board>("BoardSportsModel.FK_Rigs_Boards", "Boards", value);
                 }
             }
         }
@@ -2019,16 +2246,16 @@ namespace BoardSports.DAL
         [XmlIgnoreAttribute()]
         [SoapIgnoreAttribute()]
         [DataMemberAttribute()]
-        [EdmRelationshipNavigationPropertyAttribute("BoardSportsDevModel", "FK_Rigs_Booms", "Booms")]
+        [EdmRelationshipNavigationPropertyAttribute("BoardSportsModel", "FK_Rigs_Booms", "Booms")]
         public Boom Boom
         {
             get
             {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Boom>("BoardSportsDevModel.FK_Rigs_Booms", "Booms").Value;
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Boom>("BoardSportsModel.FK_Rigs_Booms", "Booms").Value;
             }
             set
             {
-                ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Boom>("BoardSportsDevModel.FK_Rigs_Booms", "Booms").Value = value;
+                ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Boom>("BoardSportsModel.FK_Rigs_Booms", "Booms").Value = value;
             }
         }
         /// <summary>
@@ -2040,13 +2267,13 @@ namespace BoardSports.DAL
         {
             get
             {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Boom>("BoardSportsDevModel.FK_Rigs_Booms", "Booms");
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Boom>("BoardSportsModel.FK_Rigs_Booms", "Booms");
             }
             set
             {
                 if ((value != null))
                 {
-                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedReference<Boom>("BoardSportsDevModel.FK_Rigs_Booms", "Booms", value);
+                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedReference<Boom>("BoardSportsModel.FK_Rigs_Booms", "Booms", value);
                 }
             }
         }
@@ -2057,16 +2284,16 @@ namespace BoardSports.DAL
         [XmlIgnoreAttribute()]
         [SoapIgnoreAttribute()]
         [DataMemberAttribute()]
-        [EdmRelationshipNavigationPropertyAttribute("BoardSportsDevModel", "FK_Rigs_Fins", "Fins")]
+        [EdmRelationshipNavigationPropertyAttribute("BoardSportsModel", "FK_Rigs_Fins", "Fins")]
         public Fin Fin
         {
             get
             {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Fin>("BoardSportsDevModel.FK_Rigs_Fins", "Fins").Value;
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Fin>("BoardSportsModel.FK_Rigs_Fins", "Fins").Value;
             }
             set
             {
-                ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Fin>("BoardSportsDevModel.FK_Rigs_Fins", "Fins").Value = value;
+                ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Fin>("BoardSportsModel.FK_Rigs_Fins", "Fins").Value = value;
             }
         }
         /// <summary>
@@ -2078,13 +2305,13 @@ namespace BoardSports.DAL
         {
             get
             {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Fin>("BoardSportsDevModel.FK_Rigs_Fins", "Fins");
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Fin>("BoardSportsModel.FK_Rigs_Fins", "Fins");
             }
             set
             {
                 if ((value != null))
                 {
-                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedReference<Fin>("BoardSportsDevModel.FK_Rigs_Fins", "Fins", value);
+                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedReference<Fin>("BoardSportsModel.FK_Rigs_Fins", "Fins", value);
                 }
             }
         }
@@ -2095,54 +2322,16 @@ namespace BoardSports.DAL
         [XmlIgnoreAttribute()]
         [SoapIgnoreAttribute()]
         [DataMemberAttribute()]
-        [EdmRelationshipNavigationPropertyAttribute("BoardSportsDevModel", "FK_Rigs_Kites", "Kites")]
-        public Kite Kite
-        {
-            get
-            {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Kite>("BoardSportsDevModel.FK_Rigs_Kites", "Kites").Value;
-            }
-            set
-            {
-                ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Kite>("BoardSportsDevModel.FK_Rigs_Kites", "Kites").Value = value;
-            }
-        }
-        /// <summary>
-        /// No Metadata Documentation available.
-        /// </summary>
-        [BrowsableAttribute(false)]
-        [DataMemberAttribute()]
-        public EntityReference<Kite> KiteReference
-        {
-            get
-            {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Kite>("BoardSportsDevModel.FK_Rigs_Kites", "Kites");
-            }
-            set
-            {
-                if ((value != null))
-                {
-                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedReference<Kite>("BoardSportsDevModel.FK_Rigs_Kites", "Kites", value);
-                }
-            }
-        }
-    
-        /// <summary>
-        /// No Metadata Documentation available.
-        /// </summary>
-        [XmlIgnoreAttribute()]
-        [SoapIgnoreAttribute()]
-        [DataMemberAttribute()]
-        [EdmRelationshipNavigationPropertyAttribute("BoardSportsDevModel", "FK_Rigs_Masts", "Masts")]
+        [EdmRelationshipNavigationPropertyAttribute("BoardSportsModel", "FK_Rigs_Masts", "Masts")]
         public Mast Mast
         {
             get
             {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Mast>("BoardSportsDevModel.FK_Rigs_Masts", "Masts").Value;
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Mast>("BoardSportsModel.FK_Rigs_Masts", "Masts").Value;
             }
             set
             {
-                ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Mast>("BoardSportsDevModel.FK_Rigs_Masts", "Masts").Value = value;
+                ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Mast>("BoardSportsModel.FK_Rigs_Masts", "Masts").Value = value;
             }
         }
         /// <summary>
@@ -2154,13 +2343,13 @@ namespace BoardSports.DAL
         {
             get
             {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Mast>("BoardSportsDevModel.FK_Rigs_Masts", "Masts");
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Mast>("BoardSportsModel.FK_Rigs_Masts", "Masts");
             }
             set
             {
                 if ((value != null))
                 {
-                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedReference<Mast>("BoardSportsDevModel.FK_Rigs_Masts", "Masts", value);
+                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedReference<Mast>("BoardSportsModel.FK_Rigs_Masts", "Masts", value);
                 }
             }
         }
@@ -2171,16 +2360,16 @@ namespace BoardSports.DAL
         [XmlIgnoreAttribute()]
         [SoapIgnoreAttribute()]
         [DataMemberAttribute()]
-        [EdmRelationshipNavigationPropertyAttribute("BoardSportsDevModel", "FK_Rigs_Sails", "Sails")]
+        [EdmRelationshipNavigationPropertyAttribute("BoardSportsModel", "FK_Rigs_Sails", "Sails")]
         public Sail Sail
         {
             get
             {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Sail>("BoardSportsDevModel.FK_Rigs_Sails", "Sails").Value;
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Sail>("BoardSportsModel.FK_Rigs_Sails", "Sails").Value;
             }
             set
             {
-                ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Sail>("BoardSportsDevModel.FK_Rigs_Sails", "Sails").Value = value;
+                ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Sail>("BoardSportsModel.FK_Rigs_Sails", "Sails").Value = value;
             }
         }
         /// <summary>
@@ -2192,13 +2381,13 @@ namespace BoardSports.DAL
         {
             get
             {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Sail>("BoardSportsDevModel.FK_Rigs_Sails", "Sails");
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Sail>("BoardSportsModel.FK_Rigs_Sails", "Sails");
             }
             set
             {
                 if ((value != null))
                 {
-                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedReference<Sail>("BoardSportsDevModel.FK_Rigs_Sails", "Sails", value);
+                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedReference<Sail>("BoardSportsModel.FK_Rigs_Sails", "Sails", value);
                 }
             }
         }
@@ -2209,16 +2398,16 @@ namespace BoardSports.DAL
         [XmlIgnoreAttribute()]
         [SoapIgnoreAttribute()]
         [DataMemberAttribute()]
-        [EdmRelationshipNavigationPropertyAttribute("BoardSportsDevModel", "FK_Rigs_Venues", "Venues")]
+        [EdmRelationshipNavigationPropertyAttribute("BoardSportsModel", "FK_Rigs_Venues", "Venues")]
         public Venue Venue
         {
             get
             {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Venue>("BoardSportsDevModel.FK_Rigs_Venues", "Venues").Value;
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Venue>("BoardSportsModel.FK_Rigs_Venues", "Venues").Value;
             }
             set
             {
-                ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Venue>("BoardSportsDevModel.FK_Rigs_Venues", "Venues").Value = value;
+                ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Venue>("BoardSportsModel.FK_Rigs_Venues", "Venues").Value = value;
             }
         }
         /// <summary>
@@ -2230,13 +2419,35 @@ namespace BoardSports.DAL
         {
             get
             {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Venue>("BoardSportsDevModel.FK_Rigs_Venues", "Venues");
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Venue>("BoardSportsModel.FK_Rigs_Venues", "Venues");
             }
             set
             {
                 if ((value != null))
                 {
-                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedReference<Venue>("BoardSportsDevModel.FK_Rigs_Venues", "Venues", value);
+                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedReference<Venue>("BoardSportsModel.FK_Rigs_Venues", "Venues", value);
+                }
+            }
+        }
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [XmlIgnoreAttribute()]
+        [SoapIgnoreAttribute()]
+        [DataMemberAttribute()]
+        [EdmRelationshipNavigationPropertyAttribute("BoardSportsModel", "FK_Sessions_Rigs", "Sessions")]
+        public EntityCollection<Session> Sessions
+        {
+            get
+            {
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedCollection<Session>("BoardSportsModel.FK_Sessions_Rigs", "Sessions");
+            }
+            set
+            {
+                if ((value != null))
+                {
+                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedCollection<Session>("BoardSportsModel.FK_Sessions_Rigs", "Sessions", value);
                 }
             }
         }
@@ -2247,7 +2458,7 @@ namespace BoardSports.DAL
     /// <summary>
     /// No Metadata Documentation available.
     /// </summary>
-    [EdmEntityTypeAttribute(NamespaceName="BoardSportsDevModel", Name="Sail")]
+    [EdmEntityTypeAttribute(NamespaceName="BoardSportsModel", Name="Sail")]
     [Serializable()]
     [DataContractAttribute(IsReference=true)]
     public partial class Sail : EntityObject
@@ -2448,7 +2659,7 @@ namespace BoardSports.DAL
         /// </summary>
         [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=true)]
         [DataMemberAttribute()]
-        public Nullable<global::System.Int32> BoomLength
+        public Nullable<global::System.Byte> BoomLength
         {
             get
             {
@@ -2463,8 +2674,8 @@ namespace BoardSports.DAL
                 OnBoomLengthChanged();
             }
         }
-        private Nullable<global::System.Int32> _BoomLength;
-        partial void OnBoomLengthChanging(Nullable<global::System.Int32> value);
+        private Nullable<global::System.Byte> _BoomLength;
+        partial void OnBoomLengthChanging(Nullable<global::System.Byte> value);
         partial void OnBoomLengthChanged();
     
         /// <summary>
@@ -2496,30 +2707,6 @@ namespace BoardSports.DAL
         /// </summary>
         [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=true)]
         [DataMemberAttribute()]
-        public Nullable<global::System.Int32> YearManufactured
-        {
-            get
-            {
-                return _YearManufactured;
-            }
-            set
-            {
-                OnYearManufacturedChanging(value);
-                ReportPropertyChanging("YearManufactured");
-                _YearManufactured = StructuralObject.SetValidValue(value);
-                ReportPropertyChanged("YearManufactured");
-                OnYearManufacturedChanged();
-            }
-        }
-        private Nullable<global::System.Int32> _YearManufactured;
-        partial void OnYearManufacturedChanging(Nullable<global::System.Int32> value);
-        partial void OnYearManufacturedChanged();
-    
-        /// <summary>
-        /// No Metadata Documentation available.
-        /// </summary>
-        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=true)]
-        [DataMemberAttribute()]
         public global::System.String PictureLocation
         {
             get
@@ -2538,6 +2725,30 @@ namespace BoardSports.DAL
         private global::System.String _PictureLocation;
         partial void OnPictureLocationChanging(global::System.String value);
         partial void OnPictureLocationChanged();
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=true)]
+        [DataMemberAttribute()]
+        public Nullable<global::System.Int32> YearManufactured
+        {
+            get
+            {
+                return _YearManufactured;
+            }
+            set
+            {
+                OnYearManufacturedChanging(value);
+                ReportPropertyChanging("YearManufactured");
+                _YearManufactured = StructuralObject.SetValidValue(value);
+                ReportPropertyChanged("YearManufactured");
+                OnYearManufacturedChanged();
+            }
+        }
+        private Nullable<global::System.Int32> _YearManufactured;
+        partial void OnYearManufacturedChanging(Nullable<global::System.Int32> value);
+        partial void OnYearManufacturedChanged();
 
         #endregion
     
@@ -2549,18 +2760,18 @@ namespace BoardSports.DAL
         [XmlIgnoreAttribute()]
         [SoapIgnoreAttribute()]
         [DataMemberAttribute()]
-        [EdmRelationshipNavigationPropertyAttribute("BoardSportsDevModel", "FK_Rigs_Sails", "Rigs")]
+        [EdmRelationshipNavigationPropertyAttribute("BoardSportsModel", "FK_Rigs_Sails", "Rigs")]
         public EntityCollection<Rig> Rigs
         {
             get
             {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedCollection<Rig>("BoardSportsDevModel.FK_Rigs_Sails", "Rigs");
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedCollection<Rig>("BoardSportsModel.FK_Rigs_Sails", "Rigs");
             }
             set
             {
                 if ((value != null))
                 {
-                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedCollection<Rig>("BoardSportsDevModel.FK_Rigs_Sails", "Rigs", value);
+                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedCollection<Rig>("BoardSportsModel.FK_Rigs_Sails", "Rigs", value);
                 }
             }
         }
@@ -2571,7 +2782,7 @@ namespace BoardSports.DAL
     /// <summary>
     /// No Metadata Documentation available.
     /// </summary>
-    [EdmEntityTypeAttribute(NamespaceName="BoardSportsDevModel", Name="Session")]
+    [EdmEntityTypeAttribute(NamespaceName="BoardSportsModel", Name="Session")]
     [Serializable()]
     [DataContractAttribute(IsReference=true)]
     public partial class Session : EntityObject
@@ -2582,12 +2793,16 @@ namespace BoardSports.DAL
         /// Create a new Session object.
         /// </summary>
         /// <param name="sessionId">Initial value of the SessionId property.</param>
-        /// <param name="venueId">Initial value of the VenueId property.</param>
-        public static Session CreateSession(global::System.Int32 sessionId, global::System.Int32 venueId)
+        /// <param name="sessionType">Initial value of the SessionType property.</param>
+        /// <param name="sessionDate">Initial value of the SessionDate property.</param>
+        /// <param name="rigId">Initial value of the RigId property.</param>
+        public static Session CreateSession(global::System.Int32 sessionId, global::System.String sessionType, global::System.DateTime sessionDate, global::System.Int32 rigId)
         {
             Session session = new Session();
             session.SessionId = sessionId;
-            session.VenueId = venueId;
+            session.SessionType = sessionType;
+            session.SessionDate = sessionDate;
+            session.RigId = rigId;
             return session;
         }
 
@@ -2624,7 +2839,7 @@ namespace BoardSports.DAL
         /// <summary>
         /// No Metadata Documentation available.
         /// </summary>
-        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=true)]
+        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=false)]
         [DataMemberAttribute()]
         public global::System.String SessionType
         {
@@ -2636,7 +2851,7 @@ namespace BoardSports.DAL
             {
                 OnSessionTypeChanging(value);
                 ReportPropertyChanging("SessionType");
-                _SessionType = StructuralObject.SetValidValue(value, true);
+                _SessionType = StructuralObject.SetValidValue(value, false);
                 ReportPropertyChanged("SessionType");
                 OnSessionTypeChanged();
             }
@@ -2648,9 +2863,9 @@ namespace BoardSports.DAL
         /// <summary>
         /// No Metadata Documentation available.
         /// </summary>
-        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=true)]
+        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=false)]
         [DataMemberAttribute()]
-        public Nullable<global::System.DateTime> SessionDate
+        public global::System.DateTime SessionDate
         {
             get
             {
@@ -2665,8 +2880,8 @@ namespace BoardSports.DAL
                 OnSessionDateChanged();
             }
         }
-        private Nullable<global::System.DateTime> _SessionDate;
-        partial void OnSessionDateChanging(Nullable<global::System.DateTime> value);
+        private global::System.DateTime _SessionDate;
+        partial void OnSessionDateChanging(global::System.DateTime value);
         partial void OnSessionDateChanged();
     
         /// <summary>
@@ -2722,7 +2937,7 @@ namespace BoardSports.DAL
         /// </summary>
         [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=true)]
         [DataMemberAttribute()]
-        public Nullable<global::System.Int32> Funfactor
+        public Nullable<global::System.Byte> Funfactor
         {
             get
             {
@@ -2737,16 +2952,16 @@ namespace BoardSports.DAL
                 OnFunfactorChanged();
             }
         }
-        private Nullable<global::System.Int32> _Funfactor;
-        partial void OnFunfactorChanging(Nullable<global::System.Int32> value);
+        private Nullable<global::System.Byte> _Funfactor;
+        partial void OnFunfactorChanging(Nullable<global::System.Byte> value);
         partial void OnFunfactorChanged();
     
         /// <summary>
         /// No Metadata Documentation available.
         /// </summary>
-        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=true)]
+        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=false)]
         [DataMemberAttribute()]
-        public Nullable<global::System.Int32> RigId
+        public global::System.Int32 RigId
         {
             get
             {
@@ -2761,33 +2976,9 @@ namespace BoardSports.DAL
                 OnRigIdChanged();
             }
         }
-        private Nullable<global::System.Int32> _RigId;
-        partial void OnRigIdChanging(Nullable<global::System.Int32> value);
+        private global::System.Int32 _RigId;
+        partial void OnRigIdChanging(global::System.Int32 value);
         partial void OnRigIdChanged();
-    
-        /// <summary>
-        /// No Metadata Documentation available.
-        /// </summary>
-        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=false)]
-        [DataMemberAttribute()]
-        public global::System.Int32 VenueId
-        {
-            get
-            {
-                return _VenueId;
-            }
-            set
-            {
-                OnVenueIdChanging(value);
-                ReportPropertyChanging("VenueId");
-                _VenueId = StructuralObject.SetValidValue(value);
-                ReportPropertyChanged("VenueId");
-                OnVenueIdChanged();
-            }
-        }
-        private global::System.Int32 _VenueId;
-        partial void OnVenueIdChanging(global::System.Int32 value);
-        partial void OnVenueIdChanged();
     
         /// <summary>
         /// No Metadata Documentation available.
@@ -2871,16 +3062,16 @@ namespace BoardSports.DAL
         [XmlIgnoreAttribute()]
         [SoapIgnoreAttribute()]
         [DataMemberAttribute()]
-        [EdmRelationshipNavigationPropertyAttribute("BoardSportsDevModel", "FK_Sessions_Venues", "Venues")]
-        public Venue Venue
+        [EdmRelationshipNavigationPropertyAttribute("BoardSportsModel", "FK_Sessions_Rigs", "Rigs")]
+        public Rig Rig
         {
             get
             {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Venue>("BoardSportsDevModel.FK_Sessions_Venues", "Venues").Value;
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Rig>("BoardSportsModel.FK_Sessions_Rigs", "Rigs").Value;
             }
             set
             {
-                ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Venue>("BoardSportsDevModel.FK_Sessions_Venues", "Venues").Value = value;
+                ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Rig>("BoardSportsModel.FK_Sessions_Rigs", "Rigs").Value = value;
             }
         }
         /// <summary>
@@ -2888,17 +3079,17 @@ namespace BoardSports.DAL
         /// </summary>
         [BrowsableAttribute(false)]
         [DataMemberAttribute()]
-        public EntityReference<Venue> VenueReference
+        public EntityReference<Rig> RigReference
         {
             get
             {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Venue>("BoardSportsDevModel.FK_Sessions_Venues", "Venues");
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Rig>("BoardSportsModel.FK_Sessions_Rigs", "Rigs");
             }
             set
             {
                 if ((value != null))
                 {
-                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedReference<Venue>("BoardSportsDevModel.FK_Sessions_Venues", "Venues", value);
+                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedReference<Rig>("BoardSportsModel.FK_Sessions_Rigs", "Rigs", value);
                 }
             }
         }
@@ -2909,7 +3100,256 @@ namespace BoardSports.DAL
     /// <summary>
     /// No Metadata Documentation available.
     /// </summary>
-    [EdmEntityTypeAttribute(NamespaceName="BoardSportsDevModel", Name="Venue")]
+    [EdmEntityTypeAttribute(NamespaceName="BoardSportsModel", Name="Snowboard")]
+    [Serializable()]
+    [DataContractAttribute(IsReference=true)]
+    public partial class Snowboard : EntityObject
+    {
+        #region Factory Method
+    
+        /// <summary>
+        /// Create a new Snowboard object.
+        /// </summary>
+        /// <param name="snowboardId">Initial value of the SnowboardId property.</param>
+        /// <param name="snowboardName">Initial value of the SnowboardName property.</param>
+        public static Snowboard CreateSnowboard(global::System.Int32 snowboardId, global::System.String snowboardName)
+        {
+            Snowboard snowboard = new Snowboard();
+            snowboard.SnowboardId = snowboardId;
+            snowboard.SnowboardName = snowboardName;
+            return snowboard;
+        }
+
+        #endregion
+        #region Primitive Properties
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [EdmScalarPropertyAttribute(EntityKeyProperty=true, IsNullable=false)]
+        [DataMemberAttribute()]
+        public global::System.Int32 SnowboardId
+        {
+            get
+            {
+                return _SnowboardId;
+            }
+            set
+            {
+                if (_SnowboardId != value)
+                {
+                    OnSnowboardIdChanging(value);
+                    ReportPropertyChanging("SnowboardId");
+                    _SnowboardId = StructuralObject.SetValidValue(value);
+                    ReportPropertyChanged("SnowboardId");
+                    OnSnowboardIdChanged();
+                }
+            }
+        }
+        private global::System.Int32 _SnowboardId;
+        partial void OnSnowboardIdChanging(global::System.Int32 value);
+        partial void OnSnowboardIdChanged();
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=false)]
+        [DataMemberAttribute()]
+        public global::System.String SnowboardName
+        {
+            get
+            {
+                return _SnowboardName;
+            }
+            set
+            {
+                OnSnowboardNameChanging(value);
+                ReportPropertyChanging("SnowboardName");
+                _SnowboardName = StructuralObject.SetValidValue(value, false);
+                ReportPropertyChanged("SnowboardName");
+                OnSnowboardNameChanged();
+            }
+        }
+        private global::System.String _SnowboardName;
+        partial void OnSnowboardNameChanging(global::System.String value);
+        partial void OnSnowboardNameChanged();
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=true)]
+        [DataMemberAttribute()]
+        public global::System.String Manufacturer
+        {
+            get
+            {
+                return _Manufacturer;
+            }
+            set
+            {
+                OnManufacturerChanging(value);
+                ReportPropertyChanging("Manufacturer");
+                _Manufacturer = StructuralObject.SetValidValue(value, true);
+                ReportPropertyChanged("Manufacturer");
+                OnManufacturerChanged();
+            }
+        }
+        private global::System.String _Manufacturer;
+        partial void OnManufacturerChanging(global::System.String value);
+        partial void OnManufacturerChanged();
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=true)]
+        [DataMemberAttribute()]
+        public Nullable<global::System.DateTime> PurchaseDate
+        {
+            get
+            {
+                return _PurchaseDate;
+            }
+            set
+            {
+                OnPurchaseDateChanging(value);
+                ReportPropertyChanging("PurchaseDate");
+                _PurchaseDate = StructuralObject.SetValidValue(value);
+                ReportPropertyChanged("PurchaseDate");
+                OnPurchaseDateChanged();
+            }
+        }
+        private Nullable<global::System.DateTime> _PurchaseDate;
+        partial void OnPurchaseDateChanging(Nullable<global::System.DateTime> value);
+        partial void OnPurchaseDateChanged();
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=true)]
+        [DataMemberAttribute()]
+        public Nullable<global::System.Decimal> PurchasePrice
+        {
+            get
+            {
+                return _PurchasePrice;
+            }
+            set
+            {
+                OnPurchasePriceChanging(value);
+                ReportPropertyChanging("PurchasePrice");
+                _PurchasePrice = StructuralObject.SetValidValue(value);
+                ReportPropertyChanged("PurchasePrice");
+                OnPurchasePriceChanged();
+            }
+        }
+        private Nullable<global::System.Decimal> _PurchasePrice;
+        partial void OnPurchasePriceChanging(Nullable<global::System.Decimal> value);
+        partial void OnPurchasePriceChanged();
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=true)]
+        [DataMemberAttribute()]
+        public Nullable<global::System.Decimal> EstimatedPrice
+        {
+            get
+            {
+                return _EstimatedPrice;
+            }
+            set
+            {
+                OnEstimatedPriceChanging(value);
+                ReportPropertyChanging("EstimatedPrice");
+                _EstimatedPrice = StructuralObject.SetValidValue(value);
+                ReportPropertyChanged("EstimatedPrice");
+                OnEstimatedPriceChanged();
+            }
+        }
+        private Nullable<global::System.Decimal> _EstimatedPrice;
+        partial void OnEstimatedPriceChanging(Nullable<global::System.Decimal> value);
+        partial void OnEstimatedPriceChanged();
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=true)]
+        [DataMemberAttribute()]
+        public Nullable<global::System.Byte> Length
+        {
+            get
+            {
+                return _Length;
+            }
+            set
+            {
+                OnLengthChanging(value);
+                ReportPropertyChanging("Length");
+                _Length = StructuralObject.SetValidValue(value);
+                ReportPropertyChanged("Length");
+                OnLengthChanged();
+            }
+        }
+        private Nullable<global::System.Byte> _Length;
+        partial void OnLengthChanging(Nullable<global::System.Byte> value);
+        partial void OnLengthChanged();
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=true)]
+        [DataMemberAttribute()]
+        public Nullable<global::System.Byte> Width
+        {
+            get
+            {
+                return _Width;
+            }
+            set
+            {
+                OnWidthChanging(value);
+                ReportPropertyChanging("Width");
+                _Width = StructuralObject.SetValidValue(value);
+                ReportPropertyChanged("Width");
+                OnWidthChanged();
+            }
+        }
+        private Nullable<global::System.Byte> _Width;
+        partial void OnWidthChanging(Nullable<global::System.Byte> value);
+        partial void OnWidthChanged();
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=true)]
+        [DataMemberAttribute()]
+        public global::System.String Bindings
+        {
+            get
+            {
+                return _Bindings;
+            }
+            set
+            {
+                OnBindingsChanging(value);
+                ReportPropertyChanging("Bindings");
+                _Bindings = StructuralObject.SetValidValue(value, true);
+                ReportPropertyChanged("Bindings");
+                OnBindingsChanged();
+            }
+        }
+        private global::System.String _Bindings;
+        partial void OnBindingsChanging(global::System.String value);
+        partial void OnBindingsChanged();
+
+        #endregion
+    
+    }
+    
+    /// <summary>
+    /// No Metadata Documentation available.
+    /// </summary>
+    [EdmEntityTypeAttribute(NamespaceName="BoardSportsModel", Name="Venue")]
     [Serializable()]
     [DataContractAttribute(IsReference=true)]
     public partial class Venue : EntityObject
@@ -3017,40 +3457,18 @@ namespace BoardSports.DAL
         [XmlIgnoreAttribute()]
         [SoapIgnoreAttribute()]
         [DataMemberAttribute()]
-        [EdmRelationshipNavigationPropertyAttribute("BoardSportsDevModel", "FK_Rigs_Venues", "Rigs")]
+        [EdmRelationshipNavigationPropertyAttribute("BoardSportsModel", "FK_Rigs_Venues", "Rigs")]
         public EntityCollection<Rig> Rigs
         {
             get
             {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedCollection<Rig>("BoardSportsDevModel.FK_Rigs_Venues", "Rigs");
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedCollection<Rig>("BoardSportsModel.FK_Rigs_Venues", "Rigs");
             }
             set
             {
                 if ((value != null))
                 {
-                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedCollection<Rig>("BoardSportsDevModel.FK_Rigs_Venues", "Rigs", value);
-                }
-            }
-        }
-    
-        /// <summary>
-        /// No Metadata Documentation available.
-        /// </summary>
-        [XmlIgnoreAttribute()]
-        [SoapIgnoreAttribute()]
-        [DataMemberAttribute()]
-        [EdmRelationshipNavigationPropertyAttribute("BoardSportsDevModel", "FK_Sessions_Venues", "Sessions")]
-        public EntityCollection<Session> Sessions
-        {
-            get
-            {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedCollection<Session>("BoardSportsDevModel.FK_Sessions_Venues", "Sessions");
-            }
-            set
-            {
-                if ((value != null))
-                {
-                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedCollection<Session>("BoardSportsDevModel.FK_Sessions_Venues", "Sessions", value);
+                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedCollection<Rig>("BoardSportsModel.FK_Rigs_Venues", "Rigs", value);
                 }
             }
         }

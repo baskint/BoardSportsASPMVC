@@ -1,0 +1,3 @@
+﻿ALTER TABLE [dbo].[Rigs]
+    ADD CONSTRAINT [FK_Rigs_Booms] FOREIGN KEY ([BoomId]) REFERENCES [dbo].[Booms] ([BoomId]) ON DELETE NO ACTION ON UPDATE NO ACTION;
+

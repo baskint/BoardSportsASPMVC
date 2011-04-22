@@ -1,0 +1,266 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="BoardSportsDevModel" Alias="Self" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns="http://schemas.microsoft.com/ado/2008/09/edm">
+  <EntityContainer Name="BoardSportsDevEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="Boards" EntityType="BoardSportsDevModel.Board" />
+    <EntitySet Name="Booms" EntityType="BoardSportsDevModel.Boom" />
+    <EntitySet Name="Fins" EntityType="BoardSportsDevModel.Fin" />
+    <EntitySet Name="Kites" EntityType="BoardSportsDevModel.Kite" />
+    <EntitySet Name="Masts" EntityType="BoardSportsDevModel.Mast" />
+    <EntitySet Name="Rigs" EntityType="BoardSportsDevModel.Rig" />
+    <EntitySet Name="Sails" EntityType="BoardSportsDevModel.Sail" />
+    <EntitySet Name="Sessions" EntityType="BoardSportsDevModel.Session" />
+    <EntitySet Name="Venues" EntityType="BoardSportsDevModel.Venue" />
+    <AssociationSet Name="FK_Rigs_Boards" Association="BoardSportsDevModel.FK_Rigs_Boards">
+      <End Role="Boards" EntitySet="Boards" />
+      <End Role="Rigs" EntitySet="Rigs" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Rigs_Booms" Association="BoardSportsDevModel.FK_Rigs_Booms">
+      <End Role="Booms" EntitySet="Booms" />
+      <End Role="Rigs" EntitySet="Rigs" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Rigs_Fins" Association="BoardSportsDevModel.FK_Rigs_Fins">
+      <End Role="Fins" EntitySet="Fins" />
+      <End Role="Rigs" EntitySet="Rigs" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Rigs_Kites" Association="BoardSportsDevModel.FK_Rigs_Kites">
+      <End Role="Kites" EntitySet="Kites" />
+      <End Role="Rigs" EntitySet="Rigs" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Rigs_Masts" Association="BoardSportsDevModel.FK_Rigs_Masts">
+      <End Role="Masts" EntitySet="Masts" />
+      <End Role="Rigs" EntitySet="Rigs" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Rigs_Sails" Association="BoardSportsDevModel.FK_Rigs_Sails">
+      <End Role="Sails" EntitySet="Sails" />
+      <End Role="Rigs" EntitySet="Rigs" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Rigs_Venues" Association="BoardSportsDevModel.FK_Rigs_Venues">
+      <End Role="Venues" EntitySet="Venues" />
+      <End Role="Rigs" EntitySet="Rigs" />
+    </AssociationSet>
+  </EntityContainer>
+  <EntityType Name="Board">
+    <Key>
+      <PropertyRef Name="BoardId" />
+    </Key>
+    <Property Name="BoardId" Type="Int32" Nullable="false" />
+    <Property Name="BoardName" Type="String" Nullable="false" MaxLength="100" Unicode="true" FixedLength="false" />
+    <Property Name="Manufacturer" Type="String" Nullable="false" MaxLength="100" Unicode="true" FixedLength="false" />
+    <Property Name="Length" Type="Decimal" Precision="8" Scale="4" />
+    <Property Name="Width" Type="Decimal" Precision="8" Scale="4" />
+    <Property Name="Volume" Type="Int32" />
+    <Property Name="BoardType" Type="String" MaxLength="100" Unicode="true" FixedLength="false" />
+    <Property Name="PurchaseDate" Type="DateTime" />
+    <Property Name="PurchasePrice" Type="Decimal" Precision="19" Scale="4" />
+    <Property Name="EstimatedValue" Type="Decimal" Precision="19" Scale="4" />
+    <Property Name="PurchaseLocation" Type="String" MaxLength="100" Unicode="true" FixedLength="false" />
+    <Property Name="YearManufactured" Type="Int32" />
+    <Property Name="PictureLocation" Type="String" MaxLength="250" Unicode="true" FixedLength="false" />
+    <NavigationProperty Name="Rigs" Relationship="BoardSportsDevModel.FK_Rigs_Boards" FromRole="Boards" ToRole="Rigs" />
+  </EntityType>
+  <EntityType Name="Boom">
+    <Key>
+      <PropertyRef Name="BoomId" />
+    </Key>
+    <Property Name="BoomId" Type="Int32" Nullable="false" />
+    <Property Name="BoomName" Type="String" MaxLength="100" Unicode="true" FixedLength="false" />
+    <Property Name="Manufacturer" Type="String" MaxLength="100" Unicode="true" FixedLength="false" />
+    <Property Name="MinLength" Type="Int32" />
+    <Property Name="MaxLength" Type="Int32" />
+    <Property Name="PurchaseDate" Type="DateTime" />
+    <Property Name="PurchasePrice" Type="Decimal" Precision="19" Scale="4" />
+    <Property Name="EstimatedValue" Type="Decimal" Precision="19" Scale="4" />
+    <Property Name="PictureLocation" Type="String" MaxLength="250" Unicode="true" FixedLength="false" />
+    <NavigationProperty Name="Rigs" Relationship="BoardSportsDevModel.FK_Rigs_Booms" FromRole="Booms" ToRole="Rigs" />
+  </EntityType>
+  <EntityType Name="Fin">
+    <Key>
+      <PropertyRef Name="FinId" />
+    </Key>
+    <Property Name="FinId" Type="Int32" Nullable="false" />
+    <Property Name="FinStyle" Type="String" MaxLength="100" Unicode="true" FixedLength="false" />
+    <Property Name="FinType" Type="String" MaxLength="100" Unicode="true" FixedLength="false" />
+    <Property Name="Length" Type="Int32" Nullable="false" />
+    <Property Name="Manufacturer" Type="String" MaxLength="100" Unicode="true" FixedLength="false" />
+    <Property Name="PurchasePrice" Type="Decimal" Precision="19" Scale="4" />
+    <Property Name="PictureLocation" Type="String" MaxLength="100" Unicode="true" FixedLength="false" />
+    <NavigationProperty Name="Rigs" Relationship="BoardSportsDevModel.FK_Rigs_Fins" FromRole="Fins" ToRole="Rigs" />
+  </EntityType>
+  <EntityType Name="Kite">
+    <Key>
+      <PropertyRef Name="KiteId" />
+    </Key>
+    <Property Name="KiteId" Type="Int32" Nullable="false" />
+    <Property Name="KiteName" Type="String" Nullable="false" MaxLength="100" Unicode="true" FixedLength="false" />
+    <Property Name="KiteBrand" Type="String" MaxLength="100" Unicode="true" FixedLength="false" />
+    <Property Name="Manufacturer" Type="String" MaxLength="100" Unicode="true" FixedLength="false" />
+    <Property Name="Size" Type="Int32" />
+    <Property Name="NumberLines" Type="Int32" />
+    <Property Name="YearManufactured" Type="Int32" Nullable="false" />
+    <Property Name="BarBrand" Type="String" MaxLength="100" Unicode="true" FixedLength="false" />
+    <Property Name="PictureLocation" Type="String" MaxLength="250" Unicode="true" FixedLength="false" />
+    <NavigationProperty Name="Rigs" Relationship="BoardSportsDevModel.FK_Rigs_Kites" FromRole="Kites" ToRole="Rigs" />
+  </EntityType>
+  <EntityType Name="Mast">
+    <Key>
+      <PropertyRef Name="MastId" />
+    </Key>
+    <Property Name="MastId" Type="Int32" Nullable="false" />
+    <Property Name="MastName" Type="String" MaxLength="100" Unicode="true" FixedLength="false" />
+    <Property Name="Manufacturer" Type="String" MaxLength="100" Unicode="true" FixedLength="false" />
+    <Property Name="CarbonContent" Type="Int32" />
+    <Property Name="PurchaseDate" Type="DateTime" />
+    <Property Name="PurchasePrice" Type="Decimal" Precision="19" Scale="4" />
+    <Property Name="PurchaseLocation" Type="String" MaxLength="100" Unicode="true" FixedLength="false" />
+    <Property Name="PictureLocation" Type="String" MaxLength="250" Unicode="true" FixedLength="false" />
+    <NavigationProperty Name="Rigs" Relationship="BoardSportsDevModel.FK_Rigs_Masts" FromRole="Masts" ToRole="Rigs" />
+  </EntityType>
+  <EntityType Name="Rig">
+    <Key>
+      <PropertyRef Name="RigId" />
+    </Key>
+    <Property Name="RigId" Type="Int32" Nullable="false" />
+    <Property Name="RigDate" Type="DateTime" />
+    <Property Name="RigType" Type="String" Nullable="false" MaxLength="50" Unicode="true" FixedLength="false" />
+    <Property Name="VenueId" Type="Int32" Nullable="false" />
+    <Property Name="BoardId" Type="Int32" Nullable="false" />
+    <Property Name="BoomId" Type="Int32" />
+    <Property Name="MastId" Type="Int32" />
+    <Property Name="SailId" Type="Int32" />
+    <Property Name="KiteId" Type="Int32" />
+    <Property Name="FinId" Type="Int32" />
+    <NavigationProperty Name="Board" Relationship="BoardSportsDevModel.FK_Rigs_Boards" FromRole="Rigs" ToRole="Boards" />
+    <NavigationProperty Name="Boom" Relationship="BoardSportsDevModel.FK_Rigs_Booms" FromRole="Rigs" ToRole="Booms" />
+    <NavigationProperty Name="Fin" Relationship="BoardSportsDevModel.FK_Rigs_Fins" FromRole="Rigs" ToRole="Fins" />
+    <NavigationProperty Name="Kite" Relationship="BoardSportsDevModel.FK_Rigs_Kites" FromRole="Rigs" ToRole="Kites" />
+    <NavigationProperty Name="Mast" Relationship="BoardSportsDevModel.FK_Rigs_Masts" FromRole="Rigs" ToRole="Masts" />
+    <NavigationProperty Name="Sail" Relationship="BoardSportsDevModel.FK_Rigs_Sails" FromRole="Rigs" ToRole="Sails" />
+    <NavigationProperty Name="Venue" Relationship="BoardSportsDevModel.FK_Rigs_Venues" FromRole="Rigs" ToRole="Venues" />
+  </EntityType>
+  <EntityType Name="Sail">
+    <Key>
+      <PropertyRef Name="SailId" />
+    </Key>
+    <Property Name="SailId" Type="Int32" Nullable="false" />
+    <Property Name="SailName" Type="String" Nullable="false" MaxLength="100" Unicode="true" FixedLength="false" />
+    <Property Name="Manufacturer" Type="String" MaxLength="100" Unicode="true" FixedLength="false" />
+    <Property Name="PurchaseDate" Type="DateTime" />
+    <Property Name="PurchasePrice" Type="Decimal" Precision="19" Scale="4" />
+    <Property Name="Condition" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+    <Property Name="Size" Type="Decimal" Nullable="false" Precision="8" Scale="4" />
+    <Property Name="BoomLength" Type="Int32" />
+    <Property Name="BaseLength" Type="Int32" />
+    <Property Name="YearManufactured" Type="Int32" />
+    <Property Name="PictureLocation" Type="String" MaxLength="250" Unicode="true" FixedLength="false" />
+    <NavigationProperty Name="Rigs" Relationship="BoardSportsDevModel.FK_Rigs_Sails" FromRole="Sails" ToRole="Rigs" />
+  </EntityType>
+  <EntityType Name="Session">
+    <Key>
+      <PropertyRef Name="SessionId" />
+    </Key>
+    <Property Name="SessionId" Type="Int32" Nullable="false" />
+    <Property Name="SessionType" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+    <Property Name="SessionDate" Type="DateTime" />
+    <Property Name="SessionDescription" Type="String" MaxLength="100" Unicode="true" FixedLength="false" />
+    <Property Name="Duration" Type="Decimal" Precision="4" Scale="2" />
+    <Property Name="Funfactor" Type="Int32" />
+    <Property Name="RigId" Type="Int32" />
+    <Property Name="VenueId" Type="Int32" Nullable="false" />
+    <Property Name="BeersConsumed" Type="Int32" />
+    <Property Name="PeopleInCompany" Type="Int32" />
+    <Property Name="Notes" Type="String" MaxLength="500" Unicode="true" FixedLength="false" />
+  </EntityType>
+  <EntityType Name="Venue">
+    <Key>
+      <PropertyRef Name="VenueId" />
+    </Key>
+    <Property Name="VenueId" Type="Int32" Nullable="false" />
+    <Property Name="VenueName" Type="String" Nullable="false" MaxLength="100" Unicode="true" FixedLength="false" />
+    <Property Name="PictureLocation" Type="String" MaxLength="250" Unicode="true" FixedLength="false" />
+    <NavigationProperty Name="Rigs" Relationship="BoardSportsDevModel.FK_Rigs_Venues" FromRole="Venues" ToRole="Rigs" />
+  </EntityType>
+  <Association Name="FK_Rigs_Boards">
+    <End Role="Boards" Type="BoardSportsDevModel.Board" Multiplicity="1" />
+    <End Role="Rigs" Type="BoardSportsDevModel.Rig" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Boards">
+        <PropertyRef Name="BoardId" />
+      </Principal>
+      <Dependent Role="Rigs">
+        <PropertyRef Name="BoardId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Rigs_Booms">
+    <End Role="Booms" Type="BoardSportsDevModel.Boom" Multiplicity="0..1" />
+    <End Role="Rigs" Type="BoardSportsDevModel.Rig" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Booms">
+        <PropertyRef Name="BoomId" />
+      </Principal>
+      <Dependent Role="Rigs">
+        <PropertyRef Name="BoomId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Rigs_Fins">
+    <End Role="Fins" Type="BoardSportsDevModel.Fin" Multiplicity="0..1" />
+    <End Role="Rigs" Type="BoardSportsDevModel.Rig" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Fins">
+        <PropertyRef Name="FinId" />
+      </Principal>
+      <Dependent Role="Rigs">
+        <PropertyRef Name="FinId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Rigs_Kites">
+    <End Role="Kites" Type="BoardSportsDevModel.Kite" Multiplicity="0..1" />
+    <End Role="Rigs" Type="BoardSportsDevModel.Rig" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Kites">
+        <PropertyRef Name="KiteId" />
+      </Principal>
+      <Dependent Role="Rigs">
+        <PropertyRef Name="KiteId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Rigs_Masts">
+    <End Role="Masts" Type="BoardSportsDevModel.Mast" Multiplicity="0..1" />
+    <End Role="Rigs" Type="BoardSportsDevModel.Rig" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Masts">
+        <PropertyRef Name="MastId" />
+      </Principal>
+      <Dependent Role="Rigs">
+        <PropertyRef Name="MastId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Rigs_Sails">
+    <End Role="Sails" Type="BoardSportsDevModel.Sail" Multiplicity="0..1" />
+    <End Role="Rigs" Type="BoardSportsDevModel.Rig" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Sails">
+        <PropertyRef Name="SailId" />
+      </Principal>
+      <Dependent Role="Rigs">
+        <PropertyRef Name="SailId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Rigs_Venues">
+    <End Role="Venues" Type="BoardSportsDevModel.Venue" Multiplicity="1" />
+    <End Role="Rigs" Type="BoardSportsDevModel.Rig" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Venues">
+        <PropertyRef Name="VenueId" />
+      </Principal>
+      <Dependent Role="Rigs">
+        <PropertyRef Name="VenueId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+</Schema>

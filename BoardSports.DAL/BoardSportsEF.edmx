@@ -4,47 +4,45 @@
   <edmx:Runtime>
     <!-- SSDL content -->
     <edmx:StorageModels>
-      <Schema Namespace="BoardSportsDevModel.Store" Alias="Self" Provider="System.Data.SqlClient" ProviderManifestToken="2008" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/02/edm/ssdl">
-        <EntityContainer Name="BoardSportsDevModelStoreContainer">
-          <EntitySet Name="Boards" EntityType="BoardSportsDevModel.Store.Boards" store:Type="Tables" Schema="dbo" />
-          <EntitySet Name="Booms" EntityType="BoardSportsDevModel.Store.Booms" store:Type="Tables" Schema="dbo" />
-          <EntitySet Name="Fins" EntityType="BoardSportsDevModel.Store.Fins" store:Type="Tables" Schema="dbo" />
-          <EntitySet Name="Kites" EntityType="BoardSportsDevModel.Store.Kites" store:Type="Tables" Schema="dbo" />
-          <EntitySet Name="Masts" EntityType="BoardSportsDevModel.Store.Masts" store:Type="Tables" Schema="dbo" />
-          <EntitySet Name="Rigs" EntityType="BoardSportsDevModel.Store.Rigs" store:Type="Tables" Schema="dbo" />
-          <EntitySet Name="Sails" EntityType="BoardSportsDevModel.Store.Sails" store:Type="Tables" Schema="dbo" />
-          <EntitySet Name="Sessions" EntityType="BoardSportsDevModel.Store.Sessions" store:Type="Tables" Schema="dbo" />
-          <EntitySet Name="Venues" EntityType="BoardSportsDevModel.Store.Venues" store:Type="Tables" Schema="dbo" />
-          <AssociationSet Name="FK_Rigs_Boards" Association="BoardSportsDevModel.Store.FK_Rigs_Boards">
+      <Schema Namespace="BoardSportsModel.Store" Alias="Self" Provider="System.Data.SqlClient" ProviderManifestToken="2008" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/02/edm/ssdl">
+        <EntityContainer Name="BoardSportsModelStoreContainer">
+          <EntitySet Name="Boards" EntityType="BoardSportsModel.Store.Boards" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="Booms" EntityType="BoardSportsModel.Store.Booms" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="Fins" EntityType="BoardSportsModel.Store.Fins" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="KiteBoards" EntityType="BoardSportsModel.Store.KiteBoards" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="Kites" EntityType="BoardSportsModel.Store.Kites" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="Masts" EntityType="BoardSportsModel.Store.Masts" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="Rigs" EntityType="BoardSportsModel.Store.Rigs" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="Sails" EntityType="BoardSportsModel.Store.Sails" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="Sessions" EntityType="BoardSportsModel.Store.Sessions" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="Snowboards" EntityType="BoardSportsModel.Store.Snowboards" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="Venues" EntityType="BoardSportsModel.Store.Venues" store:Type="Tables" Schema="dbo" />
+          <AssociationSet Name="FK_Rigs_Boards" Association="BoardSportsModel.Store.FK_Rigs_Boards">
             <End Role="Boards" EntitySet="Boards" />
             <End Role="Rigs" EntitySet="Rigs" />
           </AssociationSet>
-          <AssociationSet Name="FK_Rigs_Booms" Association="BoardSportsDevModel.Store.FK_Rigs_Booms">
+          <AssociationSet Name="FK_Rigs_Booms" Association="BoardSportsModel.Store.FK_Rigs_Booms">
             <End Role="Booms" EntitySet="Booms" />
             <End Role="Rigs" EntitySet="Rigs" />
           </AssociationSet>
-          <AssociationSet Name="FK_Rigs_Fins" Association="BoardSportsDevModel.Store.FK_Rigs_Fins">
+          <AssociationSet Name="FK_Rigs_Fins" Association="BoardSportsModel.Store.FK_Rigs_Fins">
             <End Role="Fins" EntitySet="Fins" />
             <End Role="Rigs" EntitySet="Rigs" />
           </AssociationSet>
-          <AssociationSet Name="FK_Rigs_Kites" Association="BoardSportsDevModel.Store.FK_Rigs_Kites">
-            <End Role="Kites" EntitySet="Kites" />
-            <End Role="Rigs" EntitySet="Rigs" />
-          </AssociationSet>
-          <AssociationSet Name="FK_Rigs_Masts" Association="BoardSportsDevModel.Store.FK_Rigs_Masts">
+          <AssociationSet Name="FK_Rigs_Masts" Association="BoardSportsModel.Store.FK_Rigs_Masts">
             <End Role="Masts" EntitySet="Masts" />
             <End Role="Rigs" EntitySet="Rigs" />
           </AssociationSet>
-          <AssociationSet Name="FK_Rigs_Sails" Association="BoardSportsDevModel.Store.FK_Rigs_Sails">
+          <AssociationSet Name="FK_Rigs_Sails" Association="BoardSportsModel.Store.FK_Rigs_Sails">
             <End Role="Sails" EntitySet="Sails" />
             <End Role="Rigs" EntitySet="Rigs" />
           </AssociationSet>
-          <AssociationSet Name="FK_Rigs_Venues" Association="BoardSportsDevModel.Store.FK_Rigs_Venues">
+          <AssociationSet Name="FK_Rigs_Venues" Association="BoardSportsModel.Store.FK_Rigs_Venues">
             <End Role="Venues" EntitySet="Venues" />
             <End Role="Rigs" EntitySet="Rigs" />
           </AssociationSet>
-          <AssociationSet Name="FK_Sessions_Venues" Association="BoardSportsDevModel.Store.FK_Sessions_Venues">
-            <End Role="Venues" EntitySet="Venues" />
+          <AssociationSet Name="FK_Sessions_Rigs" Association="BoardSportsModel.Store.FK_Sessions_Rigs">
+            <End Role="Rigs" EntitySet="Rigs" />
             <End Role="Sessions" EntitySet="Sessions" />
           </AssociationSet>
         </EntityContainer>
@@ -62,23 +60,22 @@
           <Property Name="PurchaseDate" Type="datetime" />
           <Property Name="PurchasePrice" Type="money" />
           <Property Name="EstimatedValue" Type="money" />
-          <Property Name="PurchaseLocation" Type="nvarchar" MaxLength="100" />
+          <Property Name="PictureLocation" Type="nvarchar" MaxLength="100" />
           <Property Name="YearManufactured" Type="int" />
-          <Property Name="PictureLocation" Type="nvarchar" MaxLength="250" />
         </EntityType>
         <EntityType Name="Booms">
           <Key>
             <PropertyRef Name="BoomId" />
           </Key>
           <Property Name="BoomId" Type="int" Nullable="false" />
-          <Property Name="BoomName" Type="nvarchar" MaxLength="100" />
+          <Property Name="BoomName" Type="nvarchar" Nullable="false" MaxLength="100" />
           <Property Name="Manufacturer" Type="nvarchar" MaxLength="100" />
           <Property Name="MinLength" Type="int" />
           <Property Name="MaxLength" Type="int" />
           <Property Name="PurchaseDate" Type="datetime" />
           <Property Name="PurchasePrice" Type="money" />
           <Property Name="EstimatedValue" Type="money" />
-          <Property Name="PictureLocation" Type="nvarchar" MaxLength="250" />
+          <Property Name="PictureLocation" Type="nvarchar" MaxLength="100" />
         </EntityType>
         <EntityType Name="Fins">
           <Key>
@@ -86,10 +83,21 @@
           </Key>
           <Property Name="FinId" Type="int" Nullable="false" />
           <Property Name="FinStyle" Type="nvarchar" MaxLength="100" />
-          <Property Name="FinType" Type="nvarchar" MaxLength="100" />
-          <Property Name="Length" Type="int" Nullable="false" />
+          <Property Name="FinType" Type="nvarchar" Nullable="false" MaxLength="100" />
+          <Property Name="Length" Type="int" />
+        </EntityType>
+        <EntityType Name="KiteBoards">
+          <Key>
+            <PropertyRef Name="KiteboardId" />
+          </Key>
+          <Property Name="KiteboardId" Type="int" Nullable="false" />
+          <Property Name="KiteboardName" Type="nvarchar" MaxLength="50" />
           <Property Name="Manufacturer" Type="nvarchar" MaxLength="100" />
           <Property Name="PurchasePrice" Type="money" />
+          <Property Name="PurchaseDate" Type="datetime" />
+          <Property Name="YearManufactured" Type="int" />
+          <Property Name="Length" Type="tinyint" />
+          <Property Name="Width" Type="tinyint" />
           <Property Name="PictureLocation" Type="nvarchar" MaxLength="100" />
         </EntityType>
         <EntityType Name="Kites">
@@ -98,41 +106,43 @@
           </Key>
           <Property Name="KiteId" Type="int" Nullable="false" />
           <Property Name="KiteName" Type="nvarchar" Nullable="false" MaxLength="100" />
-          <Property Name="KiteBrand" Type="nvarchar" MaxLength="100" />
           <Property Name="Manufacturer" Type="nvarchar" MaxLength="100" />
-          <Property Name="Size" Type="int" />
-          <Property Name="NumberLines" Type="int" />
-          <Property Name="YearManufactured" Type="int" Nullable="false" />
-          <Property Name="BarBrand" Type="nvarchar" MaxLength="100" />
-          <Property Name="PictureLocation" Type="nvarchar" MaxLength="250" />
+          <Property Name="Size" Type="tinyint" />
+          <Property Name="NumberOfLines" Type="tinyint" />
+          <Property Name="PictureLocation" Type="nvarchar" MaxLength="100" />
+          <Property Name="EstimatedValue" Type="money" />
+          <Property Name="PurchasePrice" Type="money" />
+          <Property Name="PurchaseDate" Type="datetime" />
+          <Property Name="YearManufactured" Type="int" />
         </EntityType>
         <EntityType Name="Masts">
           <Key>
             <PropertyRef Name="MastId" />
           </Key>
           <Property Name="MastId" Type="int" Nullable="false" />
-          <Property Name="MastName" Type="nvarchar" MaxLength="100" />
-          <Property Name="Manufacturer" Type="nvarchar" MaxLength="100" />
+          <Property Name="MastName" Type="nvarchar" Nullable="false" MaxLength="50" />
+          <Property Name="Manufacturer" Type="nvarchar" MaxLength="50" />
           <Property Name="CarbonContent" Type="int" />
-          <Property Name="PurchaseDate" Type="datetime" />
+          <Property Name="PurchaseDate" Type="date" />
           <Property Name="PurchasePrice" Type="money" />
-          <Property Name="PurchaseLocation" Type="nvarchar" MaxLength="100" />
-          <Property Name="PictureLocation" Type="nvarchar" MaxLength="250" />
+          <Property Name="PurchaseStore" Type="nvarchar" MaxLength="100" />
+          <Property Name="YearManurfactured" Type="nchar" MaxLength="10" />
         </EntityType>
         <EntityType Name="Rigs">
           <Key>
             <PropertyRef Name="RigId" />
           </Key>
           <Property Name="RigId" Type="int" Nullable="false" />
-          <Property Name="RigDate" Type="date" />
-          <Property Name="RigType" Type="nvarchar" Nullable="false" MaxLength="50" />
+          <Property Name="RigDate" Type="nchar" MaxLength="10" />
+          <Property Name="RigType" Type="nchar" MaxLength="10" />
           <Property Name="VenueId" Type="int" Nullable="false" />
           <Property Name="BoardId" Type="int" Nullable="false" />
-          <Property Name="BoomId" Type="int" />
+          <Property Name="SailId" Type="int" Nullable="false" />
+          <Property Name="BoomId" Type="int" Nullable="false" />
+          <Property Name="FinId" Type="int" Nullable="false" />
           <Property Name="MastId" Type="int" />
-          <Property Name="SailId" Type="int" />
           <Property Name="KiteId" Type="int" />
-          <Property Name="FinId" Type="int" />
+          <Property Name="KiteBoardId" Type="int" />
         </EntityType>
         <EntityType Name="Sails">
           <Key>
@@ -145,26 +155,39 @@
           <Property Name="PurchasePrice" Type="money" />
           <Property Name="Condition" Type="nvarchar" MaxLength="50" />
           <Property Name="Size" Type="decimal" Nullable="false" Precision="8" Scale="4" />
-          <Property Name="BoomLength" Type="int" />
+          <Property Name="BoomLength" Type="tinyint" />
           <Property Name="BaseLength" Type="int" />
+          <Property Name="PictureLocation" Type="nvarchar" MaxLength="100" />
           <Property Name="YearManufactured" Type="int" />
-          <Property Name="PictureLocation" Type="nvarchar" MaxLength="250" />
         </EntityType>
         <EntityType Name="Sessions">
           <Key>
             <PropertyRef Name="SessionId" />
           </Key>
           <Property Name="SessionId" Type="int" Nullable="false" />
-          <Property Name="SessionType" Type="nvarchar" MaxLength="50" />
-          <Property Name="SessionDate" Type="date" />
-          <Property Name="SessionDescription" Type="nvarchar" MaxLength="100" />
-          <Property Name="Duration" Type="decimal" Precision="4" Scale="2" />
-          <Property Name="Funfactor" Type="int" />
-          <Property Name="RigId" Type="int" />
-          <Property Name="VenueId" Type="int" Nullable="false" />
+          <Property Name="SessionType" Type="nvarchar" Nullable="false" MaxLength="50" />
+          <Property Name="SessionDate" Type="datetime" Nullable="false" />
+          <Property Name="SessionDescription" Type="nvarchar" MaxLength="250" />
+          <Property Name="Duration" Type="decimal" Precision="10" Scale="4" />
+          <Property Name="Funfactor" Type="tinyint" />
+          <Property Name="RigId" Type="int" Nullable="false" />
           <Property Name="BeersConsumed" Type="int" />
           <Property Name="PeopleInCompany" Type="int" />
-          <Property Name="Notes" Type="nvarchar" MaxLength="500" />
+          <Property Name="Notes" Type="nvarchar" MaxLength="250" />
+        </EntityType>
+        <EntityType Name="Snowboards">
+          <Key>
+            <PropertyRef Name="SnowboardId" />
+          </Key>
+          <Property Name="SnowboardId" Type="int" Nullable="false" />
+          <Property Name="SnowboardName" Type="nvarchar" Nullable="false" MaxLength="100" />
+          <Property Name="Manufacturer" Type="nvarchar" MaxLength="100" />
+          <Property Name="PurchaseDate" Type="datetime" />
+          <Property Name="PurchasePrice" Type="money" />
+          <Property Name="EstimatedPrice" Type="money" />
+          <Property Name="Length" Type="tinyint" />
+          <Property Name="Width" Type="tinyint" />
+          <Property Name="Bindings" Type="nvarchar" MaxLength="50" />
         </EntityType>
         <EntityType Name="Venues">
           <Key>
@@ -175,8 +198,8 @@
           <Property Name="PictureLocation" Type="nvarchar" MaxLength="250" />
         </EntityType>
         <Association Name="FK_Rigs_Boards">
-          <End Role="Boards" Type="BoardSportsDevModel.Store.Boards" Multiplicity="1" />
-          <End Role="Rigs" Type="BoardSportsDevModel.Store.Rigs" Multiplicity="*" />
+          <End Role="Boards" Type="BoardSportsModel.Store.Boards" Multiplicity="1" />
+          <End Role="Rigs" Type="BoardSportsModel.Store.Rigs" Multiplicity="*" />
           <ReferentialConstraint>
             <Principal Role="Boards">
               <PropertyRef Name="BoardId" />
@@ -187,8 +210,8 @@
           </ReferentialConstraint>
         </Association>
         <Association Name="FK_Rigs_Booms">
-          <End Role="Booms" Type="BoardSportsDevModel.Store.Booms" Multiplicity="0..1" />
-          <End Role="Rigs" Type="BoardSportsDevModel.Store.Rigs" Multiplicity="*" />
+          <End Role="Booms" Type="BoardSportsModel.Store.Booms" Multiplicity="1" />
+          <End Role="Rigs" Type="BoardSportsModel.Store.Rigs" Multiplicity="*" />
           <ReferentialConstraint>
             <Principal Role="Booms">
               <PropertyRef Name="BoomId" />
@@ -199,8 +222,8 @@
           </ReferentialConstraint>
         </Association>
         <Association Name="FK_Rigs_Fins">
-          <End Role="Fins" Type="BoardSportsDevModel.Store.Fins" Multiplicity="0..1" />
-          <End Role="Rigs" Type="BoardSportsDevModel.Store.Rigs" Multiplicity="*" />
+          <End Role="Fins" Type="BoardSportsModel.Store.Fins" Multiplicity="1" />
+          <End Role="Rigs" Type="BoardSportsModel.Store.Rigs" Multiplicity="*" />
           <ReferentialConstraint>
             <Principal Role="Fins">
               <PropertyRef Name="FinId" />
@@ -210,21 +233,9 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK_Rigs_Kites">
-          <End Role="Kites" Type="BoardSportsDevModel.Store.Kites" Multiplicity="0..1" />
-          <End Role="Rigs" Type="BoardSportsDevModel.Store.Rigs" Multiplicity="*" />
-          <ReferentialConstraint>
-            <Principal Role="Kites">
-              <PropertyRef Name="KiteId" />
-            </Principal>
-            <Dependent Role="Rigs">
-              <PropertyRef Name="KiteId" />
-            </Dependent>
-          </ReferentialConstraint>
-        </Association>
         <Association Name="FK_Rigs_Masts">
-          <End Role="Masts" Type="BoardSportsDevModel.Store.Masts" Multiplicity="0..1" />
-          <End Role="Rigs" Type="BoardSportsDevModel.Store.Rigs" Multiplicity="*" />
+          <End Role="Masts" Type="BoardSportsModel.Store.Masts" Multiplicity="0..1" />
+          <End Role="Rigs" Type="BoardSportsModel.Store.Rigs" Multiplicity="*" />
           <ReferentialConstraint>
             <Principal Role="Masts">
               <PropertyRef Name="MastId" />
@@ -235,8 +246,8 @@
           </ReferentialConstraint>
         </Association>
         <Association Name="FK_Rigs_Sails">
-          <End Role="Sails" Type="BoardSportsDevModel.Store.Sails" Multiplicity="0..1" />
-          <End Role="Rigs" Type="BoardSportsDevModel.Store.Rigs" Multiplicity="*" />
+          <End Role="Sails" Type="BoardSportsModel.Store.Sails" Multiplicity="1" />
+          <End Role="Rigs" Type="BoardSportsModel.Store.Rigs" Multiplicity="*" />
           <ReferentialConstraint>
             <Principal Role="Sails">
               <PropertyRef Name="SailId" />
@@ -247,8 +258,8 @@
           </ReferentialConstraint>
         </Association>
         <Association Name="FK_Rigs_Venues">
-          <End Role="Venues" Type="BoardSportsDevModel.Store.Venues" Multiplicity="1" />
-          <End Role="Rigs" Type="BoardSportsDevModel.Store.Rigs" Multiplicity="*" />
+          <End Role="Venues" Type="BoardSportsModel.Store.Venues" Multiplicity="1" />
+          <End Role="Rigs" Type="BoardSportsModel.Store.Rigs" Multiplicity="*" />
           <ReferentialConstraint>
             <Principal Role="Venues">
               <PropertyRef Name="VenueId" />
@@ -258,15 +269,15 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK_Sessions_Venues">
-          <End Role="Venues" Type="BoardSportsDevModel.Store.Venues" Multiplicity="1" />
-          <End Role="Sessions" Type="BoardSportsDevModel.Store.Sessions" Multiplicity="*" />
+        <Association Name="FK_Sessions_Rigs">
+          <End Role="Rigs" Type="BoardSportsModel.Store.Rigs" Multiplicity="1" />
+          <End Role="Sessions" Type="BoardSportsModel.Store.Sessions" Multiplicity="*" />
           <ReferentialConstraint>
-            <Principal Role="Venues">
-              <PropertyRef Name="VenueId" />
+            <Principal Role="Rigs">
+              <PropertyRef Name="RigId" />
             </Principal>
             <Dependent Role="Sessions">
-              <PropertyRef Name="VenueId" />
+              <PropertyRef Name="RigId" />
             </Dependent>
           </ReferentialConstraint>
         </Association>
@@ -274,47 +285,45 @@
     </edmx:StorageModels>
     <!-- CSDL content -->
     <edmx:ConceptualModels>
-      <Schema Namespace="BoardSportsDevModel" Alias="Self" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns="http://schemas.microsoft.com/ado/2008/09/edm">
-        <EntityContainer Name="BoardSportsDevEntities" annotation:LazyLoadingEnabled="true">
-          <EntitySet Name="Boards" EntityType="BoardSportsDevModel.Board" />
-          <EntitySet Name="Booms" EntityType="BoardSportsDevModel.Boom" />
-          <EntitySet Name="Fins" EntityType="BoardSportsDevModel.Fin" />
-          <EntitySet Name="Kites" EntityType="BoardSportsDevModel.Kite" />
-          <EntitySet Name="Masts" EntityType="BoardSportsDevModel.Mast" />
-          <EntitySet Name="Rigs" EntityType="BoardSportsDevModel.Rig" />
-          <EntitySet Name="Sails" EntityType="BoardSportsDevModel.Sail" />
-          <EntitySet Name="Sessions" EntityType="BoardSportsDevModel.Session" />
-          <EntitySet Name="Venues" EntityType="BoardSportsDevModel.Venue" />
-          <AssociationSet Name="FK_Rigs_Boards" Association="BoardSportsDevModel.FK_Rigs_Boards">
+      <Schema Namespace="BoardSportsModel" Alias="Self" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns="http://schemas.microsoft.com/ado/2008/09/edm">
+        <EntityContainer Name="BoardSportsDevEntity" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="Boards" EntityType="BoardSportsModel.Board" />
+          <EntitySet Name="Booms" EntityType="BoardSportsModel.Boom" />
+          <EntitySet Name="Fins" EntityType="BoardSportsModel.Fin" />
+          <EntitySet Name="KiteBoards" EntityType="BoardSportsModel.KiteBoard" />
+          <EntitySet Name="Kites" EntityType="BoardSportsModel.Kite" />
+          <EntitySet Name="Masts" EntityType="BoardSportsModel.Mast" />
+          <EntitySet Name="Rigs" EntityType="BoardSportsModel.Rig" />
+          <EntitySet Name="Sails" EntityType="BoardSportsModel.Sail" />
+          <EntitySet Name="Sessions" EntityType="BoardSportsModel.Session" />
+          <EntitySet Name="Snowboards" EntityType="BoardSportsModel.Snowboard" />
+          <EntitySet Name="Venues" EntityType="BoardSportsModel.Venue" />
+          <AssociationSet Name="FK_Rigs_Boards" Association="BoardSportsModel.FK_Rigs_Boards">
             <End Role="Boards" EntitySet="Boards" />
             <End Role="Rigs" EntitySet="Rigs" />
           </AssociationSet>
-          <AssociationSet Name="FK_Rigs_Booms" Association="BoardSportsDevModel.FK_Rigs_Booms">
+          <AssociationSet Name="FK_Rigs_Booms" Association="BoardSportsModel.FK_Rigs_Booms">
             <End Role="Booms" EntitySet="Booms" />
             <End Role="Rigs" EntitySet="Rigs" />
           </AssociationSet>
-          <AssociationSet Name="FK_Rigs_Fins" Association="BoardSportsDevModel.FK_Rigs_Fins">
+          <AssociationSet Name="FK_Rigs_Fins" Association="BoardSportsModel.FK_Rigs_Fins">
             <End Role="Fins" EntitySet="Fins" />
             <End Role="Rigs" EntitySet="Rigs" />
           </AssociationSet>
-          <AssociationSet Name="FK_Rigs_Kites" Association="BoardSportsDevModel.FK_Rigs_Kites">
-            <End Role="Kites" EntitySet="Kites" />
-            <End Role="Rigs" EntitySet="Rigs" />
-          </AssociationSet>
-          <AssociationSet Name="FK_Rigs_Masts" Association="BoardSportsDevModel.FK_Rigs_Masts">
+          <AssociationSet Name="FK_Rigs_Masts" Association="BoardSportsModel.FK_Rigs_Masts">
             <End Role="Masts" EntitySet="Masts" />
             <End Role="Rigs" EntitySet="Rigs" />
           </AssociationSet>
-          <AssociationSet Name="FK_Rigs_Sails" Association="BoardSportsDevModel.FK_Rigs_Sails">
+          <AssociationSet Name="FK_Rigs_Sails" Association="BoardSportsModel.FK_Rigs_Sails">
             <End Role="Sails" EntitySet="Sails" />
             <End Role="Rigs" EntitySet="Rigs" />
           </AssociationSet>
-          <AssociationSet Name="FK_Rigs_Venues" Association="BoardSportsDevModel.FK_Rigs_Venues">
+          <AssociationSet Name="FK_Rigs_Venues" Association="BoardSportsModel.FK_Rigs_Venues">
             <End Role="Venues" EntitySet="Venues" />
             <End Role="Rigs" EntitySet="Rigs" />
           </AssociationSet>
-          <AssociationSet Name="FK_Sessions_Venues" Association="BoardSportsDevModel.FK_Sessions_Venues">
-            <End Role="Venues" EntitySet="Venues" />
+          <AssociationSet Name="FK_Sessions_Rigs" Association="BoardSportsModel.FK_Sessions_Rigs">
+            <End Role="Rigs" EntitySet="Rigs" />
             <End Role="Sessions" EntitySet="Sessions" />
           </AssociationSet>
         </EntityContainer>
@@ -332,25 +341,24 @@
           <Property Name="PurchaseDate" Type="DateTime" />
           <Property Name="PurchasePrice" Type="Decimal" Precision="19" Scale="4" />
           <Property Name="EstimatedValue" Type="Decimal" Precision="19" Scale="4" />
-          <Property Name="PurchaseLocation" Type="String" MaxLength="100" Unicode="true" FixedLength="false" />
+          <Property Name="PictureLocation" Type="String" MaxLength="100" Unicode="true" FixedLength="false" />
           <Property Name="YearManufactured" Type="Int32" />
-          <Property Name="PictureLocation" Type="String" MaxLength="250" Unicode="true" FixedLength="false" />
-          <NavigationProperty Name="Rigs" Relationship="BoardSportsDevModel.FK_Rigs_Boards" FromRole="Boards" ToRole="Rigs" />
+          <NavigationProperty Name="Rigs" Relationship="BoardSportsModel.FK_Rigs_Boards" FromRole="Boards" ToRole="Rigs" />
         </EntityType>
         <EntityType Name="Boom">
           <Key>
             <PropertyRef Name="BoomId" />
           </Key>
           <Property Name="BoomId" Type="Int32" Nullable="false" />
-          <Property Name="BoomName" Type="String" MaxLength="100" Unicode="true" FixedLength="false" />
+          <Property Name="BoomName" Type="String" Nullable="false" MaxLength="100" Unicode="true" FixedLength="false" />
           <Property Name="Manufacturer" Type="String" MaxLength="100" Unicode="true" FixedLength="false" />
           <Property Name="MinLength" Type="Int32" />
           <Property Name="MaxLength" Type="Int32" />
           <Property Name="PurchaseDate" Type="DateTime" />
           <Property Name="PurchasePrice" Type="Decimal" Precision="19" Scale="4" />
           <Property Name="EstimatedValue" Type="Decimal" Precision="19" Scale="4" />
-          <Property Name="PictureLocation" Type="String" MaxLength="250" Unicode="true" FixedLength="false" />
-          <NavigationProperty Name="Rigs" Relationship="BoardSportsDevModel.FK_Rigs_Booms" FromRole="Booms" ToRole="Rigs" />
+          <Property Name="PictureLocation" Type="String" MaxLength="100" Unicode="true" FixedLength="false" />
+          <NavigationProperty Name="Rigs" Relationship="BoardSportsModel.FK_Rigs_Booms" FromRole="Booms" ToRole="Rigs" />
         </EntityType>
         <EntityType Name="Fin">
           <Key>
@@ -358,12 +366,23 @@
           </Key>
           <Property Name="FinId" Type="Int32" Nullable="false" />
           <Property Name="FinStyle" Type="String" MaxLength="100" Unicode="true" FixedLength="false" />
-          <Property Name="FinType" Type="String" MaxLength="100" Unicode="true" FixedLength="false" />
-          <Property Name="Length" Type="Int32" Nullable="false" />
+          <Property Name="FinType" Type="String" Nullable="false" MaxLength="100" Unicode="true" FixedLength="false" />
+          <Property Name="Length" Type="Int32" />
+          <NavigationProperty Name="Rigs" Relationship="BoardSportsModel.FK_Rigs_Fins" FromRole="Fins" ToRole="Rigs" />
+        </EntityType>
+        <EntityType Name="KiteBoard">
+          <Key>
+            <PropertyRef Name="KiteboardId" />
+          </Key>
+          <Property Name="KiteboardId" Type="Int32" Nullable="false" />
+          <Property Name="KiteboardName" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
           <Property Name="Manufacturer" Type="String" MaxLength="100" Unicode="true" FixedLength="false" />
           <Property Name="PurchasePrice" Type="Decimal" Precision="19" Scale="4" />
+          <Property Name="PurchaseDate" Type="DateTime" />
+          <Property Name="YearManufactured" Type="Int32" />
+          <Property Name="Length" Type="Byte" />
+          <Property Name="Width" Type="Byte" />
           <Property Name="PictureLocation" Type="String" MaxLength="100" Unicode="true" FixedLength="false" />
-          <NavigationProperty Name="Rigs" Relationship="BoardSportsDevModel.FK_Rigs_Fins" FromRole="Fins" ToRole="Rigs" />
         </EntityType>
         <EntityType Name="Kite">
           <Key>
@@ -371,50 +390,51 @@
           </Key>
           <Property Name="KiteId" Type="Int32" Nullable="false" />
           <Property Name="KiteName" Type="String" Nullable="false" MaxLength="100" Unicode="true" FixedLength="false" />
-          <Property Name="KiteBrand" Type="String" MaxLength="100" Unicode="true" FixedLength="false" />
           <Property Name="Manufacturer" Type="String" MaxLength="100" Unicode="true" FixedLength="false" />
-          <Property Name="Size" Type="Int32" />
-          <Property Name="NumberLines" Type="Int32" />
-          <Property Name="YearManufactured" Type="Int32" Nullable="false" />
-          <Property Name="BarBrand" Type="String" MaxLength="100" Unicode="true" FixedLength="false" />
-          <Property Name="PictureLocation" Type="String" MaxLength="250" Unicode="true" FixedLength="false" />
-          <NavigationProperty Name="Rigs" Relationship="BoardSportsDevModel.FK_Rigs_Kites" FromRole="Kites" ToRole="Rigs" />
+          <Property Name="Size" Type="Byte" />
+          <Property Name="NumberOfLines" Type="Byte" />
+          <Property Name="PictureLocation" Type="String" MaxLength="100" Unicode="true" FixedLength="false" />
+          <Property Name="EstimatedValue" Type="Decimal" Precision="19" Scale="4" />
+          <Property Name="PurchasePrice" Type="Decimal" Precision="19" Scale="4" />
+          <Property Name="PurchaseDate" Type="DateTime" />
+          <Property Name="YearManufactured" Type="Int32" />
         </EntityType>
         <EntityType Name="Mast">
           <Key>
             <PropertyRef Name="MastId" />
           </Key>
           <Property Name="MastId" Type="Int32" Nullable="false" />
-          <Property Name="MastName" Type="String" MaxLength="100" Unicode="true" FixedLength="false" />
-          <Property Name="Manufacturer" Type="String" MaxLength="100" Unicode="true" FixedLength="false" />
+          <Property Name="MastName" Type="String" Nullable="false" MaxLength="50" Unicode="true" FixedLength="false" />
+          <Property Name="Manufacturer" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
           <Property Name="CarbonContent" Type="Int32" />
           <Property Name="PurchaseDate" Type="DateTime" />
           <Property Name="PurchasePrice" Type="Decimal" Precision="19" Scale="4" />
-          <Property Name="PurchaseLocation" Type="String" MaxLength="100" Unicode="true" FixedLength="false" />
-          <Property Name="PictureLocation" Type="String" MaxLength="250" Unicode="true" FixedLength="false" />
-          <NavigationProperty Name="Rigs" Relationship="BoardSportsDevModel.FK_Rigs_Masts" FromRole="Masts" ToRole="Rigs" />
+          <Property Name="PurchaseStore" Type="String" MaxLength="100" Unicode="true" FixedLength="false" />
+          <Property Name="YearManurfactured" Type="String" MaxLength="10" Unicode="true" FixedLength="true" />
+          <NavigationProperty Name="Rigs" Relationship="BoardSportsModel.FK_Rigs_Masts" FromRole="Masts" ToRole="Rigs" />
         </EntityType>
         <EntityType Name="Rig">
           <Key>
             <PropertyRef Name="RigId" />
           </Key>
           <Property Name="RigId" Type="Int32" Nullable="false" />
-          <Property Name="RigDate" Type="DateTime" />
-          <Property Name="RigType" Type="String" Nullable="false" MaxLength="50" Unicode="true" FixedLength="false" />
+          <Property Name="RigDate" Type="String" MaxLength="10" Unicode="true" FixedLength="true" />
+          <Property Name="RigType" Type="String" MaxLength="10" Unicode="true" FixedLength="true" />
           <Property Name="VenueId" Type="Int32" Nullable="false" />
           <Property Name="BoardId" Type="Int32" Nullable="false" />
-          <Property Name="BoomId" Type="Int32" />
+          <Property Name="SailId" Type="Int32" Nullable="false" />
+          <Property Name="BoomId" Type="Int32" Nullable="false" />
+          <Property Name="FinId" Type="Int32" Nullable="false" />
           <Property Name="MastId" Type="Int32" />
-          <Property Name="SailId" Type="Int32" />
           <Property Name="KiteId" Type="Int32" />
-          <Property Name="FinId" Type="Int32" />
-          <NavigationProperty Name="Board" Relationship="BoardSportsDevModel.FK_Rigs_Boards" FromRole="Rigs" ToRole="Boards" />
-          <NavigationProperty Name="Boom" Relationship="BoardSportsDevModel.FK_Rigs_Booms" FromRole="Rigs" ToRole="Booms" />
-          <NavigationProperty Name="Fin" Relationship="BoardSportsDevModel.FK_Rigs_Fins" FromRole="Rigs" ToRole="Fins" />
-          <NavigationProperty Name="Kite" Relationship="BoardSportsDevModel.FK_Rigs_Kites" FromRole="Rigs" ToRole="Kites" />
-          <NavigationProperty Name="Mast" Relationship="BoardSportsDevModel.FK_Rigs_Masts" FromRole="Rigs" ToRole="Masts" />
-          <NavigationProperty Name="Sail" Relationship="BoardSportsDevModel.FK_Rigs_Sails" FromRole="Rigs" ToRole="Sails" />
-          <NavigationProperty Name="Venue" Relationship="BoardSportsDevModel.FK_Rigs_Venues" FromRole="Rigs" ToRole="Venues" />
+          <Property Name="KiteBoardId" Type="Int32" />
+          <NavigationProperty Name="Board" Relationship="BoardSportsModel.FK_Rigs_Boards" FromRole="Rigs" ToRole="Boards" />
+          <NavigationProperty Name="Boom" Relationship="BoardSportsModel.FK_Rigs_Booms" FromRole="Rigs" ToRole="Booms" />
+          <NavigationProperty Name="Fin" Relationship="BoardSportsModel.FK_Rigs_Fins" FromRole="Rigs" ToRole="Fins" />
+          <NavigationProperty Name="Mast" Relationship="BoardSportsModel.FK_Rigs_Masts" FromRole="Rigs" ToRole="Masts" />
+          <NavigationProperty Name="Sail" Relationship="BoardSportsModel.FK_Rigs_Sails" FromRole="Rigs" ToRole="Sails" />
+          <NavigationProperty Name="Venue" Relationship="BoardSportsModel.FK_Rigs_Venues" FromRole="Rigs" ToRole="Venues" />
+          <NavigationProperty Name="Sessions" Relationship="BoardSportsModel.FK_Sessions_Rigs" FromRole="Rigs" ToRole="Sessions" />
         </EntityType>
         <EntityType Name="Sail">
           <Key>
@@ -427,28 +447,41 @@
           <Property Name="PurchasePrice" Type="Decimal" Precision="19" Scale="4" />
           <Property Name="Condition" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
           <Property Name="Size" Type="Decimal" Nullable="false" Precision="8" Scale="4" />
-          <Property Name="BoomLength" Type="Int32" />
+          <Property Name="BoomLength" Type="Byte" />
           <Property Name="BaseLength" Type="Int32" />
+          <Property Name="PictureLocation" Type="String" MaxLength="100" Unicode="true" FixedLength="false" />
           <Property Name="YearManufactured" Type="Int32" />
-          <Property Name="PictureLocation" Type="String" MaxLength="250" Unicode="true" FixedLength="false" />
-          <NavigationProperty Name="Rigs" Relationship="BoardSportsDevModel.FK_Rigs_Sails" FromRole="Sails" ToRole="Rigs" />
+          <NavigationProperty Name="Rigs" Relationship="BoardSportsModel.FK_Rigs_Sails" FromRole="Sails" ToRole="Rigs" />
         </EntityType>
         <EntityType Name="Session">
           <Key>
             <PropertyRef Name="SessionId" />
           </Key>
           <Property Name="SessionId" Type="Int32" Nullable="false" />
-          <Property Name="SessionType" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
-          <Property Name="SessionDate" Type="DateTime" />
-          <Property Name="SessionDescription" Type="String" MaxLength="100" Unicode="true" FixedLength="false" />
-          <Property Name="Duration" Type="Decimal" Precision="4" Scale="2" />
-          <Property Name="Funfactor" Type="Int32" />
-          <Property Name="RigId" Type="Int32" />
-          <Property Name="VenueId" Type="Int32" Nullable="false" />
+          <Property Name="SessionType" Type="String" Nullable="false" MaxLength="50" Unicode="true" FixedLength="false" />
+          <Property Name="SessionDate" Type="DateTime" Nullable="false" />
+          <Property Name="SessionDescription" Type="String" MaxLength="250" Unicode="true" FixedLength="false" />
+          <Property Name="Duration" Type="Decimal" Precision="10" Scale="4" />
+          <Property Name="Funfactor" Type="Byte" />
+          <Property Name="RigId" Type="Int32" Nullable="false" />
           <Property Name="BeersConsumed" Type="Int32" />
           <Property Name="PeopleInCompany" Type="Int32" />
-          <Property Name="Notes" Type="String" MaxLength="500" Unicode="true" FixedLength="false" />
-          <NavigationProperty Name="Venue" Relationship="BoardSportsDevModel.FK_Sessions_Venues" FromRole="Sessions" ToRole="Venues" />
+          <Property Name="Notes" Type="String" MaxLength="250" Unicode="true" FixedLength="false" />
+          <NavigationProperty Name="Rig" Relationship="BoardSportsModel.FK_Sessions_Rigs" FromRole="Sessions" ToRole="Rigs" />
+        </EntityType>
+        <EntityType Name="Snowboard">
+          <Key>
+            <PropertyRef Name="SnowboardId" />
+          </Key>
+          <Property Name="SnowboardId" Type="Int32" Nullable="false" />
+          <Property Name="SnowboardName" Type="String" Nullable="false" MaxLength="100" Unicode="true" FixedLength="false" />
+          <Property Name="Manufacturer" Type="String" MaxLength="100" Unicode="true" FixedLength="false" />
+          <Property Name="PurchaseDate" Type="DateTime" />
+          <Property Name="PurchasePrice" Type="Decimal" Precision="19" Scale="4" />
+          <Property Name="EstimatedPrice" Type="Decimal" Precision="19" Scale="4" />
+          <Property Name="Length" Type="Byte" />
+          <Property Name="Width" Type="Byte" />
+          <Property Name="Bindings" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
         </EntityType>
         <EntityType Name="Venue">
           <Key>
@@ -457,12 +490,11 @@
           <Property Name="VenueId" Type="Int32" Nullable="false" />
           <Property Name="VenueName" Type="String" Nullable="false" MaxLength="100" Unicode="true" FixedLength="false" />
           <Property Name="PictureLocation" Type="String" MaxLength="250" Unicode="true" FixedLength="false" />
-          <NavigationProperty Name="Rigs" Relationship="BoardSportsDevModel.FK_Rigs_Venues" FromRole="Venues" ToRole="Rigs" />
-          <NavigationProperty Name="Sessions" Relationship="BoardSportsDevModel.FK_Sessions_Venues" FromRole="Venues" ToRole="Sessions" />
+          <NavigationProperty Name="Rigs" Relationship="BoardSportsModel.FK_Rigs_Venues" FromRole="Venues" ToRole="Rigs" />
         </EntityType>
         <Association Name="FK_Rigs_Boards">
-          <End Role="Boards" Type="BoardSportsDevModel.Board" Multiplicity="1" />
-          <End Role="Rigs" Type="BoardSportsDevModel.Rig" Multiplicity="*" />
+          <End Role="Boards" Type="BoardSportsModel.Board" Multiplicity="1" />
+          <End Role="Rigs" Type="BoardSportsModel.Rig" Multiplicity="*" />
           <ReferentialConstraint>
             <Principal Role="Boards">
               <PropertyRef Name="BoardId" />
@@ -473,8 +505,8 @@
           </ReferentialConstraint>
         </Association>
         <Association Name="FK_Rigs_Booms">
-          <End Role="Booms" Type="BoardSportsDevModel.Boom" Multiplicity="0..1" />
-          <End Role="Rigs" Type="BoardSportsDevModel.Rig" Multiplicity="*" />
+          <End Role="Booms" Type="BoardSportsModel.Boom" Multiplicity="1" />
+          <End Role="Rigs" Type="BoardSportsModel.Rig" Multiplicity="*" />
           <ReferentialConstraint>
             <Principal Role="Booms">
               <PropertyRef Name="BoomId" />
@@ -485,8 +517,8 @@
           </ReferentialConstraint>
         </Association>
         <Association Name="FK_Rigs_Fins">
-          <End Role="Fins" Type="BoardSportsDevModel.Fin" Multiplicity="0..1" />
-          <End Role="Rigs" Type="BoardSportsDevModel.Rig" Multiplicity="*" />
+          <End Role="Fins" Type="BoardSportsModel.Fin" Multiplicity="1" />
+          <End Role="Rigs" Type="BoardSportsModel.Rig" Multiplicity="*" />
           <ReferentialConstraint>
             <Principal Role="Fins">
               <PropertyRef Name="FinId" />
@@ -496,21 +528,9 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK_Rigs_Kites">
-          <End Role="Kites" Type="BoardSportsDevModel.Kite" Multiplicity="0..1" />
-          <End Role="Rigs" Type="BoardSportsDevModel.Rig" Multiplicity="*" />
-          <ReferentialConstraint>
-            <Principal Role="Kites">
-              <PropertyRef Name="KiteId" />
-            </Principal>
-            <Dependent Role="Rigs">
-              <PropertyRef Name="KiteId" />
-            </Dependent>
-          </ReferentialConstraint>
-        </Association>
         <Association Name="FK_Rigs_Masts">
-          <End Role="Masts" Type="BoardSportsDevModel.Mast" Multiplicity="0..1" />
-          <End Role="Rigs" Type="BoardSportsDevModel.Rig" Multiplicity="*" />
+          <End Role="Masts" Type="BoardSportsModel.Mast" Multiplicity="0..1" />
+          <End Role="Rigs" Type="BoardSportsModel.Rig" Multiplicity="*" />
           <ReferentialConstraint>
             <Principal Role="Masts">
               <PropertyRef Name="MastId" />
@@ -521,8 +541,8 @@
           </ReferentialConstraint>
         </Association>
         <Association Name="FK_Rigs_Sails">
-          <End Role="Sails" Type="BoardSportsDevModel.Sail" Multiplicity="0..1" />
-          <End Role="Rigs" Type="BoardSportsDevModel.Rig" Multiplicity="*" />
+          <End Role="Sails" Type="BoardSportsModel.Sail" Multiplicity="1" />
+          <End Role="Rigs" Type="BoardSportsModel.Rig" Multiplicity="*" />
           <ReferentialConstraint>
             <Principal Role="Sails">
               <PropertyRef Name="SailId" />
@@ -533,8 +553,8 @@
           </ReferentialConstraint>
         </Association>
         <Association Name="FK_Rigs_Venues">
-          <End Role="Venues" Type="BoardSportsDevModel.Venue" Multiplicity="1" />
-          <End Role="Rigs" Type="BoardSportsDevModel.Rig" Multiplicity="*" />
+          <End Role="Venues" Type="BoardSportsModel.Venue" Multiplicity="1" />
+          <End Role="Rigs" Type="BoardSportsModel.Rig" Multiplicity="*" />
           <ReferentialConstraint>
             <Principal Role="Venues">
               <PropertyRef Name="VenueId" />
@@ -544,15 +564,15 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK_Sessions_Venues">
-          <End Role="Venues" Type="BoardSportsDevModel.Venue" Multiplicity="1" />
-          <End Role="Sessions" Type="BoardSportsDevModel.Session" Multiplicity="*" />
+        <Association Name="FK_Sessions_Rigs">
+          <End Role="Rigs" Type="BoardSportsModel.Rig" Multiplicity="1" />
+          <End Role="Sessions" Type="BoardSportsModel.Session" Multiplicity="*" />
           <ReferentialConstraint>
-            <Principal Role="Venues">
-              <PropertyRef Name="VenueId" />
+            <Principal Role="Rigs">
+              <PropertyRef Name="RigId" />
             </Principal>
             <Dependent Role="Sessions">
-              <PropertyRef Name="VenueId" />
+              <PropertyRef Name="RigId" />
             </Dependent>
           </ReferentialConstraint>
         </Association>
@@ -561,8 +581,8 @@
     <!-- C-S mapping content -->
     <edmx:Mappings>
       <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2008/09/mapping/cs">
-        <EntityContainerMapping StorageEntityContainer="BoardSportsDevModelStoreContainer" CdmEntityContainer="BoardSportsDevEntities">
-          <EntitySetMapping Name="Boards"><EntityTypeMapping TypeName="BoardSportsDevModel.Board"><MappingFragment StoreEntitySet="Boards">
+        <EntityContainerMapping StorageEntityContainer="BoardSportsModelStoreContainer" CdmEntityContainer="BoardSportsDevEntity">
+          <EntitySetMapping Name="Boards"><EntityTypeMapping TypeName="BoardSportsModel.Board"><MappingFragment StoreEntitySet="Boards">
             <ScalarProperty Name="BoardId" ColumnName="BoardId" />
             <ScalarProperty Name="BoardName" ColumnName="BoardName" />
             <ScalarProperty Name="Manufacturer" ColumnName="Manufacturer" />
@@ -573,11 +593,10 @@
             <ScalarProperty Name="PurchaseDate" ColumnName="PurchaseDate" />
             <ScalarProperty Name="PurchasePrice" ColumnName="PurchasePrice" />
             <ScalarProperty Name="EstimatedValue" ColumnName="EstimatedValue" />
-            <ScalarProperty Name="PurchaseLocation" ColumnName="PurchaseLocation" />
-            <ScalarProperty Name="YearManufactured" ColumnName="YearManufactured" />
             <ScalarProperty Name="PictureLocation" ColumnName="PictureLocation" />
+            <ScalarProperty Name="YearManufactured" ColumnName="YearManufactured" />
           </MappingFragment></EntityTypeMapping></EntitySetMapping>
-          <EntitySetMapping Name="Booms"><EntityTypeMapping TypeName="BoardSportsDevModel.Boom"><MappingFragment StoreEntitySet="Booms">
+          <EntitySetMapping Name="Booms"><EntityTypeMapping TypeName="BoardSportsModel.Boom"><MappingFragment StoreEntitySet="Booms">
             <ScalarProperty Name="BoomId" ColumnName="BoomId" />
             <ScalarProperty Name="BoomName" ColumnName="BoomName" />
             <ScalarProperty Name="Manufacturer" ColumnName="Manufacturer" />
@@ -588,49 +607,59 @@
             <ScalarProperty Name="EstimatedValue" ColumnName="EstimatedValue" />
             <ScalarProperty Name="PictureLocation" ColumnName="PictureLocation" />
           </MappingFragment></EntityTypeMapping></EntitySetMapping>
-          <EntitySetMapping Name="Fins"><EntityTypeMapping TypeName="BoardSportsDevModel.Fin"><MappingFragment StoreEntitySet="Fins">
+          <EntitySetMapping Name="Fins"><EntityTypeMapping TypeName="BoardSportsModel.Fin"><MappingFragment StoreEntitySet="Fins">
             <ScalarProperty Name="FinId" ColumnName="FinId" />
             <ScalarProperty Name="FinStyle" ColumnName="FinStyle" />
             <ScalarProperty Name="FinType" ColumnName="FinType" />
             <ScalarProperty Name="Length" ColumnName="Length" />
+          </MappingFragment></EntityTypeMapping></EntitySetMapping>
+          <EntitySetMapping Name="KiteBoards"><EntityTypeMapping TypeName="BoardSportsModel.KiteBoard"><MappingFragment StoreEntitySet="KiteBoards">
+            <ScalarProperty Name="KiteboardId" ColumnName="KiteboardId" />
+            <ScalarProperty Name="KiteboardName" ColumnName="KiteboardName" />
             <ScalarProperty Name="Manufacturer" ColumnName="Manufacturer" />
             <ScalarProperty Name="PurchasePrice" ColumnName="PurchasePrice" />
+            <ScalarProperty Name="PurchaseDate" ColumnName="PurchaseDate" />
+            <ScalarProperty Name="YearManufactured" ColumnName="YearManufactured" />
+            <ScalarProperty Name="Length" ColumnName="Length" />
+            <ScalarProperty Name="Width" ColumnName="Width" />
             <ScalarProperty Name="PictureLocation" ColumnName="PictureLocation" />
           </MappingFragment></EntityTypeMapping></EntitySetMapping>
-          <EntitySetMapping Name="Kites"><EntityTypeMapping TypeName="BoardSportsDevModel.Kite"><MappingFragment StoreEntitySet="Kites">
+          <EntitySetMapping Name="Kites"><EntityTypeMapping TypeName="BoardSportsModel.Kite"><MappingFragment StoreEntitySet="Kites">
             <ScalarProperty Name="KiteId" ColumnName="KiteId" />
             <ScalarProperty Name="KiteName" ColumnName="KiteName" />
-            <ScalarProperty Name="KiteBrand" ColumnName="KiteBrand" />
             <ScalarProperty Name="Manufacturer" ColumnName="Manufacturer" />
             <ScalarProperty Name="Size" ColumnName="Size" />
-            <ScalarProperty Name="NumberLines" ColumnName="NumberLines" />
-            <ScalarProperty Name="YearManufactured" ColumnName="YearManufactured" />
-            <ScalarProperty Name="BarBrand" ColumnName="BarBrand" />
+            <ScalarProperty Name="NumberOfLines" ColumnName="NumberOfLines" />
             <ScalarProperty Name="PictureLocation" ColumnName="PictureLocation" />
+            <ScalarProperty Name="EstimatedValue" ColumnName="EstimatedValue" />
+            <ScalarProperty Name="PurchasePrice" ColumnName="PurchasePrice" />
+            <ScalarProperty Name="PurchaseDate" ColumnName="PurchaseDate" />
+            <ScalarProperty Name="YearManufactured" ColumnName="YearManufactured" />
           </MappingFragment></EntityTypeMapping></EntitySetMapping>
-          <EntitySetMapping Name="Masts"><EntityTypeMapping TypeName="BoardSportsDevModel.Mast"><MappingFragment StoreEntitySet="Masts">
+          <EntitySetMapping Name="Masts"><EntityTypeMapping TypeName="BoardSportsModel.Mast"><MappingFragment StoreEntitySet="Masts">
             <ScalarProperty Name="MastId" ColumnName="MastId" />
             <ScalarProperty Name="MastName" ColumnName="MastName" />
             <ScalarProperty Name="Manufacturer" ColumnName="Manufacturer" />
             <ScalarProperty Name="CarbonContent" ColumnName="CarbonContent" />
             <ScalarProperty Name="PurchaseDate" ColumnName="PurchaseDate" />
             <ScalarProperty Name="PurchasePrice" ColumnName="PurchasePrice" />
-            <ScalarProperty Name="PurchaseLocation" ColumnName="PurchaseLocation" />
-            <ScalarProperty Name="PictureLocation" ColumnName="PictureLocation" />
+            <ScalarProperty Name="PurchaseStore" ColumnName="PurchaseStore" />
+            <ScalarProperty Name="YearManurfactured" ColumnName="YearManurfactured" />
           </MappingFragment></EntityTypeMapping></EntitySetMapping>
-          <EntitySetMapping Name="Rigs"><EntityTypeMapping TypeName="BoardSportsDevModel.Rig"><MappingFragment StoreEntitySet="Rigs">
+          <EntitySetMapping Name="Rigs"><EntityTypeMapping TypeName="BoardSportsModel.Rig"><MappingFragment StoreEntitySet="Rigs">
             <ScalarProperty Name="RigId" ColumnName="RigId" />
             <ScalarProperty Name="RigDate" ColumnName="RigDate" />
             <ScalarProperty Name="RigType" ColumnName="RigType" />
             <ScalarProperty Name="VenueId" ColumnName="VenueId" />
             <ScalarProperty Name="BoardId" ColumnName="BoardId" />
-            <ScalarProperty Name="BoomId" ColumnName="BoomId" />
-            <ScalarProperty Name="MastId" ColumnName="MastId" />
             <ScalarProperty Name="SailId" ColumnName="SailId" />
-            <ScalarProperty Name="KiteId" ColumnName="KiteId" />
+            <ScalarProperty Name="BoomId" ColumnName="BoomId" />
             <ScalarProperty Name="FinId" ColumnName="FinId" />
+            <ScalarProperty Name="MastId" ColumnName="MastId" />
+            <ScalarProperty Name="KiteId" ColumnName="KiteId" />
+            <ScalarProperty Name="KiteBoardId" ColumnName="KiteBoardId" />
           </MappingFragment></EntityTypeMapping></EntitySetMapping>
-          <EntitySetMapping Name="Sails"><EntityTypeMapping TypeName="BoardSportsDevModel.Sail"><MappingFragment StoreEntitySet="Sails">
+          <EntitySetMapping Name="Sails"><EntityTypeMapping TypeName="BoardSportsModel.Sail"><MappingFragment StoreEntitySet="Sails">
             <ScalarProperty Name="SailId" ColumnName="SailId" />
             <ScalarProperty Name="SailName" ColumnName="SailName" />
             <ScalarProperty Name="Manufacturer" ColumnName="Manufacturer" />
@@ -640,10 +669,10 @@
             <ScalarProperty Name="Size" ColumnName="Size" />
             <ScalarProperty Name="BoomLength" ColumnName="BoomLength" />
             <ScalarProperty Name="BaseLength" ColumnName="BaseLength" />
-            <ScalarProperty Name="YearManufactured" ColumnName="YearManufactured" />
             <ScalarProperty Name="PictureLocation" ColumnName="PictureLocation" />
+            <ScalarProperty Name="YearManufactured" ColumnName="YearManufactured" />
           </MappingFragment></EntityTypeMapping></EntitySetMapping>
-          <EntitySetMapping Name="Sessions"><EntityTypeMapping TypeName="BoardSportsDevModel.Session"><MappingFragment StoreEntitySet="Sessions">
+          <EntitySetMapping Name="Sessions"><EntityTypeMapping TypeName="BoardSportsModel.Session"><MappingFragment StoreEntitySet="Sessions">
             <ScalarProperty Name="SessionId" ColumnName="SessionId" />
             <ScalarProperty Name="SessionType" ColumnName="SessionType" />
             <ScalarProperty Name="SessionDate" ColumnName="SessionDate" />
@@ -651,12 +680,22 @@
             <ScalarProperty Name="Duration" ColumnName="Duration" />
             <ScalarProperty Name="Funfactor" ColumnName="Funfactor" />
             <ScalarProperty Name="RigId" ColumnName="RigId" />
-            <ScalarProperty Name="VenueId" ColumnName="VenueId" />
             <ScalarProperty Name="BeersConsumed" ColumnName="BeersConsumed" />
             <ScalarProperty Name="PeopleInCompany" ColumnName="PeopleInCompany" />
             <ScalarProperty Name="Notes" ColumnName="Notes" />
           </MappingFragment></EntityTypeMapping></EntitySetMapping>
-          <EntitySetMapping Name="Venues"><EntityTypeMapping TypeName="BoardSportsDevModel.Venue"><MappingFragment StoreEntitySet="Venues">
+          <EntitySetMapping Name="Snowboards"><EntityTypeMapping TypeName="BoardSportsModel.Snowboard"><MappingFragment StoreEntitySet="Snowboards">
+            <ScalarProperty Name="SnowboardId" ColumnName="SnowboardId" />
+            <ScalarProperty Name="SnowboardName" ColumnName="SnowboardName" />
+            <ScalarProperty Name="Manufacturer" ColumnName="Manufacturer" />
+            <ScalarProperty Name="PurchaseDate" ColumnName="PurchaseDate" />
+            <ScalarProperty Name="PurchasePrice" ColumnName="PurchasePrice" />
+            <ScalarProperty Name="EstimatedPrice" ColumnName="EstimatedPrice" />
+            <ScalarProperty Name="Length" ColumnName="Length" />
+            <ScalarProperty Name="Width" ColumnName="Width" />
+            <ScalarProperty Name="Bindings" ColumnName="Bindings" />
+          </MappingFragment></EntityTypeMapping></EntitySetMapping>
+          <EntitySetMapping Name="Venues"><EntityTypeMapping TypeName="BoardSportsModel.Venue"><MappingFragment StoreEntitySet="Venues">
             <ScalarProperty Name="VenueId" ColumnName="VenueId" />
             <ScalarProperty Name="VenueName" ColumnName="VenueName" />
             <ScalarProperty Name="PictureLocation" ColumnName="PictureLocation" />
@@ -682,60 +721,53 @@
     <!-- Diagram content (shape and connector positions) -->
     <Diagrams>
       <Diagram Name="BoardSportsEF">
-        <EntityTypeShape EntityType="BoardSportsDevModel.Board" Width="1.5" PointX="0.625" PointY="6.375" Height="3.7109993489583317" IsExpanded="true" />
-        <EntityTypeShape EntityType="BoardSportsDevModel.Boom" Width="1.5" PointX="11.125" PointY="8" Height="2.9417936197916674" IsExpanded="true" />
-        <EntityTypeShape EntityType="BoardSportsDevModel.Fin" Width="1.5" PointX="6.875" PointY="10" Height="2.5571907552083317" IsExpanded="true" />
-        <EntityTypeShape EntityType="BoardSportsDevModel.Kite" Width="1.5" PointX="8.875" PointY="5.375" Height="2.9417936197916674" IsExpanded="true" />
-        <EntityTypeShape EntityType="BoardSportsDevModel.Mast" Width="1.5" PointX="3" PointY="9.75" Height="2.749492187499996" IsExpanded="true" />
-        <EntityTypeShape EntityType="BoardSportsDevModel.Rig" Width="1.5" PointX="4.25" PointY="5" Height="4.2879036458333317" IsExpanded="true" />
-        <EntityTypeShape EntityType="BoardSportsDevModel.Sail" Width="1.5" PointX="9" PointY="9.125" Height="3.326396484374996" IsExpanded="true" />
-        <EntityTypeShape EntityType="BoardSportsDevModel.Session" Width="1.5" PointX="6.875" PointY="4.25" Height="3.3263964843749996" IsExpanded="true" />
-        <EntityTypeShape EntityType="BoardSportsDevModel.Venue" Width="1.5" PointX="1.125" PointY="4" Height="1.9802864583333317" IsExpanded="true" />
-        <AssociationConnector Association="BoardSportsDevModel.FK_Rigs_Boards" ManuallyRouted="false">
-          <ConnectorPoint PointX="2.125" PointY="7.8001993229166651" />
-          <ConnectorPoint PointX="3.5104146666666667" PointY="7.8001993229166642" />
-          <ConnectorPoint PointX="3.6770813333333336" PointY="7.8001993229166651" />
-          <ConnectorPoint PointX="4.25" PointY="7.8001993229166651" />
+        <EntityTypeShape EntityType="BoardSportsModel.Board" Width="1.5" PointX="0.625" PointY="0.625" Height="3.5186979166666665" IsExpanded="true" />
+        <EntityTypeShape EntityType="BoardSportsModel.Boom" Width="1.5" PointX="0.625" PointY="4.875" Height="2.9417936197916665" IsExpanded="true" />
+        <EntityTypeShape EntityType="BoardSportsModel.Fin" Width="1.5" PointX="7.25" PointY="6" Height="1.9802864583333317" IsExpanded="true" />
+        <EntityTypeShape EntityType="BoardSportsModel.KiteBoard" Width="1.5" PointX="9.875" PointY="0.75" Height="2.7494921874999996" IsExpanded="true" />
+        <EntityTypeShape EntityType="BoardSportsModel.Kite" Width="1.5" PointX="12.25" PointY="1.75" Height="2.9417936197916665" IsExpanded="true" />
+        <EntityTypeShape EntityType="BoardSportsModel.Mast" Width="1.5" PointX="2.625" PointY="5.375" Height="2.7494921874999978" IsExpanded="true" />
+        <EntityTypeShape EntityType="BoardSportsModel.Rig" Width="1.5" PointX="4.5" PointY="0.625" Height="4.4802050781250031" IsExpanded="true" />
+        <EntityTypeShape EntityType="BoardSportsModel.Sail" Width="1.5" PointX="5.25" PointY="5.75" Height="3.326396484374996" IsExpanded="true" />
+        <EntityTypeShape EntityType="BoardSportsModel.Session" Width="1.5" PointX="9.75" PointY="3.875" Height="3.1340950520833317" IsExpanded="true" />
+        <EntityTypeShape EntityType="BoardSportsModel.Snowboard" Width="1.5" PointX="7.75" PointY="0.75" Height="2.7494921875000031" IsExpanded="true" />
+        <EntityTypeShape EntityType="BoardSportsModel.Venue" Width="1.5" PointX="0.75" PointY="21" Height="1.7879850260416674" IsExpanded="true" />
+        <AssociationConnector Association="BoardSportsModel.FK_Rigs_Boards" ManuallyRouted="false">
+          <ConnectorPoint PointX="2.125" PointY="2.3843489583333333" />
+          <ConnectorPoint PointX="2.2916666666666665" PointY="2.3843489583333328" />
+          <ConnectorPoint PointX="2.4583333333333335" PointY="2.3843489583333333" />
+          <ConnectorPoint PointX="4.5" PointY="2.3843489583333333" />
         </AssociationConnector>
-        <AssociationConnector Association="BoardSportsDevModel.FK_Rigs_Booms" ManuallyRouted="false">
-          <ConnectorPoint PointX="11.125" PointY="8.7208968098958337" />
-          <ConnectorPoint PointX="10.552083333333334" PointY="8.7208968098958337" />
-          <ConnectorPoint PointX="10.385416666666666" PointY="8.7208968098958337" />
-          <ConnectorPoint PointX="6.583333333333333" PointY="8.7208968098958337" />
-          <ConnectorPoint PointX="6.416666666666667" PointY="8.7208968098958337" />
-          <ConnectorPoint PointX="5.75" PointY="8.7208968098958337" />
+        <AssociationConnector Association="BoardSportsModel.FK_Rigs_Booms" ManuallyRouted="false">
+          <ConnectorPoint PointX="1.375" PointY="4.875" />
+          <ConnectorPoint PointX="1.375" PointY="4.3936979166666665" />
+          <ConnectorPoint PointX="2.375" PointY="4.3936979166666665" />
+          <ConnectorPoint PointX="2.375" PointY="1.4734224791666657" />
+          <ConnectorPoint PointX="4.5" PointY="1.4734224791666657" />
         </AssociationConnector>
-        <AssociationConnector Association="BoardSportsDevModel.FK_Rigs_Fins" ManuallyRouted="false">
-          <ConnectorPoint PointX="6.8761528461538459" PointY="10" />
-          <ConnectorPoint PointX="6.5" PointY="9.6238471538461532" />
-          <ConnectorPoint PointX="6.5" PointY="6.5201705260416656" />
-          <ConnectorPoint PointX="5.75" PointY="6.5201705260416656" />
+        <AssociationConnector Association="BoardSportsModel.FK_Rigs_Fins" ManuallyRouted="false">
+          <ConnectorPoint PointX="7.46875" PointY="6" />
+          <ConnectorPoint PointX="7.46875" PointY="4.1406945214843773" />
+          <ConnectorPoint PointX="6" PointY="4.1406945214843773" />
         </AssociationConnector>
-        <AssociationConnector Association="BoardSportsDevModel.FK_Rigs_Kites" ManuallyRouted="false">
-          <ConnectorPoint PointX="8.875" PointY="7.9778450520833335" />
-          <ConnectorPoint PointX="6.583333333333333" PointY="7.9778450520833326" />
-          <ConnectorPoint PointX="6.416666666666667" PointY="7.9778450520833335" />
-          <ConnectorPoint PointX="5.75" PointY="7.9778450520833335" />
+        <AssociationConnector Association="BoardSportsModel.FK_Rigs_Masts" ManuallyRouted="false">
+          <ConnectorPoint PointX="4.125" PointY="5.375" />
+          <ConnectorPoint PointX="4.5" PointY="5.1052050781250031" />
         </AssociationConnector>
-        <AssociationConnector Association="BoardSportsDevModel.FK_Rigs_Masts" ManuallyRouted="false">
-          <ConnectorPoint PointX="3.593748" PointY="9.75" />
-          <ConnectorPoint PointX="3.593748" PointY="6.6451712760416655" />
-          <ConnectorPoint PointX="4.25" PointY="6.6451712760416655" />
+        <AssociationConnector Association="BoardSportsModel.FK_Rigs_Sails" ManuallyRouted="false">
+          <ConnectorPoint PointX="5.625" PointY="5.75" />
+          <ConnectorPoint PointX="5.625" PointY="5.1052050781250031" />
         </AssociationConnector>
-        <AssociationConnector Association="BoardSportsDevModel.FK_Rigs_Sails" ManuallyRouted="false">
-          <ConnectorPoint PointX="10.46875" PointY="9.125" />
-          <ConnectorPoint PointX="10.46875" PointY="8.51884271484375" />
-          <ConnectorPoint PointX="6.583333333333333" PointY="8.51884271484375" />
-          <ConnectorPoint PointX="6.416666666666667" PointY="8.51884271484375" />
-          <ConnectorPoint PointX="5.75" PointY="8.51884271484375" />
+        <AssociationConnector Association="BoardSportsModel.FK_Rigs_Venues" ManuallyRouted="false">
+          <ConnectorPoint PointX="2.21875" PointY="21" />
+          <ConnectorPoint PointX="2.21875" PointY="4.6030989583333337" />
+          <ConnectorPoint PointX="4.5" PointY="4.6030989583333337" />
         </AssociationConnector>
-        <AssociationConnector Association="BoardSportsDevModel.FK_Rigs_Venues" ManuallyRouted="false">
-          <ConnectorPoint PointX="2.625" PointY="5.4901432291666659" />
-          <ConnectorPoint PointX="4.25" PointY="5.4901432291666659" />
-        </AssociationConnector>
-        <AssociationConnector Association="BoardSportsDevModel.FK_Sessions_Venues" ManuallyRouted="false">
-          <ConnectorPoint PointX="2.625" PointY="4.59375" />
-          <ConnectorPoint PointX="6.875" PointY="4.59375" />
+        <AssociationConnector Association="BoardSportsModel.FK_Sessions_Rigs" ManuallyRouted="false">
+          <ConnectorPoint PointX="6" PointY="4.7819018554687531" />
+          <ConnectorPoint PointX="7.385416666666667" PointY="4.7819018554687522" />
+          <ConnectorPoint PointX="7.552083333333333" PointY="4.7819018554687531" />
+          <ConnectorPoint PointX="9.75" PointY="4.7819018554687531" />
         </AssociationConnector>
       </Diagram>
     </Diagrams>

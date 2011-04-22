@@ -1,45 +1,43 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<Schema Namespace="BoardSportsDevModel.Store" Alias="Self" Provider="System.Data.SqlClient" ProviderManifestToken="2008" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/02/edm/ssdl">
-  <EntityContainer Name="BoardSportsDevModelStoreContainer">
-    <EntitySet Name="Boards" EntityType="BoardSportsDevModel.Store.Boards" store:Type="Tables" Schema="dbo" />
-    <EntitySet Name="Booms" EntityType="BoardSportsDevModel.Store.Booms" store:Type="Tables" Schema="dbo" />
-    <EntitySet Name="Fins" EntityType="BoardSportsDevModel.Store.Fins" store:Type="Tables" Schema="dbo" />
-    <EntitySet Name="Kites" EntityType="BoardSportsDevModel.Store.Kites" store:Type="Tables" Schema="dbo" />
-    <EntitySet Name="Masts" EntityType="BoardSportsDevModel.Store.Masts" store:Type="Tables" Schema="dbo" />
-    <EntitySet Name="Rigs" EntityType="BoardSportsDevModel.Store.Rigs" store:Type="Tables" Schema="dbo" />
-    <EntitySet Name="Sails" EntityType="BoardSportsDevModel.Store.Sails" store:Type="Tables" Schema="dbo" />
-    <EntitySet Name="Sessions" EntityType="BoardSportsDevModel.Store.Sessions" store:Type="Tables" Schema="dbo" />
-    <EntitySet Name="Venues" EntityType="BoardSportsDevModel.Store.Venues" store:Type="Tables" Schema="dbo" />
-    <AssociationSet Name="FK_Rigs_Boards" Association="BoardSportsDevModel.Store.FK_Rigs_Boards">
+<Schema Namespace="BoardSportsModel.Store" Alias="Self" Provider="System.Data.SqlClient" ProviderManifestToken="2008" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/02/edm/ssdl">
+  <EntityContainer Name="BoardSportsModelStoreContainer">
+    <EntitySet Name="Boards" EntityType="BoardSportsModel.Store.Boards" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Booms" EntityType="BoardSportsModel.Store.Booms" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Fins" EntityType="BoardSportsModel.Store.Fins" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="KiteBoards" EntityType="BoardSportsModel.Store.KiteBoards" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Kites" EntityType="BoardSportsModel.Store.Kites" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Masts" EntityType="BoardSportsModel.Store.Masts" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Rigs" EntityType="BoardSportsModel.Store.Rigs" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Sails" EntityType="BoardSportsModel.Store.Sails" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Sessions" EntityType="BoardSportsModel.Store.Sessions" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Snowboards" EntityType="BoardSportsModel.Store.Snowboards" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Venues" EntityType="BoardSportsModel.Store.Venues" store:Type="Tables" Schema="dbo" />
+    <AssociationSet Name="FK_Rigs_Boards" Association="BoardSportsModel.Store.FK_Rigs_Boards">
       <End Role="Boards" EntitySet="Boards" />
       <End Role="Rigs" EntitySet="Rigs" />
     </AssociationSet>
-    <AssociationSet Name="FK_Rigs_Booms" Association="BoardSportsDevModel.Store.FK_Rigs_Booms">
+    <AssociationSet Name="FK_Rigs_Booms" Association="BoardSportsModel.Store.FK_Rigs_Booms">
       <End Role="Booms" EntitySet="Booms" />
       <End Role="Rigs" EntitySet="Rigs" />
     </AssociationSet>
-    <AssociationSet Name="FK_Rigs_Fins" Association="BoardSportsDevModel.Store.FK_Rigs_Fins">
+    <AssociationSet Name="FK_Rigs_Fins" Association="BoardSportsModel.Store.FK_Rigs_Fins">
       <End Role="Fins" EntitySet="Fins" />
       <End Role="Rigs" EntitySet="Rigs" />
     </AssociationSet>
-    <AssociationSet Name="FK_Rigs_Kites" Association="BoardSportsDevModel.Store.FK_Rigs_Kites">
-      <End Role="Kites" EntitySet="Kites" />
-      <End Role="Rigs" EntitySet="Rigs" />
-    </AssociationSet>
-    <AssociationSet Name="FK_Rigs_Masts" Association="BoardSportsDevModel.Store.FK_Rigs_Masts">
+    <AssociationSet Name="FK_Rigs_Masts" Association="BoardSportsModel.Store.FK_Rigs_Masts">
       <End Role="Masts" EntitySet="Masts" />
       <End Role="Rigs" EntitySet="Rigs" />
     </AssociationSet>
-    <AssociationSet Name="FK_Rigs_Sails" Association="BoardSportsDevModel.Store.FK_Rigs_Sails">
+    <AssociationSet Name="FK_Rigs_Sails" Association="BoardSportsModel.Store.FK_Rigs_Sails">
       <End Role="Sails" EntitySet="Sails" />
       <End Role="Rigs" EntitySet="Rigs" />
     </AssociationSet>
-    <AssociationSet Name="FK_Rigs_Venues" Association="BoardSportsDevModel.Store.FK_Rigs_Venues">
+    <AssociationSet Name="FK_Rigs_Venues" Association="BoardSportsModel.Store.FK_Rigs_Venues">
       <End Role="Venues" EntitySet="Venues" />
       <End Role="Rigs" EntitySet="Rigs" />
     </AssociationSet>
-    <AssociationSet Name="FK_Sessions_Venues" Association="BoardSportsDevModel.Store.FK_Sessions_Venues">
-      <End Role="Venues" EntitySet="Venues" />
+    <AssociationSet Name="FK_Sessions_Rigs" Association="BoardSportsModel.Store.FK_Sessions_Rigs">
+      <End Role="Rigs" EntitySet="Rigs" />
       <End Role="Sessions" EntitySet="Sessions" />
     </AssociationSet>
   </EntityContainer>
@@ -57,23 +55,22 @@
     <Property Name="PurchaseDate" Type="datetime" />
     <Property Name="PurchasePrice" Type="money" />
     <Property Name="EstimatedValue" Type="money" />
-    <Property Name="PurchaseLocation" Type="nvarchar" MaxLength="100" />
+    <Property Name="PictureLocation" Type="nvarchar" MaxLength="100" />
     <Property Name="YearManufactured" Type="int" />
-    <Property Name="PictureLocation" Type="nvarchar" MaxLength="250" />
   </EntityType>
   <EntityType Name="Booms">
     <Key>
       <PropertyRef Name="BoomId" />
     </Key>
     <Property Name="BoomId" Type="int" Nullable="false" />
-    <Property Name="BoomName" Type="nvarchar" MaxLength="100" />
+    <Property Name="BoomName" Type="nvarchar" Nullable="false" MaxLength="100" />
     <Property Name="Manufacturer" Type="nvarchar" MaxLength="100" />
     <Property Name="MinLength" Type="int" />
     <Property Name="MaxLength" Type="int" />
     <Property Name="PurchaseDate" Type="datetime" />
     <Property Name="PurchasePrice" Type="money" />
     <Property Name="EstimatedValue" Type="money" />
-    <Property Name="PictureLocation" Type="nvarchar" MaxLength="250" />
+    <Property Name="PictureLocation" Type="nvarchar" MaxLength="100" />
   </EntityType>
   <EntityType Name="Fins">
     <Key>
@@ -81,10 +78,21 @@
     </Key>
     <Property Name="FinId" Type="int" Nullable="false" />
     <Property Name="FinStyle" Type="nvarchar" MaxLength="100" />
-    <Property Name="FinType" Type="nvarchar" MaxLength="100" />
-    <Property Name="Length" Type="int" Nullable="false" />
+    <Property Name="FinType" Type="nvarchar" Nullable="false" MaxLength="100" />
+    <Property Name="Length" Type="int" />
+  </EntityType>
+  <EntityType Name="KiteBoards">
+    <Key>
+      <PropertyRef Name="KiteboardId" />
+    </Key>
+    <Property Name="KiteboardId" Type="int" Nullable="false" />
+    <Property Name="KiteboardName" Type="nvarchar" MaxLength="50" />
     <Property Name="Manufacturer" Type="nvarchar" MaxLength="100" />
     <Property Name="PurchasePrice" Type="money" />
+    <Property Name="PurchaseDate" Type="datetime" />
+    <Property Name="YearManufactured" Type="int" />
+    <Property Name="Length" Type="tinyint" />
+    <Property Name="Width" Type="tinyint" />
     <Property Name="PictureLocation" Type="nvarchar" MaxLength="100" />
   </EntityType>
   <EntityType Name="Kites">
@@ -93,41 +101,43 @@
     </Key>
     <Property Name="KiteId" Type="int" Nullable="false" />
     <Property Name="KiteName" Type="nvarchar" Nullable="false" MaxLength="100" />
-    <Property Name="KiteBrand" Type="nvarchar" MaxLength="100" />
     <Property Name="Manufacturer" Type="nvarchar" MaxLength="100" />
-    <Property Name="Size" Type="int" />
-    <Property Name="NumberLines" Type="int" />
-    <Property Name="YearManufactured" Type="int" Nullable="false" />
-    <Property Name="BarBrand" Type="nvarchar" MaxLength="100" />
-    <Property Name="PictureLocation" Type="nvarchar" MaxLength="250" />
+    <Property Name="Size" Type="tinyint" />
+    <Property Name="NumberOfLines" Type="tinyint" />
+    <Property Name="PictureLocation" Type="nvarchar" MaxLength="100" />
+    <Property Name="EstimatedValue" Type="money" />
+    <Property Name="PurchasePrice" Type="money" />
+    <Property Name="PurchaseDate" Type="datetime" />
+    <Property Name="YearManufactured" Type="int" />
   </EntityType>
   <EntityType Name="Masts">
     <Key>
       <PropertyRef Name="MastId" />
     </Key>
     <Property Name="MastId" Type="int" Nullable="false" />
-    <Property Name="MastName" Type="nvarchar" MaxLength="100" />
-    <Property Name="Manufacturer" Type="nvarchar" MaxLength="100" />
+    <Property Name="MastName" Type="nvarchar" Nullable="false" MaxLength="50" />
+    <Property Name="Manufacturer" Type="nvarchar" MaxLength="50" />
     <Property Name="CarbonContent" Type="int" />
-    <Property Name="PurchaseDate" Type="datetime" />
+    <Property Name="PurchaseDate" Type="date" />
     <Property Name="PurchasePrice" Type="money" />
-    <Property Name="PurchaseLocation" Type="nvarchar" MaxLength="100" />
-    <Property Name="PictureLocation" Type="nvarchar" MaxLength="250" />
+    <Property Name="PurchaseStore" Type="nvarchar" MaxLength="100" />
+    <Property Name="YearManurfactured" Type="nchar" MaxLength="10" />
   </EntityType>
   <EntityType Name="Rigs">
     <Key>
       <PropertyRef Name="RigId" />
     </Key>
     <Property Name="RigId" Type="int" Nullable="false" />
-    <Property Name="RigDate" Type="date" />
-    <Property Name="RigType" Type="nvarchar" Nullable="false" MaxLength="50" />
+    <Property Name="RigDate" Type="nchar" MaxLength="10" />
+    <Property Name="RigType" Type="nchar" MaxLength="10" />
     <Property Name="VenueId" Type="int" Nullable="false" />
     <Property Name="BoardId" Type="int" Nullable="false" />
-    <Property Name="BoomId" Type="int" />
+    <Property Name="SailId" Type="int" Nullable="false" />
+    <Property Name="BoomId" Type="int" Nullable="false" />
+    <Property Name="FinId" Type="int" Nullable="false" />
     <Property Name="MastId" Type="int" />
-    <Property Name="SailId" Type="int" />
     <Property Name="KiteId" Type="int" />
-    <Property Name="FinId" Type="int" />
+    <Property Name="KiteBoardId" Type="int" />
   </EntityType>
   <EntityType Name="Sails">
     <Key>
@@ -140,26 +150,39 @@
     <Property Name="PurchasePrice" Type="money" />
     <Property Name="Condition" Type="nvarchar" MaxLength="50" />
     <Property Name="Size" Type="decimal" Nullable="false" Precision="8" Scale="4" />
-    <Property Name="BoomLength" Type="int" />
+    <Property Name="BoomLength" Type="tinyint" />
     <Property Name="BaseLength" Type="int" />
+    <Property Name="PictureLocation" Type="nvarchar" MaxLength="100" />
     <Property Name="YearManufactured" Type="int" />
-    <Property Name="PictureLocation" Type="nvarchar" MaxLength="250" />
   </EntityType>
   <EntityType Name="Sessions">
     <Key>
       <PropertyRef Name="SessionId" />
     </Key>
     <Property Name="SessionId" Type="int" Nullable="false" />
-    <Property Name="SessionType" Type="nvarchar" MaxLength="50" />
-    <Property Name="SessionDate" Type="date" />
-    <Property Name="SessionDescription" Type="nvarchar" MaxLength="100" />
-    <Property Name="Duration" Type="decimal" Precision="4" Scale="2" />
-    <Property Name="Funfactor" Type="int" />
-    <Property Name="RigId" Type="int" />
-    <Property Name="VenueId" Type="int" Nullable="false" />
+    <Property Name="SessionType" Type="nvarchar" Nullable="false" MaxLength="50" />
+    <Property Name="SessionDate" Type="datetime" Nullable="false" />
+    <Property Name="SessionDescription" Type="nvarchar" MaxLength="250" />
+    <Property Name="Duration" Type="decimal" Precision="10" Scale="4" />
+    <Property Name="Funfactor" Type="tinyint" />
+    <Property Name="RigId" Type="int" Nullable="false" />
     <Property Name="BeersConsumed" Type="int" />
     <Property Name="PeopleInCompany" Type="int" />
-    <Property Name="Notes" Type="nvarchar" MaxLength="500" />
+    <Property Name="Notes" Type="nvarchar" MaxLength="250" />
+  </EntityType>
+  <EntityType Name="Snowboards">
+    <Key>
+      <PropertyRef Name="SnowboardId" />
+    </Key>
+    <Property Name="SnowboardId" Type="int" Nullable="false" />
+    <Property Name="SnowboardName" Type="nvarchar" Nullable="false" MaxLength="100" />
+    <Property Name="Manufacturer" Type="nvarchar" MaxLength="100" />
+    <Property Name="PurchaseDate" Type="datetime" />
+    <Property Name="PurchasePrice" Type="money" />
+    <Property Name="EstimatedPrice" Type="money" />
+    <Property Name="Length" Type="tinyint" />
+    <Property Name="Width" Type="tinyint" />
+    <Property Name="Bindings" Type="nvarchar" MaxLength="50" />
   </EntityType>
   <EntityType Name="Venues">
     <Key>
@@ -170,8 +193,8 @@
     <Property Name="PictureLocation" Type="nvarchar" MaxLength="250" />
   </EntityType>
   <Association Name="FK_Rigs_Boards">
-    <End Role="Boards" Type="BoardSportsDevModel.Store.Boards" Multiplicity="1" />
-    <End Role="Rigs" Type="BoardSportsDevModel.Store.Rigs" Multiplicity="*" />
+    <End Role="Boards" Type="BoardSportsModel.Store.Boards" Multiplicity="1" />
+    <End Role="Rigs" Type="BoardSportsModel.Store.Rigs" Multiplicity="*" />
     <ReferentialConstraint>
       <Principal Role="Boards">
         <PropertyRef Name="BoardId" />
@@ -182,8 +205,8 @@
     </ReferentialConstraint>
   </Association>
   <Association Name="FK_Rigs_Booms">
-    <End Role="Booms" Type="BoardSportsDevModel.Store.Booms" Multiplicity="0..1" />
-    <End Role="Rigs" Type="BoardSportsDevModel.Store.Rigs" Multiplicity="*" />
+    <End Role="Booms" Type="BoardSportsModel.Store.Booms" Multiplicity="1" />
+    <End Role="Rigs" Type="BoardSportsModel.Store.Rigs" Multiplicity="*" />
     <ReferentialConstraint>
       <Principal Role="Booms">
         <PropertyRef Name="BoomId" />
@@ -194,8 +217,8 @@
     </ReferentialConstraint>
   </Association>
   <Association Name="FK_Rigs_Fins">
-    <End Role="Fins" Type="BoardSportsDevModel.Store.Fins" Multiplicity="0..1" />
-    <End Role="Rigs" Type="BoardSportsDevModel.Store.Rigs" Multiplicity="*" />
+    <End Role="Fins" Type="BoardSportsModel.Store.Fins" Multiplicity="1" />
+    <End Role="Rigs" Type="BoardSportsModel.Store.Rigs" Multiplicity="*" />
     <ReferentialConstraint>
       <Principal Role="Fins">
         <PropertyRef Name="FinId" />
@@ -205,21 +228,9 @@
       </Dependent>
     </ReferentialConstraint>
   </Association>
-  <Association Name="FK_Rigs_Kites">
-    <End Role="Kites" Type="BoardSportsDevModel.Store.Kites" Multiplicity="0..1" />
-    <End Role="Rigs" Type="BoardSportsDevModel.Store.Rigs" Multiplicity="*" />
-    <ReferentialConstraint>
-      <Principal Role="Kites">
-        <PropertyRef Name="KiteId" />
-      </Principal>
-      <Dependent Role="Rigs">
-        <PropertyRef Name="KiteId" />
-      </Dependent>
-    </ReferentialConstraint>
-  </Association>
   <Association Name="FK_Rigs_Masts">
-    <End Role="Masts" Type="BoardSportsDevModel.Store.Masts" Multiplicity="0..1" />
-    <End Role="Rigs" Type="BoardSportsDevModel.Store.Rigs" Multiplicity="*" />
+    <End Role="Masts" Type="BoardSportsModel.Store.Masts" Multiplicity="0..1" />
+    <End Role="Rigs" Type="BoardSportsModel.Store.Rigs" Multiplicity="*" />
     <ReferentialConstraint>
       <Principal Role="Masts">
         <PropertyRef Name="MastId" />
@@ -230,8 +241,8 @@
     </ReferentialConstraint>
   </Association>
   <Association Name="FK_Rigs_Sails">
-    <End Role="Sails" Type="BoardSportsDevModel.Store.Sails" Multiplicity="0..1" />
-    <End Role="Rigs" Type="BoardSportsDevModel.Store.Rigs" Multiplicity="*" />
+    <End Role="Sails" Type="BoardSportsModel.Store.Sails" Multiplicity="1" />
+    <End Role="Rigs" Type="BoardSportsModel.Store.Rigs" Multiplicity="*" />
     <ReferentialConstraint>
       <Principal Role="Sails">
         <PropertyRef Name="SailId" />
@@ -242,8 +253,8 @@
     </ReferentialConstraint>
   </Association>
   <Association Name="FK_Rigs_Venues">
-    <End Role="Venues" Type="BoardSportsDevModel.Store.Venues" Multiplicity="1" />
-    <End Role="Rigs" Type="BoardSportsDevModel.Store.Rigs" Multiplicity="*" />
+    <End Role="Venues" Type="BoardSportsModel.Store.Venues" Multiplicity="1" />
+    <End Role="Rigs" Type="BoardSportsModel.Store.Rigs" Multiplicity="*" />
     <ReferentialConstraint>
       <Principal Role="Venues">
         <PropertyRef Name="VenueId" />
@@ -253,15 +264,15 @@
       </Dependent>
     </ReferentialConstraint>
   </Association>
-  <Association Name="FK_Sessions_Venues">
-    <End Role="Venues" Type="BoardSportsDevModel.Store.Venues" Multiplicity="1" />
-    <End Role="Sessions" Type="BoardSportsDevModel.Store.Sessions" Multiplicity="*" />
+  <Association Name="FK_Sessions_Rigs">
+    <End Role="Rigs" Type="BoardSportsModel.Store.Rigs" Multiplicity="1" />
+    <End Role="Sessions" Type="BoardSportsModel.Store.Sessions" Multiplicity="*" />
     <ReferentialConstraint>
-      <Principal Role="Venues">
-        <PropertyRef Name="VenueId" />
+      <Principal Role="Rigs">
+        <PropertyRef Name="RigId" />
       </Principal>
       <Dependent Role="Sessions">
-        <PropertyRef Name="VenueId" />
+        <PropertyRef Name="RigId" />
       </Dependent>
     </ReferentialConstraint>
   </Association>

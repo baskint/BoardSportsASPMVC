@@ -1,0 +1,3 @@
+﻿ALTER TABLE [dbo].[Rigs]
+    ADD CONSTRAINT [FK_Rigs_Sails] FOREIGN KEY ([SailId]) REFERENCES [dbo].[Sails] ([SailId]) ON DELETE NO ACTION ON UPDATE NO ACTION;
+

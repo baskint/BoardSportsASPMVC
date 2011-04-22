@@ -41,6 +41,9 @@
     <Reference Include="EntityFramework">
       <HintPath>..\packages\EntityFramework.4.1.10331.0\lib\EntityFramework.dll</HintPath>
     </Reference>
+    <Reference Include="Glimpse.Net">
+      <HintPath>..\packages\Glimpse.0.79\lib\net40\Glimpse.Net.dll</HintPath>
+    </Reference>
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="System.Data.Entity" />
     <Reference Include="System.Web.Mvc, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL" />
@@ -75,6 +78,7 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="App_Readme\glimpse.readme.txt" />
     <Content Include="Content\images\BoardSports_gradient.png" />
     <Content Include="Content\images\kiteboarding_logo.jpg" />
     <Content Include="Content\images\windsurfing_logo.jpg" />
@@ -82,6 +86,8 @@
     <Content Include="Scripts\jquery-1.5.2-vsdoc.js" />
     <Content Include="Scripts\jquery-1.5.2.js" />
     <Content Include="Scripts\jquery-1.5.2.min.js" />
+    <Content Include="Scripts\modernizr-1.7.js" />
+    <Content Include="Scripts\modernizr-1.7.min.js" />
     <Content Include="Web.config" />
     <Content Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>

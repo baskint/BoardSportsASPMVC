@@ -1,8 +1,8 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2008/09/mapping/cs">
-  <EntityContainerMapping StorageEntityContainer="BoardSportsDevModelStoreContainer" CdmEntityContainer="BoardSportsDevEntities">
+  <EntityContainerMapping StorageEntityContainer="BoardSportsModelStoreContainer" CdmEntityContainer="BoardSportsDevEntity">
     <EntitySetMapping Name="Boards">
-      <EntityTypeMapping TypeName="BoardSportsDevModel.Board">
+      <EntityTypeMapping TypeName="BoardSportsModel.Board">
         <MappingFragment StoreEntitySet="Boards">
           <ScalarProperty Name="BoardId" ColumnName="BoardId" />
           <ScalarProperty Name="BoardName" ColumnName="BoardName" />
@@ -14,14 +14,13 @@
           <ScalarProperty Name="PurchaseDate" ColumnName="PurchaseDate" />
           <ScalarProperty Name="PurchasePrice" ColumnName="PurchasePrice" />
           <ScalarProperty Name="EstimatedValue" ColumnName="EstimatedValue" />
-          <ScalarProperty Name="PurchaseLocation" ColumnName="PurchaseLocation" />
-          <ScalarProperty Name="YearManufactured" ColumnName="YearManufactured" />
           <ScalarProperty Name="PictureLocation" ColumnName="PictureLocation" />
+          <ScalarProperty Name="YearManufactured" ColumnName="YearManufactured" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
     <EntitySetMapping Name="Booms">
-      <EntityTypeMapping TypeName="BoardSportsDevModel.Boom">
+      <EntityTypeMapping TypeName="BoardSportsModel.Boom">
         <MappingFragment StoreEntitySet="Booms">
           <ScalarProperty Name="BoomId" ColumnName="BoomId" />
           <ScalarProperty Name="BoomName" ColumnName="BoomName" />
@@ -36,35 +35,48 @@
       </EntityTypeMapping>
     </EntitySetMapping>
     <EntitySetMapping Name="Fins">
-      <EntityTypeMapping TypeName="BoardSportsDevModel.Fin">
+      <EntityTypeMapping TypeName="BoardSportsModel.Fin">
         <MappingFragment StoreEntitySet="Fins">
           <ScalarProperty Name="FinId" ColumnName="FinId" />
           <ScalarProperty Name="FinStyle" ColumnName="FinStyle" />
           <ScalarProperty Name="FinType" ColumnName="FinType" />
           <ScalarProperty Name="Length" ColumnName="Length" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="KiteBoards">
+      <EntityTypeMapping TypeName="BoardSportsModel.KiteBoard">
+        <MappingFragment StoreEntitySet="KiteBoards">
+          <ScalarProperty Name="KiteboardId" ColumnName="KiteboardId" />
+          <ScalarProperty Name="KiteboardName" ColumnName="KiteboardName" />
           <ScalarProperty Name="Manufacturer" ColumnName="Manufacturer" />
           <ScalarProperty Name="PurchasePrice" ColumnName="PurchasePrice" />
+          <ScalarProperty Name="PurchaseDate" ColumnName="PurchaseDate" />
+          <ScalarProperty Name="YearManufactured" ColumnName="YearManufactured" />
+          <ScalarProperty Name="Length" ColumnName="Length" />
+          <ScalarProperty Name="Width" ColumnName="Width" />
           <ScalarProperty Name="PictureLocation" ColumnName="PictureLocation" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
     <EntitySetMapping Name="Kites">
-      <EntityTypeMapping TypeName="BoardSportsDevModel.Kite">
+      <EntityTypeMapping TypeName="BoardSportsModel.Kite">
         <MappingFragment StoreEntitySet="Kites">
           <ScalarProperty Name="KiteId" ColumnName="KiteId" />
           <ScalarProperty Name="KiteName" ColumnName="KiteName" />
-          <ScalarProperty Name="KiteBrand" ColumnName="KiteBrand" />
           <ScalarProperty Name="Manufacturer" ColumnName="Manufacturer" />
           <ScalarProperty Name="Size" ColumnName="Size" />
-          <ScalarProperty Name="NumberLines" ColumnName="NumberLines" />
-          <ScalarProperty Name="YearManufactured" ColumnName="YearManufactured" />
-          <ScalarProperty Name="BarBrand" ColumnName="BarBrand" />
+          <ScalarProperty Name="NumberOfLines" ColumnName="NumberOfLines" />
           <ScalarProperty Name="PictureLocation" ColumnName="PictureLocation" />
+          <ScalarProperty Name="EstimatedValue" ColumnName="EstimatedValue" />
+          <ScalarProperty Name="PurchasePrice" ColumnName="PurchasePrice" />
+          <ScalarProperty Name="PurchaseDate" ColumnName="PurchaseDate" />
+          <ScalarProperty Name="YearManufactured" ColumnName="YearManufactured" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
     <EntitySetMapping Name="Masts">
-      <EntityTypeMapping TypeName="BoardSportsDevModel.Mast">
+      <EntityTypeMapping TypeName="BoardSportsModel.Mast">
         <MappingFragment StoreEntitySet="Masts">
           <ScalarProperty Name="MastId" ColumnName="MastId" />
           <ScalarProperty Name="MastName" ColumnName="MastName" />
@@ -72,29 +84,30 @@
           <ScalarProperty Name="CarbonContent" ColumnName="CarbonContent" />
           <ScalarProperty Name="PurchaseDate" ColumnName="PurchaseDate" />
           <ScalarProperty Name="PurchasePrice" ColumnName="PurchasePrice" />
-          <ScalarProperty Name="PurchaseLocation" ColumnName="PurchaseLocation" />
-          <ScalarProperty Name="PictureLocation" ColumnName="PictureLocation" />
+          <ScalarProperty Name="PurchaseStore" ColumnName="PurchaseStore" />
+          <ScalarProperty Name="YearManurfactured" ColumnName="YearManurfactured" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
     <EntitySetMapping Name="Rigs">
-      <EntityTypeMapping TypeName="BoardSportsDevModel.Rig">
+      <EntityTypeMapping TypeName="BoardSportsModel.Rig">
         <MappingFragment StoreEntitySet="Rigs">
           <ScalarProperty Name="RigId" ColumnName="RigId" />
           <ScalarProperty Name="RigDate" ColumnName="RigDate" />
           <ScalarProperty Name="RigType" ColumnName="RigType" />
           <ScalarProperty Name="VenueId" ColumnName="VenueId" />
           <ScalarProperty Name="BoardId" ColumnName="BoardId" />
-          <ScalarProperty Name="BoomId" ColumnName="BoomId" />
-          <ScalarProperty Name="MastId" ColumnName="MastId" />
           <ScalarProperty Name="SailId" ColumnName="SailId" />
-          <ScalarProperty Name="KiteId" ColumnName="KiteId" />
+          <ScalarProperty Name="BoomId" ColumnName="BoomId" />
           <ScalarProperty Name="FinId" ColumnName="FinId" />
+          <ScalarProperty Name="MastId" ColumnName="MastId" />
+          <ScalarProperty Name="KiteId" ColumnName="KiteId" />
+          <ScalarProperty Name="KiteBoardId" ColumnName="KiteBoardId" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
     <EntitySetMapping Name="Sails">
-      <EntityTypeMapping TypeName="BoardSportsDevModel.Sail">
+      <EntityTypeMapping TypeName="BoardSportsModel.Sail">
         <MappingFragment StoreEntitySet="Sails">
           <ScalarProperty Name="SailId" ColumnName="SailId" />
           <ScalarProperty Name="SailName" ColumnName="SailName" />
@@ -105,13 +118,13 @@
           <ScalarProperty Name="Size" ColumnName="Size" />
           <ScalarProperty Name="BoomLength" ColumnName="BoomLength" />
           <ScalarProperty Name="BaseLength" ColumnName="BaseLength" />
-          <ScalarProperty Name="YearManufactured" ColumnName="YearManufactured" />
           <ScalarProperty Name="PictureLocation" ColumnName="PictureLocation" />
+          <ScalarProperty Name="YearManufactured" ColumnName="YearManufactured" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
     <EntitySetMapping Name="Sessions">
-      <EntityTypeMapping TypeName="BoardSportsDevModel.Session">
+      <EntityTypeMapping TypeName="BoardSportsModel.Session">
         <MappingFragment StoreEntitySet="Sessions">
           <ScalarProperty Name="SessionId" ColumnName="SessionId" />
           <ScalarProperty Name="SessionType" ColumnName="SessionType" />
@@ -120,15 +133,29 @@
           <ScalarProperty Name="Duration" ColumnName="Duration" />
           <ScalarProperty Name="Funfactor" ColumnName="Funfactor" />
           <ScalarProperty Name="RigId" ColumnName="RigId" />
-          <ScalarProperty Name="VenueId" ColumnName="VenueId" />
           <ScalarProperty Name="BeersConsumed" ColumnName="BeersConsumed" />
           <ScalarProperty Name="PeopleInCompany" ColumnName="PeopleInCompany" />
           <ScalarProperty Name="Notes" ColumnName="Notes" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
+    <EntitySetMapping Name="Snowboards">
+      <EntityTypeMapping TypeName="BoardSportsModel.Snowboard">
+        <MappingFragment StoreEntitySet="Snowboards">
+          <ScalarProperty Name="SnowboardId" ColumnName="SnowboardId" />
+          <ScalarProperty Name="SnowboardName" ColumnName="SnowboardName" />
+          <ScalarProperty Name="Manufacturer" ColumnName="Manufacturer" />
+          <ScalarProperty Name="PurchaseDate" ColumnName="PurchaseDate" />
+          <ScalarProperty Name="PurchasePrice" ColumnName="PurchasePrice" />
+          <ScalarProperty Name="EstimatedPrice" ColumnName="EstimatedPrice" />
+          <ScalarProperty Name="Length" ColumnName="Length" />
+          <ScalarProperty Name="Width" ColumnName="Width" />
+          <ScalarProperty Name="Bindings" ColumnName="Bindings" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
     <EntitySetMapping Name="Venues">
-      <EntityTypeMapping TypeName="BoardSportsDevModel.Venue">
+      <EntityTypeMapping TypeName="BoardSportsModel.Venue">
         <MappingFragment StoreEntitySet="Venues">
           <ScalarProperty Name="VenueId" ColumnName="VenueId" />
           <ScalarProperty Name="VenueName" ColumnName="VenueName" />

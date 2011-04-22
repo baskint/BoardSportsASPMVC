@@ -8,12 +8,6 @@
   </SettingsComponent>
   <RecentFiles>
     <RecentFiles>
-      <File id="3B04DC45-B70C-4BA9-9127-3C5BF42E3B69/d:Properties/f:AssemblyInfo.cs" caret="0" fromTop="0" />
-      <File id="3B04DC45-B70C-4BA9-9127-3C5BF42E3B69/f:Program.cs" caret="512" fromTop="21" />
-      <File id="3B04DC45-B70C-4BA9-9127-3C5BF42E3B69/f:RigService.cs" caret="494" fromTop="18" />
-      <File id="8C7DF6AC-DFF8-45DC-963C-6D57520CFDB1/d:Models/f:RigsViewModel.cs" caret="171" fromTop="10" />
-      <File id="8C7DF6AC-DFF8-45DC-963C-6D57520CFDB1/d:Models/f:WindsurfingViewModel.cs" caret="0" fromTop="0" />
-      <File id="8C7DF6AC-DFF8-45DC-963C-6D57520CFDB1/d:Views/d:Home/f:Index.aspx" caret="447" fromTop="13" />
       <File id="8C7DF6AC-DFF8-45DC-963C-6D57520CFDB1/f:Global.asax.cs" caret="504" fromTop="17" />
       <File id="8C7DF6AC-DFF8-45DC-963C-6D57520CFDB1/d:Views/d:Shared/f:LogOnUserControl.ascx" caret="362" fromTop="14" />
       <File id="8C7DF6AC-DFF8-45DC-963C-6D57520CFDB1/d:Views/d:Snowboarding/f:Index.aspx" caret="351" fromTop="11" />
@@ -25,12 +19,7 @@
       <File id="8C7DF6AC-DFF8-45DC-963C-6D57520CFDB1/d:Helpers/f:MenuHelpers.cs" caret="740" fromTop="24" />
       <File id="8C7DF6AC-DFF8-45DC-963C-6D57520CFDB1/d:Views/d:Kiteboarding/f:Index.aspx" caret="0" fromTop="0" />
       <File id="8C7DF6AC-DFF8-45DC-963C-6D57520CFDB1/f:Web.sitemap" caret="628" fromTop="17" />
-      <File id="EA936470-B201-4EA1-A93F-008FF0BB8F7F/d:Kiting/f:Kiteboard.cs" caret="0" fromTop="0" />
       <File id="EA936470-B201-4EA1-A93F-008FF0BB8F7F/d:Snowboarding/f:Snowboard.cs" caret="0" fromTop="0" />
-      <File id="EA936470-B201-4EA1-A93F-008FF0BB8F7F/f:App.Config" caret="512" fromTop="4" />
-      <File id="CCA4FA4D-ABF0-4B67-A541-90C0B8893DC7/f:App.config" caret="682" fromTop="13" />
-      <File id="EA936470-B201-4EA1-A93F-008FF0BB8F7F/d:Windsurfing/f:Sailboard.cs" caret="531" fromTop="18" />
-      <File id="CCA4FA4D-ABF0-4B67-A541-90C0B8893DC7/d:Integration/f:SailboardTests.cs" caret="1324" fromTop="37" />
       <File id="8C7DF6AC-DFF8-45DC-963C-6D57520CFDB1/d:Controllers/f:AccountController.cs" caret="2050" fromTop="54" />
       <File id="8C7DF6AC-DFF8-45DC-963C-6D57520CFDB1/d:Views/d:Account/f:LogOn.aspx" caret="0" fromTop="0" />
       <File id="EA936470-B201-4EA1-A93F-008FF0BB8F7F/f:Rigs.cs" caret="162" fromTop="11" />
@@ -38,28 +27,18 @@
       <File id="CCA4FA4D-ABF0-4B67-A541-90C0B8893DC7/d:Controllers/f:AccountControllerTest.cs" caret="0" fromTop="0" />
       <File id="211F5080-91FC-4E0E-8B1A-D5197E655733/d:Controllers/f:HomeController.cs" caret="442" fromTop="20" />
       <File id="211F5080-91FC-4E0E-8B1A-D5197E655733/d:Views/d:Home/f:Index.cshtml" caret="0" fromTop="0" />
+      <File id="EA936470-B201-4EA1-A93F-008FF0BB8F7F/d:Kiting/f:Kiteboard.cs" caret="110" fromTop="5" />
+      <File id="EA936470-B201-4EA1-A93F-008FF0BB8F7F/f:BoardSportsEF.edmx" caret="0" fromTop="0" />
+      <File id="EA936470-B201-4EA1-A93F-008FF0BB8F7F/d:Properties/f:AssemblyInfo.cs" caret="0" fromTop="0" />
+      <File id="EA936470-B201-4EA1-A93F-008FF0BB8F7F/f:packages.config" caret="121" fromTop="3" />
+      <File id="CCA4FA4D-ABF0-4B67-A541-90C0B8893DC7/d:Integration/f:SailboardTests.cs" caret="693" fromTop="14" />
+      <File id="EA936470-B201-4EA1-A93F-008FF0BB8F7F/f:App.Config" caret="80" fromTop="3" />
+      <File id="CCA4FA4D-ABF0-4B67-A541-90C0B8893DC7/f:App.config" caret="714" fromTop="16" />
+      <File id="EA936470-B201-4EA1-A93F-008FF0BB8F7F/d:Windsurfing/f:Sailboard.cs" caret="525" fromTop="17" />
     </RecentFiles>
     <RecentEdits>
-      <File id="8C7DF6AC-DFF8-45DC-963C-6D57520CFDB1/f:Web.sitemap" caret="446" fromTop="9" />
-      <File id="8C7DF6AC-DFF8-45DC-963C-6D57520CFDB1/f:Web.sitemap" caret="313" fromTop="8" />
-      <File id="8C7DF6AC-DFF8-45DC-963C-6D57520CFDB1/d:Helpers/f:MenuHelpers.cs" caret="875" fromTop="27" />
-      <File id="8C7DF6AC-DFF8-45DC-963C-6D57520CFDB1/d:Views/d:Kiteboarding/f:Index.aspx" caret="0" fromTop="0" />
-      <File id="8C7DF6AC-DFF8-45DC-963C-6D57520CFDB1/f:Web.sitemap" caret="628" fromTop="17" />
-      <File id="EA936470-B201-4EA1-A93F-008FF0BB8F7F/f:App.Config" caret="0" fromTop="0" />
-      <File id="EA936470-B201-4EA1-A93F-008FF0BB8F7F/d:Kiting/f:Kiteboard.cs" caret="0" fromTop="0" />
-      <File id="EA936470-B201-4EA1-A93F-008FF0BB8F7F/d:Snowboarding/f:Snowboard.cs" caret="0" fromTop="0" />
-      <File id="EA936470-B201-4EA1-A93F-008FF0BB8F7F/d:Windsurfing/f:Sailboard.cs" caret="678" fromTop="11" />
-      <File id="CCA4FA4D-ABF0-4B67-A541-90C0B8893DC7/d:Integration/f:SailboardTests.cs" caret="201" fromTop="6" />
-      <File id="EA936470-B201-4EA1-A93F-008FF0BB8F7F/d:Windsurfing/f:Sailboard.cs" caret="256" fromTop="11" />
-      <File id="EA936470-B201-4EA1-A93F-008FF0BB8F7F/d:Windsurfing/f:Sailboard.cs" caret="466" fromTop="19" />
-      <File id="EA936470-B201-4EA1-A93F-008FF0BB8F7F/d:Windsurfing/f:Sailboard.cs" caret="601" fromTop="22" />
-      <File id="CCA4FA4D-ABF0-4B67-A541-90C0B8893DC7/d:Integration/f:SailboardTests.cs" caret="810" fromTop="21" />
-      <File id="CCA4FA4D-ABF0-4B67-A541-90C0B8893DC7/f:App.config" caret="231" fromTop="10" />
-      <File id="CCA4FA4D-ABF0-4B67-A541-90C0B8893DC7/f:App.config" caret="254" fromTop="12" />
-      <File id="CCA4FA4D-ABF0-4B67-A541-90C0B8893DC7/f:App.config" caret="682" fromTop="13" />
-      <File id="CCA4FA4D-ABF0-4B67-A541-90C0B8893DC7/d:Integration/f:SailboardTests.cs" caret="479" fromTop="14" />
-      <File id="CCA4FA4D-ABF0-4B67-A541-90C0B8893DC7/d:Integration/f:SailboardTests.cs" caret="1084" fromTop="26" />
-      <File id="CCA4FA4D-ABF0-4B67-A541-90C0B8893DC7/d:Integration/f:SailboardTests.cs" caret="1324" fromTop="37" />
+      <File id="CCA4FA4D-ABF0-4B67-A541-90C0B8893DC7/d:Integration/f:SailboardTests.cs" caret="1250" fromTop="26" />
+      <File id="CCA4FA4D-ABF0-4B67-A541-90C0B8893DC7/d:Integration/f:SailboardTests.cs" caret="1452" fromTop="37" />
       <File id="EA936470-B201-4EA1-A93F-008FF0BB8F7F/f:Rigs.cs" caret="164" fromTop="11" />
       <File id="CCA4FA4D-ABF0-4B67-A541-90C0B8893DC7/d:Controllers/f:HomeControllerTest.cs" caret="0" fromTop="0" />
       <File id="CCA4FA4D-ABF0-4B67-A541-90C0B8893DC7/d:Controllers/f:HomeControllerTest.cs" caret="1078" fromTop="28" />
@@ -70,6 +49,22 @@
       <File id="211F5080-91FC-4E0E-8B1A-D5197E655733/d:Controllers/f:HomeController.cs" caret="190" fromTop="8" />
       <File id="211F5080-91FC-4E0E-8B1A-D5197E655733/d:Controllers/f:HomeController.cs" caret="455" fromTop="20" />
       <File id="211F5080-91FC-4E0E-8B1A-D5197E655733/d:Views/d:Home/f:Index.cshtml" caret="0" fromTop="0" />
+      <File id="EA936470-B201-4EA1-A93F-008FF0BB8F7F/d:Kiting/f:Kiteboard.cs" caret="117" fromTop="5" />
+      <File id="EA936470-B201-4EA1-A93F-008FF0BB8F7F/d:Windsurfing/f:Sailboard.cs" caret="112" fromTop="4" />
+      <File id="EA936470-B201-4EA1-A93F-008FF0BB8F7F/f:packages.config" caret="121" fromTop="3" />
+      <File id="EA936470-B201-4EA1-A93F-008FF0BB8F7F/d:Windsurfing/f:Sailboard.cs" caret="809" fromTop="20" />
+      <File id="EA936470-B201-4EA1-A93F-008FF0BB8F7F/d:Windsurfing/f:Sailboard.cs" caret="1011" fromTop="27" />
+      <File id="EA936470-B201-4EA1-A93F-008FF0BB8F7F/d:Windsurfing/f:Sailboard.cs" caret="289" fromTop="15" />
+      <File id="EA936470-B201-4EA1-A93F-008FF0BB8F7F/d:Windsurfing/f:Sailboard.cs" caret="555" fromTop="18" />
+      <File id="EA936470-B201-4EA1-A93F-008FF0BB8F7F/d:Windsurfing/f:Sailboard.cs" caret="379" fromTop="19" />
+      <File id="EA936470-B201-4EA1-A93F-008FF0BB8F7F/d:Windsurfing/f:Sailboard.cs" caret="1043" fromTop="41" />
+      <File id="CCA4FA4D-ABF0-4B67-A541-90C0B8893DC7/d:Integration/f:SailboardTests.cs" caret="167" fromTop="6" />
+      <File id="CCA4FA4D-ABF0-4B67-A541-90C0B8893DC7/d:Integration/f:SailboardTests.cs" caret="1344" fromTop="28" />
+      <File id="CCA4FA4D-ABF0-4B67-A541-90C0B8893DC7/d:Integration/f:SailboardTests.cs" caret="1195" fromTop="10" />
+      <File id="CCA4FA4D-ABF0-4B67-A541-90C0B8893DC7/d:Integration/f:SailboardTests.cs" caret="1195" fromTop="20" />
+      <File id="CCA4FA4D-ABF0-4B67-A541-90C0B8893DC7/d:Integration/f:SailboardTests.cs" caret="399" fromTop="8" />
+      <File id="EA936470-B201-4EA1-A93F-008FF0BB8F7F/f:App.Config" caret="350" fromTop="3" />
+      <File id="CCA4FA4D-ABF0-4B67-A541-90C0B8893DC7/f:App.config" caret="671" fromTop="13" />
     </RecentEdits>
   </RecentFiles>
   <NAntValidationSettings>
@@ -94,21 +89,21 @@
       <Item value="BoardSportsDevEntities`0" priority="2" />
       <Item value="throw" priority="0" />
       <Item value="NotImplementedException`0" priority="0" />
-      <Item value="Board`0" priority="2" />
-      <Item value="new" priority="3" />
-      <Item value="Board" priority="1" />
-      <Item value="board" priority="11" />
+      <Item value="Board`0" priority="5" />
+      <Item value="new" priority="8" />
+      <Item value="Board" priority="2" />
+      <Item value="board" priority="15" />
       <Item value="Convert`0" priority="3" />
-      <Item value="using" priority="0" />
-      <Item value="BoardSports" priority="1" />
-      <Item value="DAL" priority="0" />
+      <Item value="using" priority="2" />
+      <Item value="BoardSports" priority="7" />
+      <Item value="DAL" priority="4" />
       <Item value="Windsurfing" priority="0" />
       <Item value="Sailboard`0" priority="0" />
       <Item value="Sailboard" priority="0" />
       <Item value="sb" priority="0" />
       <Item value="BoardSportsDevEntities" priority="0" />
       <Item value="be" priority="1" />
-      <Item value="if" priority="0" />
+      <Item value="if" priority="1" />
       <Item value="try" priority="0" />
       <Item value="catch" priority="0" />
       <Item value="Exception`0" priority="0" />
@@ -117,6 +112,20 @@
       <Item value="true" priority="0" />
       <Item value="AssemblyCleanupAttribute`0" priority="0" />
       <Item value="void" priority="0" />
+      <Item value="float" priority="0" />
+      <Item value="BoardSportsEF" priority="0" />
+      <Item value="var" priority="5" />
+      <Item value="Entities`0" priority="2" />
+      <Item value="context" priority="1" />
+      <Item value="from" priority="0" />
+      <Item value="where" priority="0" />
+      <Item value="b" priority="1" />
+      <Item value="select" priority="0" />
+      <Item value="return" priority="1" />
+      <Item value="int" priority="0" />
+      <Item value="boardId" priority="0" />
+      <Item value="dBoard" priority="1" />
+      <Item value="q" priority="0" />
     </ItemStatistics>
     <ItemStatistics item="Qualified:System.Web.Mvc.HtmlHelper`1">
       <Item value="ActionLink`0" priority="0" />
@@ -125,8 +134,8 @@
       <Item value="Description" priority="0" />
     </ItemStatistics>
     <ItemStatistics item="Qualified:BoardSports.DAL.Board">
-      <Item value="BoardId" priority="0" />
-      <Item value="BoardName" priority="0" />
+      <Item value="BoardId" priority="2" />
+      <Item value="BoardName" priority="1" />
       <Item value="Manufacturer" priority="0" />
       <Item value="Length" priority="0" />
       <Item value="Width" priority="0" />
@@ -153,6 +162,18 @@
     </ItemStatistics>
     <ItemStatistics item="Qualified:@Microsoft.VisualStudio.TestTools.UnitTesting.Assert">
       <Item value="IsTrue`0" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:BoardSports.DAL.BoardSportsDevEntity">
+      <Item value="Boards" priority="1" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Data.Objects.ObjectSet`1">
+      <Item value="First`1" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:@BoardSports.DAL.BoardSportsDevEntity">
+      <Item value="Board`0" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Linq.IQueryable`1">
+      <Item value="Count`1" priority="0" />
     </ItemStatistics>
   </CompletionStatisticsManager>
 </Configuration>
