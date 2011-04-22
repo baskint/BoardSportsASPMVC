@@ -26,4 +26,4 @@ _ReSharper*
 
 #TestResults
 ######################
-BoardSports.Tests\bin\Debug\TestResults\*
+BoardSports.Tests/bin/Debug/TestResults/*
