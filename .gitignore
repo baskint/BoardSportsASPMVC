@@ -23,3 +23,7 @@ _ReSharper*
 ######################
 *.suo
 *.vsscc
+
+#TestResults
+######################
+BoardSports.Tests\bin\Debug\TestResults\*
