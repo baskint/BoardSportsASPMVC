@@ -6,11 +6,11 @@ C:\src\dotNet\BoardSportsASPMVC\BoardSports.DBProj\sql\debug\BoardSports_Databas
 C:\src\dotNet\BoardSportsASPMVC\BoardSports.DBProj\sql\debug\BoardSports.DB.deploymanifest
 C:\src\dotNet\BoardSportsASPMVC\BoardSports.DBProj\sql\debug\BoardSports.DB.dbschema
 C:\src\dotNet\BoardSportsASPMVC\BoardSports.DBProj\obj\Debug\BoardSports.DB.dbschema
-C:\src\dotNet\BoardSportsASPMVC\BoardSports.DB\sql\debug\BoardSports_Script.PreDeployment.sql
-C:\src\dotNet\BoardSportsASPMVC\BoardSports.DB\sql\debug\BoardSports_Script.PostDeployment.sql
-C:\src\dotNet\BoardSportsASPMVC\BoardSports.DB\sql\debug\BoardSports_Database.sqlsettings
-C:\src\dotNet\BoardSportsASPMVC\BoardSports.DB\sql\debug\BoardSports_Database.sqldeployment
-C:\src\dotNet\BoardSportsASPMVC\BoardSports.DB\sql\debug\BoardSports_Database.sqlcmdvars
 C:\src\dotNet\BoardSportsASPMVC\BoardSports.DB\sql\debug\BoardSports.DB.deploymanifest
 C:\src\dotNet\BoardSportsASPMVC\BoardSports.DB\sql\debug\BoardSports.DB.dbschema
 C:\src\dotNet\BoardSportsASPMVC\BoardSports.DB\obj\Debug\BoardSports.DB.dbschema
+C:\src\dotNet\BoardSportsASPMVC\BoardSports.DB\sql\debug\BoardSportsDev_Script.PreDeployment.sql
+C:\src\dotNet\BoardSportsASPMVC\BoardSports.DB\sql\debug\BoardSportsDev_Script.PostDeployment.sql
+C:\src\dotNet\BoardSportsASPMVC\BoardSports.DB\sql\debug\BoardSportsDev_Database.sqlsettings
+C:\src\dotNet\BoardSportsASPMVC\BoardSports.DB\sql\debug\BoardSportsDev_Database.sqldeployment
+C:\src\dotNet\BoardSportsASPMVC\BoardSports.DB\sql\debug\BoardSportsDev_Database.sqlcmdvars

@@ -22,6 +22,10 @@
     <RootNamespace>BoardSports</RootNamespace>
     <DefaultSchema>dbo</DefaultSchema>
     <PreviousProjectVersion>4.0</PreviousProjectVersion>
+    <SccProjectName>SAK</SccProjectName>
+    <SccProvider>SAK</SccProvider>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccLocalPath>SAK</SccLocalPath>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)' == 'Release' ">
     <OutputPath>.\sql\release\</OutputPath>
@@ -39,8 +43,8 @@
   <PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">
     <OutputPath>.\sql\debug\</OutputPath>
     <BuildScriptName>$(MSBuildProjectName).sql</BuildScriptName>
-    <TargetConnectionString>Data Source=Win7-us688228\us688228;Integrated Security=True;Pooling=False</TargetConnectionString>
-    <TargetDatabase>BoardSports</TargetDatabase>
+    <TargetConnectionString>Data Source=DARLIN;Integrated Security=True;Pooling=False</TargetConnectionString>
+    <TargetDatabase>BoardSportsDev</TargetDatabase>
     <TreatWarningsAsErrors>False</TreatWarningsAsErrors>
     <SuppressWarnings>
     </SuppressWarnings>

@@ -11,7 +11,7 @@ body {
     padding: 0;
     color: #696969;
     /* gradient background */
-    background-image: url(../../Content/images/BoardSports_gradient.png); 
+    background-image: url(../Content/images/BoardSports_gradient.png); 
     background-repeat: repeat-x; 
 }
 

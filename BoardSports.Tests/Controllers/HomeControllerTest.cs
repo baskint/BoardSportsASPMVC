@@ -24,7 +24,7 @@ namespace BoardSports.Tests.Controllers
 
             // Assert
             ViewDataDictionary viewData = result.ViewData;
-            Assert.AreEqual("Board sports are fun!", viewData["Message"]);
+            Assert.AreEqual("Board sports are fun (perhaps)!", viewData["Message"]);
         }
 
         [TestMethod]
