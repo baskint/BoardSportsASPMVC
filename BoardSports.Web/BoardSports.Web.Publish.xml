@@ -1,0 +1,44 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<publishData>
+  <publishProfile publishUrl="D:\BoardSportsTemp" deleteExistingFiles="False" ftpAnonymousLogin="False" ftpPassiveMode="True" msdeploySite="baskintapkan.com/BoardSports" msdeploySiteID="" msdeployRemoteSitePhysicalPath="" msdeployAllowUntrustedCertificate="False" msdeploySkipExtraFilesOnServer="True" msdeployMarkAsApp="False" profileName="Profile1" publishMethod="FileSystem" replaceMatchingFiles="True" userName="" savePWD="False" userPWD="" SelectedForPublish="True">
+    <file relUrl="Views/Account/Register.cshtml" publishTime="04/22/2011 23:57:24" />
+    <file relUrl="Scripts/MicrosoftAjax.js" publishTime="04/22/2011 23:57:24" />
+    <file relUrl="Global.asax" publishTime="04/22/2011 23:57:24" />
+    <file relUrl="bin/EntityFramework.xml" publishTime="04/22/2011 23:57:24" />
+    <file relUrl="Scripts/modernizr-1.7.js" publishTime="04/22/2011 23:57:24" />
+    <file relUrl="App_Readme/glimpse.readme.txt" publishTime="04/23/2011 00:03:21" />
+    <file relUrl="Scripts/jquery-1.5.2.js" publishTime="04/22/2011 23:57:24" />
+    <file relUrl="Views/Account/ChangePassword.cshtml" publishTime="04/22/2011 23:57:24" />
+    <file relUrl="Content/images/windsurfing_logo.jpg" publishTime="04/22/2011 23:57:24" />
+    <file relUrl="Scripts/MicrosoftMvcValidation.debug.js" publishTime="04/22/2011 23:57:24" />
+    <file relUrl="Scripts/jquery-1.5.2.min.js" publishTime="04/22/2011 23:57:24" />
+    <file relUrl="Scripts/MicrosoftMvcAjax.debug.js" publishTime="04/22/2011 23:57:24" />
+    <file relUrl="Views/Shared/_LogOnPartial.cshtml" publishTime="04/22/2011 23:57:24" />
+    <file relUrl="bin/BoardSports.Web.pdb" publishTime="04/23/2011 00:41:37" />
+    <file relUrl="Views/Account/ChangePasswordSuccess.cshtml" publishTime="04/22/2011 23:57:24" />
+    <file relUrl="Content/images/kiteboarding_logo.jpg" publishTime="04/22/2011 23:57:23" />
+    <file relUrl="Views/Home/About.cshtml" publishTime="04/22/2011 23:57:24" />
+    <file relUrl="Scripts/jquery.unobtrusive-ajax.min.js" publishTime="04/22/2011 23:57:24" />
+    <file relUrl="bin/BoardSports.Web.dll" publishTime="04/23/2011 00:41:37" />
+    <file relUrl="packages.config" publishTime="04/23/2011 00:03:22" />
+    <file relUrl="Scripts/modernizr-1.7.min.js" publishTime="04/22/2011 23:57:24" />
+    <file relUrl="Views/Home/Index.cshtml" publishTime="04/22/2011 23:57:24" />
+    <file relUrl="Scripts/MicrosoftMvcValidation.js" publishTime="04/22/2011 23:57:24" />
+    <file relUrl="Scripts/jquery-1.5.2-vsdoc.js" publishTime="04/22/2011 23:57:24" />
+    <file relUrl="bin/Glimpse.Net.dll" publishTime="04/23/2011 00:03:21" />
+    <file relUrl="Scripts/MicrosoftMvcAjax.js" publishTime="04/22/2011 23:57:24" />
+    <file relUrl="Views/_ViewStart.cshtml" publishTime="04/22/2011 23:57:24" />
+    <file relUrl="Scripts/jquery.validate.unobtrusive.js" publishTime="04/22/2011 23:57:24" />
+    <file relUrl="Views/Shared/_Layout.cshtml" publishTime="04/22/2011 23:57:24" />
+    <file relUrl="Views/Account/LogOn.cshtml" publishTime="04/22/2011 23:57:24" />
+    <file relUrl="Web.config" publishTime="04/23/2011 00:42:47" />
+    <file relUrl="Content/images/BoardSports_gradient.png" publishTime="04/22/2011 23:57:23" />
+    <file relUrl="Content/Site.css" publishTime="04/22/2011 23:57:23" />
+    <file relUrl="Scripts/MicrosoftAjax.debug.js" publishTime="04/22/2011 23:57:24" />
+    <file relUrl="bin/EntityFramework.dll" publishTime="04/22/2011 23:57:24" />
+    <file relUrl="Views/Shared/Error.cshtml" publishTime="04/22/2011 23:57:24" />
+    <file relUrl="Scripts/jquery.unobtrusive-ajax.js" publishTime="04/22/2011 23:57:24" />
+    <file relUrl="Scripts/jquery.validate.unobtrusive.min.js" publishTime="04/22/2011 23:57:24" />
+    <file relUrl="Views/Web.config" publishTime="04/23/2011 00:42:48" />
+  </publishProfile>
+</publishData>
