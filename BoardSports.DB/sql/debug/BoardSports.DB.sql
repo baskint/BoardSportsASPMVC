@@ -1,5 +1,9 @@
 ﻿/*
+<<<<<<< HEAD
 Deployment script for BoardSportsDev
+=======
+Deployment script for BoardSports
+>>>>>>> f0797c61d5678ce8fd61b26b2ee1499e5557e00f
 */
 
 GO
@@ -7,9 +11,15 @@ SET ANSI_NULLS, ANSI_PADDING, ANSI_WARNINGS, ARITHABORT, CONCAT_NULL_YIELDS_NULL
 
 
 GO
+<<<<<<< HEAD
 :setvar DatabaseName "BoardSportsDev"
 :setvar DefaultDataPath "C:\Program Files\Microsoft SQL Server\MSSQL10_50.MSSQLSERVER\MSSQL\DATA\"
 :setvar DefaultLogPath "C:\Program Files\Microsoft SQL Server\MSSQL10_50.MSSQLSERVER\MSSQL\DATA\"
+=======
+:setvar DatabaseName "BoardSports"
+:setvar DefaultDataPath "C:\Program Files\Microsoft SQL Server\MSSQL10_50.US688228\MSSQL\DATA\"
+:setvar DefaultLogPath "C:\Program Files\Microsoft SQL Server\MSSQL10_50.US688228\MSSQL\DATA\"
+>>>>>>> f0797c61d5678ce8fd61b26b2ee1499e5557e00f
 
 GO
 :on error exit
@@ -27,15 +37,25 @@ GO
 
 IF NOT EXISTS (SELECT 1 FROM [master].[dbo].[sysdatabases] WHERE [name] = N'$(DatabaseName)')
 BEGIN
+<<<<<<< HEAD
     RAISERROR(N'You cannot deploy this update script to target DARLIN. The database for which this script was built, BoardSportsDev, does not exist on this server.', 16, 127) WITH NOWAIT
+=======
+    RAISERROR(N'You cannot deploy this update script to target WIN7-US688228\US688228. The database for which this script was built, BoardSports, does not exist on this server.', 16, 127) WITH NOWAIT
+>>>>>>> f0797c61d5678ce8fd61b26b2ee1499e5557e00f
     RETURN
 END
 
 GO
 
+<<<<<<< HEAD
 IF (@@servername != 'DARLIN')
 BEGIN
     RAISERROR(N'The server name in the build script %s does not match the name of the target server %s. Verify whether your database project settings are correct and whether your build script is up to date.', 16, 127,N'DARLIN',@@servername) WITH NOWAIT
+=======
+IF (@@servername != 'WIN7-US688228\US688228')
+BEGIN
+    RAISERROR(N'The server name in the build script %s does not match the name of the target server %s. Verify whether your database project settings are correct and whether your build script is up to date.', 16, 127,N'WIN7-US688228\US688228',@@servername) WITH NOWAIT
+>>>>>>> f0797c61d5678ce8fd61b26b2ee1499e5557e00f
     RETURN
 END
 
@@ -48,6 +68,7 @@ BEGIN
 END
 
 GO
+<<<<<<< HEAD
 PRINT N'Creating [BoardSports]...';
 
 
@@ -66,6 +87,8 @@ ALTER DATABASE [$(DatabaseName)]
 
 
 GO
+=======
+>>>>>>> f0797c61d5678ce8fd61b26b2ee1499e5557e00f
 USE [$(DatabaseName)]
 GO
 /*
@@ -105,6 +128,7 @@ ALTER TABLE [dbo].[Rigs] DROP CONSTRAINT [FK_Rigs_Fins];
 
 
 GO
+<<<<<<< HEAD
 PRINT N'Dropping FK_Rigs_Kites...';
 
 
@@ -113,6 +137,8 @@ ALTER TABLE [dbo].[Rigs] DROP CONSTRAINT [FK_Rigs_Kites];
 
 
 GO
+=======
+>>>>>>> f0797c61d5678ce8fd61b26b2ee1499e5557e00f
 PRINT N'Dropping FK_Rigs_Masts...';
 
 
@@ -121,6 +147,7 @@ ALTER TABLE [dbo].[Rigs] DROP CONSTRAINT [FK_Rigs_Masts];
 
 
 GO
+<<<<<<< HEAD
 PRINT N'Dropping FK_Rigs_Sails...';
 
 
@@ -145,16 +172,21 @@ ALTER TABLE [dbo].[Sessions] DROP CONSTRAINT [FK_Sessions_Rigs];
 
 
 GO
+=======
+>>>>>>> f0797c61d5678ce8fd61b26b2ee1499e5557e00f
 PRINT N'Starting rebuilding table [dbo].[Boards]...';
 
 
 GO
+<<<<<<< HEAD
 /*
 The column [dbo].[Boards].[PurchaseLocation] is being dropped, data loss could occur.
 
 The type for column PictureLocation in table [dbo].[Boards] is currently  NVARCHAR (250) NULL but is being changed to  NVARCHAR (100) NULL. Data loss could occur.
 */
 GO
+=======
+>>>>>>> f0797c61d5678ce8fd61b26b2ee1499e5557e00f
 SET TRANSACTION ISOLATION LEVEL SERIALIZABLE;
 
 SET XACT_ABORT ON;
@@ -182,7 +214,11 @@ ALTER TABLE [dbo].[tmp_ms_xx_Boards]
 IF EXISTS (SELECT TOP 1 1
            FROM   [dbo].[Boards])
     BEGIN
+<<<<<<< HEAD
         INSERT INTO [dbo].[tmp_ms_xx_Boards] ([BoardId], [BoardName], [Manufacturer], [Length], [Width], [Volume], [BoardType], [PurchaseDate], [PurchasePrice], [EstimatedValue], [YearManufactured], [PictureLocation])
+=======
+        INSERT INTO [dbo].[tmp_ms_xx_Boards] ([BoardId], [BoardName], [Manufacturer], [Length], [Width], [Volume], [BoardType], [PurchaseDate], [PurchasePrice], [EstimatedValue], [PictureLocation], [YearManufactured])
+>>>>>>> f0797c61d5678ce8fd61b26b2ee1499e5557e00f
         SELECT   [BoardId],
                  [BoardName],
                  [Manufacturer],
@@ -193,8 +229,13 @@ IF EXISTS (SELECT TOP 1 1
                  [PurchaseDate],
                  [PurchasePrice],
                  [EstimatedValue],
+<<<<<<< HEAD
                  [YearManufactured],
                  [PictureLocation]
+=======
+                 [PictureLocation],
+                 [YearManufactured]
+>>>>>>> f0797c61d5678ce8fd61b26b2ee1499e5557e00f
         FROM     [dbo].[Boards]
         ORDER BY [BoardId] ASC;
     END
@@ -215,10 +256,13 @@ PRINT N'Starting rebuilding table [dbo].[Booms]...';
 
 
 GO
+<<<<<<< HEAD
 /*
 The type for column PictureLocation in table [dbo].[Booms] is currently  NVARCHAR (250) NULL but is being changed to  NVARCHAR (100) NULL. Data loss could occur.
 */
 GO
+=======
+>>>>>>> f0797c61d5678ce8fd61b26b2ee1499e5557e00f
 SET TRANSACTION ISOLATION LEVEL SERIALIZABLE;
 
 SET XACT_ABORT ON;
@@ -273,6 +317,7 @@ PRINT N'Starting rebuilding table [dbo].[Fins]...';
 
 
 GO
+<<<<<<< HEAD
 /*
 The column [dbo].[Fins].[Manufacturer] is being dropped, data loss could occur.
 
@@ -281,6 +326,8 @@ The column [dbo].[Fins].[PictureLocation] is being dropped, data loss could occu
 The column [dbo].[Fins].[PurchasePrice] is being dropped, data loss could occur.
 */
 GO
+=======
+>>>>>>> f0797c61d5678ce8fd61b26b2ee1499e5557e00f
 SET TRANSACTION ISOLATION LEVEL SERIALIZABLE;
 
 SET XACT_ABORT ON;
@@ -321,6 +368,7 @@ SET TRANSACTION ISOLATION LEVEL READ COMMITTED;
 
 
 GO
+<<<<<<< HEAD
 PRINT N'Starting rebuilding table [dbo].[Kites]...';
 
 
@@ -336,6 +384,65 @@ The type for column PictureLocation in table [dbo].[Kites] is currently  NVARCHA
 
 The type for column Size in table [dbo].[Kites] is currently  INT NULL but is being changed to  TINYINT NULL. Data loss could occur.
 */
+=======
+PRINT N'Starting rebuilding table [dbo].[KiteBoards]...';
+
+
+GO
+SET TRANSACTION ISOLATION LEVEL SERIALIZABLE;
+
+SET XACT_ABORT ON;
+
+BEGIN TRANSACTION;
+
+CREATE TABLE [dbo].[tmp_ms_xx_KiteBoards] (
+    [KiteboardId]      INT            NOT NULL,
+    [KiteboardName]    NVARCHAR (50)  NULL,
+    [Manufacturer]     NVARCHAR (100) NULL,
+    [PurchasePrice]    MONEY          NULL,
+    [PurchaseDate]     DATETIME       NULL,
+    [YearManufactured] INT            NULL,
+    [Length]           TINYINT        NULL,
+    [Width]            TINYINT        NULL,
+    [PictureLocation]  NVARCHAR (100) NULL
+);
+
+ALTER TABLE [dbo].[tmp_ms_xx_KiteBoards]
+    ADD CONSTRAINT [tmp_ms_xx_clusteredindex_PK_KiteBoards] PRIMARY KEY CLUSTERED ([KiteboardId] ASC) WITH (ALLOW_PAGE_LOCKS = ON, ALLOW_ROW_LOCKS = ON, PAD_INDEX = OFF, IGNORE_DUP_KEY = OFF, STATISTICS_NORECOMPUTE = OFF);
+
+IF EXISTS (SELECT TOP 1 1
+           FROM   [dbo].[KiteBoards])
+    BEGIN
+        INSERT INTO [dbo].[tmp_ms_xx_KiteBoards] ([KiteboardId], [KiteboardName], [Manufacturer], [PurchasePrice], [PurchaseDate], [YearManufactured], [Length], [Width], [PictureLocation])
+        SELECT   [KiteboardId],
+                 [KiteboardName],
+                 [Manufacturer],
+                 [PurchasePrice],
+                 [PurchaseDate],
+                 [YearManufactured],
+                 [Length],
+                 [Width],
+                 [PictureLocation]
+        FROM     [dbo].[KiteBoards]
+        ORDER BY [KiteboardId] ASC;
+    END
+
+DROP TABLE [dbo].[KiteBoards];
+
+EXECUTE sp_rename N'[dbo].[tmp_ms_xx_KiteBoards]', N'KiteBoards';
+
+EXECUTE sp_rename N'[dbo].[tmp_ms_xx_clusteredindex_PK_KiteBoards]', N'PK_KiteBoards', N'OBJECT';
+
+COMMIT TRANSACTION;
+
+SET TRANSACTION ISOLATION LEVEL READ COMMITTED;
+
+
+GO
+PRINT N'Starting rebuilding table [dbo].[Kites]...';
+
+
+>>>>>>> f0797c61d5678ce8fd61b26b2ee1499e5557e00f
 GO
 SET TRANSACTION ISOLATION LEVEL SERIALIZABLE;
 
@@ -362,13 +469,26 @@ ALTER TABLE [dbo].[tmp_ms_xx_Kites]
 IF EXISTS (SELECT TOP 1 1
            FROM   [dbo].[Kites])
     BEGIN
+<<<<<<< HEAD
         INSERT INTO [dbo].[tmp_ms_xx_Kites] ([KiteId], [KiteName], [Manufacturer], [Size], [YearManufactured], [PictureLocation])
+=======
+        INSERT INTO [dbo].[tmp_ms_xx_Kites] ([KiteId], [KiteName], [Manufacturer], [Size], [NumberOfLines], [PictureLocation], [EstimatedValue], [PurchasePrice], [PurchaseDate], [YearManufactured])
+>>>>>>> f0797c61d5678ce8fd61b26b2ee1499e5557e00f
         SELECT   [KiteId],
                  [KiteName],
                  [Manufacturer],
                  [Size],
+<<<<<<< HEAD
                  [YearManufactured],
                  [PictureLocation]
+=======
+                 [NumberOfLines],
+                 [PictureLocation],
+                 [EstimatedValue],
+                 [PurchasePrice],
+                 [PurchaseDate],
+                 [YearManufactured]
+>>>>>>> f0797c61d5678ce8fd61b26b2ee1499e5557e00f
         FROM     [dbo].[Kites]
         ORDER BY [KiteId] ASC;
     END
@@ -389,6 +509,7 @@ PRINT N'Starting rebuilding table [dbo].[Masts]...';
 
 
 GO
+<<<<<<< HEAD
 /*
 The column [dbo].[Masts].[PictureLocation] is being dropped, data loss could occur.
 
@@ -399,6 +520,8 @@ The type for column Manufacturer in table [dbo].[Masts] is currently  NVARCHAR (
 The type for column MastName in table [dbo].[Masts] is currently  NVARCHAR (100) NULL but is being changed to  NVARCHAR (50) NOT NULL. Data loss could occur.
 */
 GO
+=======
+>>>>>>> f0797c61d5678ce8fd61b26b2ee1499e5557e00f
 SET TRANSACTION ISOLATION LEVEL SERIALIZABLE;
 
 SET XACT_ABORT ON;
@@ -422,13 +545,23 @@ ALTER TABLE [dbo].[tmp_ms_xx_Masts]
 IF EXISTS (SELECT TOP 1 1
            FROM   [dbo].[Masts])
     BEGIN
+<<<<<<< HEAD
         INSERT INTO [dbo].[tmp_ms_xx_Masts] ([MastId], [MastName], [Manufacturer], [CarbonContent], [PurchaseDate], [PurchasePrice])
+=======
+        INSERT INTO [dbo].[tmp_ms_xx_Masts] ([MastId], [MastName], [Manufacturer], [CarbonContent], [PurchaseDate], [PurchasePrice], [PurchaseStore], [YearManurfactured])
+>>>>>>> f0797c61d5678ce8fd61b26b2ee1499e5557e00f
         SELECT   [MastId],
                  [MastName],
                  [Manufacturer],
                  [CarbonContent],
                  [PurchaseDate],
+<<<<<<< HEAD
                  [PurchasePrice]
+=======
+                 [PurchasePrice],
+                 [PurchaseStore],
+                 [YearManurfactured]
+>>>>>>> f0797c61d5678ce8fd61b26b2ee1499e5557e00f
         FROM     [dbo].[Masts]
         ORDER BY [MastId] ASC;
     END
@@ -445,6 +578,7 @@ SET TRANSACTION ISOLATION LEVEL READ COMMITTED;
 
 
 GO
+<<<<<<< HEAD
 PRINT N'Starting rebuilding table [dbo].[Rigs]...';
 
 
@@ -458,6 +592,9 @@ SET ANSI_NULLS, QUOTED_IDENTIFIER ON;
 
 GO
 SET ANSI_NULLS, QUOTED_IDENTIFIER ON;
+=======
+PRINT N'Starting rebuilding table [dbo].[Snowboards]...';
+>>>>>>> f0797c61d5678ce8fd61b26b2ee1499e5557e00f
 
 
 GO
@@ -467,6 +604,7 @@ SET XACT_ABORT ON;
 
 BEGIN TRANSACTION;
 
+<<<<<<< HEAD
 CREATE TABLE [dbo].[tmp_ms_xx_Rigs] (
     [RigId]       INT        NOT NULL,
     [RigDate]     NCHAR (10) NULL,
@@ -587,6 +725,45 @@ DROP TABLE [dbo].[Sails];
 EXECUTE sp_rename N'[dbo].[tmp_ms_xx_Sails]', N'Sails';
 
 EXECUTE sp_rename N'[dbo].[tmp_ms_xx_clusteredindex_PK_Sails]', N'PK_Sails', N'OBJECT';
+=======
+CREATE TABLE [dbo].[tmp_ms_xx_Snowboards] (
+    [SnowboardId]    INT            NOT NULL,
+    [SnowboardName]  NVARCHAR (100) NOT NULL,
+    [Manufacturer]   NVARCHAR (100) NULL,
+    [PurchaseDate]   DATETIME       NULL,
+    [PurchasePrice]  MONEY          NULL,
+    [EstimatedPrice] MONEY          NULL,
+    [Length]         TINYINT        NULL,
+    [Width]          TINYINT        NULL,
+    [Bindings]       NVARCHAR (50)  NULL
+);
+
+ALTER TABLE [dbo].[tmp_ms_xx_Snowboards]
+    ADD CONSTRAINT [tmp_ms_xx_clusteredindex_PK_Snowboards] PRIMARY KEY CLUSTERED ([SnowboardId] ASC) WITH (ALLOW_PAGE_LOCKS = ON, ALLOW_ROW_LOCKS = ON, PAD_INDEX = OFF, IGNORE_DUP_KEY = OFF, STATISTICS_NORECOMPUTE = OFF);
+
+IF EXISTS (SELECT TOP 1 1
+           FROM   [dbo].[Snowboards])
+    BEGIN
+        INSERT INTO [dbo].[tmp_ms_xx_Snowboards] ([SnowboardId], [SnowboardName], [Manufacturer], [PurchaseDate], [PurchasePrice], [EstimatedPrice], [Length], [Width], [Bindings])
+        SELECT   [SnowboardId],
+                 [SnowboardName],
+                 [Manufacturer],
+                 [PurchaseDate],
+                 [PurchasePrice],
+                 [EstimatedPrice],
+                 [Length],
+                 [Width],
+                 [Bindings]
+        FROM     [dbo].[Snowboards]
+        ORDER BY [SnowboardId] ASC;
+    END
+
+DROP TABLE [dbo].[Snowboards];
+
+EXECUTE sp_rename N'[dbo].[tmp_ms_xx_Snowboards]', N'Snowboards';
+
+EXECUTE sp_rename N'[dbo].[tmp_ms_xx_clusteredindex_PK_Snowboards]', N'PK_Snowboards', N'OBJECT';
+>>>>>>> f0797c61d5678ce8fd61b26b2ee1499e5557e00f
 
 COMMIT TRANSACTION;
 
@@ -594,6 +771,7 @@ SET TRANSACTION ISOLATION LEVEL READ COMMITTED;
 
 
 GO
+<<<<<<< HEAD
 SET ANSI_NULLS, QUOTED_IDENTIFIER OFF;
 
 
@@ -688,6 +866,8 @@ ALTER TABLE [dbo].[Snowboards]
 
 
 GO
+=======
+>>>>>>> f0797c61d5678ce8fd61b26b2ee1499e5557e00f
 PRINT N'Creating FK_Rigs_Boards...';
 
 
@@ -724,6 +904,7 @@ ALTER TABLE [dbo].[Rigs] WITH NOCHECK
 
 
 GO
+<<<<<<< HEAD
 PRINT N'Creating FK_Rigs_Sails...';
 
 
@@ -751,6 +932,8 @@ ALTER TABLE [dbo].[Sessions] WITH NOCHECK
 
 
 GO
+=======
+>>>>>>> f0797c61d5678ce8fd61b26b2ee1499e5557e00f
 /*
 Post-Deployment Script Template							
 --------------------------------------------------------------------------------------
@@ -780,11 +963,14 @@ ALTER TABLE [dbo].[Rigs] WITH CHECK CHECK CONSTRAINT [FK_Rigs_Fins];
 
 ALTER TABLE [dbo].[Rigs] WITH CHECK CHECK CONSTRAINT [FK_Rigs_Masts];
 
+<<<<<<< HEAD
 ALTER TABLE [dbo].[Rigs] WITH CHECK CHECK CONSTRAINT [FK_Rigs_Sails];
 
 ALTER TABLE [dbo].[Rigs] WITH CHECK CHECK CONSTRAINT [FK_Rigs_Venues];
 
 ALTER TABLE [dbo].[Sessions] WITH CHECK CHECK CONSTRAINT [FK_Sessions_Rigs];
 
+=======
+>>>>>>> f0797c61d5678ce8fd61b26b2ee1499e5557e00f
 
 GO

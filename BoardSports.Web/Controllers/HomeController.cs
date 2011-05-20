@@ -19,5 +19,10 @@ namespace BoardSports.Web.Controllers
         {
             return View();
         }
+
+        public ActionResult TabDemo()
+        {
+            return View();
+        }
     }
 }

@@ -4,5 +4,46 @@
 
 <h2>@ViewBag.Message</h2>
 <p>
-    Fun to be boarding <a href="http://boardsports.org" title="Boards Sports are cool">http://boardsports.org</a>.
+    Fun to be boarding brought to you by jQuery-UI<a href="http://boardsports.org" title="Boards Sports are cool">http://boardsports.org</a>.
 </p>
+
+<script type="text/javascript">
+    $(function () {
+        $("#tabs").tabs();
+    });
+	</script>
+
+
+
+<div class="demo">
+
+<div id="tabs">
+	<ul>
+		<li><a href="#tabs-1">Windsurfing</a></li>
+		<li><a href="#tabs-2">Kiteboarding</a></li>
+		<li><a href="#tabs-3">Snowkiting</a></li>
+        <li><a href="#tabs-4">Snowboarding</a></li>
+	</ul>
+	<div id="tabs-1">
+		<p>This is windsurfing.</p>
+	</div>
+	<div id="tabs-2">
+		<p>This is kiteboarding.</p>
+	</div>
+	<div id="tabs-3">
+		<p>This is snowkiting.</p>
+	</div>
+    <div id="tabs-4">
+        <p>This is snowboarding</p>
+    </div>
+</div>
+
+</div><!-- End demo -->
+
+
+
+<div style="display: none;" class="demo-description">
+<p>Click tabs to swap between content that is broken into logical sections.</p>
+</div><!-- End demo-description -->
+
+
