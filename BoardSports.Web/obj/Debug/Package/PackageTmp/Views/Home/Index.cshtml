@@ -1,8 +1,45 @@
 ﻿@{
-    ViewBag.Title = "Home Page";
+	ViewBag.Title = "Board Sports";
 }
 
 <h2>@ViewBag.Message</h2>
 <p>
-    Fun to be boarding <a href="http://boardsports.org" title="Boards Sports are cool">http://boardsports.org</a>.
+	Fun to be boarding!
 </p>
+
+<script type="text/javascript">
+	$(function () {
+		$("#tabs").tabs();
+	});
+</script>
+
+<div class="demo">
+
+<div id="tabs">
+	<ul>
+		<li><a href="#tabs-1">Windsurfing</a></li>
+		<li><a href="#tabs-2">Kiteboarding</a></li>
+		<li><a href="#tabs-3">S.U.P.</a></li>
+		<li><a href="#tabs-4">Snowkiting</a></li>
+		<li><a href="#tabs-5">Snowboarding</a></li>
+	</ul>
+	<div id="tabs-1">
+		<p>This is windsurfing.</p>
+	</div>
+	<div id="tabs-2">
+		<p>This is kiteboarding.</p>
+	</div>
+	<div id="tabs-3">
+		<p>This is S.U.P.</p>
+	</div>
+	<div id="tabs-4">
+		<p>This is snowkiting</p>
+	</div>
+	<div id="tabs-5">
+		<p>This is snowboarding</p>
+	</div>
+</div>
+
+</div>
+
+

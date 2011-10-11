@@ -14,3 +14,4 @@ C:\src\dotNet\BoardSportsASPMVC\BoardSports.DAL\bin\Debug\EntityFramework.xml
 C:\src\dotNet\BoardSportsASPMVC\BoardSports.DAL\obj\Debug\ResolveAssemblyReference.cache
 C:\src\dotNet\BoardSportsASPMVC\BoardSports.DAL\obj\Debug\BoardSports.DAL.dll
 C:\src\dotNet\BoardSportsASPMVC\BoardSports.DAL\obj\Debug\BoardSports.DAL.pdb
+C:\src\dotNet\BoardSportsASPMVC\BoardSports.DAL\bin\Debug\Glimpse.Core.dll
