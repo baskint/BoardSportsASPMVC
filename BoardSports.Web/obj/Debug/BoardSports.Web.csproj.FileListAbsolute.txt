@@ -12,3 +12,10 @@ C:\src\dotNet\BoardSportsASPMVC\BoardSports.Web\bin\EntityFramework.xml
 C:\src\dotNet\BoardSportsASPMVC\BoardSports.Web\obj\Debug\ResolveAssemblyReference.cache
 C:\src\dotNet\BoardSportsASPMVC\BoardSports.Web\obj\Debug\BoardSports.Web.dll
 C:\src\dotNet\BoardSportsASPMVC\BoardSports.Web\obj\Debug\BoardSports.Web.pdb
+E:\baskint\Documents\GitHub\BoardSportsASPMVC\BoardSports.Web\bin\BoardSports.Web.dll
+E:\baskint\Documents\GitHub\BoardSportsASPMVC\BoardSports.Web\bin\BoardSports.Web.pdb
+E:\baskint\Documents\GitHub\BoardSportsASPMVC\BoardSports.Web\bin\EntityFramework.dll
+E:\baskint\Documents\GitHub\BoardSportsASPMVC\BoardSports.Web\bin\EntityFramework.xml
+E:\baskint\Documents\GitHub\BoardSportsASPMVC\BoardSports.Web\obj\Debug\BoardSports.Web.csprojResolveAssemblyReference.cache
+E:\baskint\Documents\GitHub\BoardSportsASPMVC\BoardSports.Web\obj\Debug\BoardSports.Web.dll
+E:\baskint\Documents\GitHub\BoardSportsASPMVC\BoardSports.Web\obj\Debug\BoardSports.Web.pdb

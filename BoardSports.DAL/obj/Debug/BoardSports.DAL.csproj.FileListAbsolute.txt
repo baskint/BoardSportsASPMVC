@@ -15,3 +15,10 @@ C:\src\dotNet\BoardSportsASPMVC\BoardSports.DAL\obj\Debug\ResolveAssemblyReferen
 C:\src\dotNet\BoardSportsASPMVC\BoardSports.DAL\obj\Debug\BoardSports.DAL.dll
 C:\src\dotNet\BoardSportsASPMVC\BoardSports.DAL\obj\Debug\BoardSports.DAL.pdb
 C:\src\dotNet\BoardSportsASPMVC\BoardSports.DAL\bin\Debug\Glimpse.Core.dll
+E:\baskint\Documents\GitHub\BoardSportsASPMVC\BoardSports.DAL\bin\Debug\BoardSports.DAL.dll.config
+E:\baskint\Documents\GitHub\BoardSportsASPMVC\BoardSports.DAL\bin\Debug\BoardSports.DAL.dll
+E:\baskint\Documents\GitHub\BoardSportsASPMVC\BoardSports.DAL\bin\Debug\BoardSports.DAL.pdb
+E:\baskint\Documents\GitHub\BoardSportsASPMVC\BoardSports.DAL\bin\Debug\EntityFramework.xml
+E:\baskint\Documents\GitHub\BoardSportsASPMVC\BoardSports.DAL\obj\Debug\BoardSports.DAL.csprojResolveAssemblyReference.cache
+E:\baskint\Documents\GitHub\BoardSportsASPMVC\BoardSports.DAL\obj\Debug\BoardSports.DAL.dll
+E:\baskint\Documents\GitHub\BoardSportsASPMVC\BoardSports.DAL\obj\Debug\BoardSports.DAL.pdb

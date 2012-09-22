@@ -10,3 +10,9 @@ C:\src\dotNet\BoardSportsASPMVC\BoardSports.Services\bin\Debug\BoardSports.Servi
 C:\src\dotNet\BoardSportsASPMVC\BoardSports.Services\obj\x86\Debug\ResolveAssemblyReference.cache
 C:\src\dotNet\BoardSportsASPMVC\BoardSports.Services\obj\x86\Debug\BoardSports.Services.exe
 C:\src\dotNet\BoardSportsASPMVC\BoardSports.Services\obj\x86\Debug\BoardSports.Services.pdb
+E:\baskint\Documents\GitHub\BoardSportsASPMVC\BoardSports.Services\bin\Debug\BoardSports.Services.exe.config
+E:\baskint\Documents\GitHub\BoardSportsASPMVC\BoardSports.Services\bin\Debug\BoardSports.Services.exe
+E:\baskint\Documents\GitHub\BoardSportsASPMVC\BoardSports.Services\bin\Debug\BoardSports.Services.pdb
+E:\baskint\Documents\GitHub\BoardSportsASPMVC\BoardSports.Services\obj\x86\Debug\BoardSports.Services.csprojResolveAssemblyReference.cache
+E:\baskint\Documents\GitHub\BoardSportsASPMVC\BoardSports.Services\obj\x86\Debug\BoardSports.Services.exe
+E:\baskint\Documents\GitHub\BoardSportsASPMVC\BoardSports.Services\obj\x86\Debug\BoardSports.Services.pdb

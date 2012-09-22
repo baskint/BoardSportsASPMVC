@@ -8,3 +8,8 @@ C:\src\dotNet\BoardSportsASPMVC\BoarSports.Modeling\bin\Debug\BoardSports.Servic
 C:\src\dotNet\BoardSportsASPMVC\BoarSports.Modeling\bin\Debug\BoardSports.DAL.pdb
 C:\src\dotNet\BoardSportsASPMVC\BoarSports.Modeling\bin\Debug\BoardSports.Services.pdb
 C:\src\dotNet\BoardSportsASPMVC\BoarSports.Modeling\obj\Debug\ResolveAssemblyReference.cache
+E:\baskint\Documents\GitHub\BoardSportsASPMVC\BoarSports.Modeling\bin\Debug\BoardSports.DAL.dll
+E:\baskint\Documents\GitHub\BoardSportsASPMVC\BoarSports.Modeling\bin\Debug\BoardSports.Services.exe
+E:\baskint\Documents\GitHub\BoardSportsASPMVC\BoarSports.Modeling\bin\Debug\BoardSports.DAL.pdb
+E:\baskint\Documents\GitHub\BoardSportsASPMVC\BoarSports.Modeling\bin\Debug\BoardSports.Services.pdb
+E:\baskint\Documents\GitHub\BoardSportsASPMVC\BoarSports.Modeling\obj\Debug\BoarSports.Modeling.modelprojResolveAssemblyReference.cache
